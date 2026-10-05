@@ -11,6 +11,11 @@
 <meta name="keywords" content="RAAZ REBOOT GROUP, Qatar business group, company formation Qatar, real estate Qatar, cleaning services Qatar, technology services Qatar, online services Qatar, government services Qatar, tourist visa Qatar">
 
 <style>
+
+/* ==============================
+   GLOBAL
+================================ */
+
 *{
     margin:0;
     padding:0;
@@ -33,23 +38,34 @@ a{
     color:inherit;
 }
 
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
 .container{
     width:min(1180px,92%);
     margin:auto;
 }
 
-/* HEADER */
+
+/* ==============================
+   HEADER
+================================ */
+
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.96);
+    background:rgba(255,255,255,.97);
     border-bottom:1px solid #e5ebe7;
     backdrop-filter:blur(12px);
 }
 
 .nav{
-    height:82px;
+    min-height:82px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -65,6 +81,7 @@ header{
 .logo-mark{
     width:45px;
     height:45px;
+    flex-shrink:0;
     border-radius:12px;
     background:#087443;
     color:white;
@@ -93,15 +110,6 @@ header{
     letter-spacing:1.4px;
     line-height:1.2;
 }
-}
-
-.logo-text span{
-    display:block;
-    color:#087443;
-    font-size:10px;
-    font-weight:700;
-    letter-spacing:1.5px;
-}
 
 nav{
     display:flex;
@@ -113,6 +121,7 @@ nav a{
     font-size:13px;
     font-weight:700;
     color:#52605a;
+    transition:.2s;
 }
 
 nav a:hover{
@@ -126,7 +135,23 @@ nav a:hover{
     border-radius:8px;
 }
 
-/* HERO */
+.menu-toggle{
+    display:none;
+    border:0;
+    background:#087443;
+    color:white;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+    font-size:24px;
+    cursor:pointer;
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
 .hero{
     position:relative;
     overflow:hidden;
@@ -199,6 +224,8 @@ nav a:hover{
     font-size:13px;
     font-weight:800;
     transition:.25s;
+    border:0;
+    cursor:pointer;
 }
 
 .btn-primary{
@@ -221,7 +248,11 @@ nav a:hover{
     color:#087443;
 }
 
-/* HERO CARD */
+
+/* ==============================
+   HERO CARD
+================================ */
+
 .hero-card{
     background:#102019;
     color:white;
@@ -270,6 +301,7 @@ nav a:hover{
 .card-stat{
     display:flex;
     justify-content:space-between;
+    gap:20px;
     padding:11px 0;
 }
 
@@ -279,9 +311,14 @@ nav a:hover{
 
 .card-stat span:last-child{
     font-weight:800;
+    text-align:right;
 }
 
-/* TRUST */
+
+/* ==============================
+   TRUST
+================================ */
+
 .trust{
     background:#087443;
     color:white;
@@ -305,7 +342,11 @@ nav a:hover{
     border-right:0;
 }
 
-/* GENERAL */
+
+/* ==============================
+   GENERAL
+================================ */
+
 section{
     padding:95px 0;
 }
@@ -334,7 +375,11 @@ section{
     color:#68756f;
 }
 
-/* ABOUT */
+
+/* ==============================
+   ABOUT
+================================ */
+
 .about{
     background:white;
 }
@@ -369,7 +414,11 @@ section{
     color:#65736c;
 }
 
-/* FOUNDER */
+
+/* ==============================
+   FOUNDER
+================================ */
+
 .founder{
     background:#102019;
     color:white;
@@ -413,7 +462,11 @@ section{
     font-size:12px;
 }
 
-/* SERVICES */
+
+/* ==============================
+   SERVICES
+================================ */
+
 .services{
     background:#f7faf8;
 }
@@ -464,7 +517,11 @@ section{
     letter-spacing:.5px;
 }
 
-/* TRAVEL */
+
+/* ==============================
+   TRAVEL
+================================ */
+
 .travel{
     background:#7b1732;
     color:white;
@@ -507,7 +564,11 @@ section{
     margin-bottom:8px;
 }
 
-/* WHY */
+
+/* ==============================
+   WHY
+================================ */
+
 .why{
     background:white;
 }
@@ -539,7 +600,11 @@ section{
     font-size:13px;
 }
 
-/* PROCESS */
+
+/* ==============================
+   PROCESS
+================================ */
+
 .process{
     background:#f7faf8;
 }
@@ -573,7 +638,11 @@ section{
     font-size:13px;
 }
 
-/* CONTACT */
+
+/* ==============================
+   CONTACT
+================================ */
+
 .contact{
     background:white;
 }
@@ -660,7 +729,11 @@ section{
     resize:vertical;
 }
 
-/* DISCLAIMER */
+
+/* ==============================
+   DISCLAIMER
+================================ */
+
 .disclaimer{
     background:#fff8fa;
     border-top:1px solid #f0dce1;
@@ -683,7 +756,11 @@ section{
     margin-bottom:10px;
 }
 
-/* FOOTER */
+
+/* ==============================
+   FOOTER
+================================ */
+
 footer{
     background:#0b1711;
     color:white;
@@ -722,7 +799,11 @@ footer a{
     justify-content:space-between;
 }
 
-/* WHATSAPP */
+
+/* ==============================
+   WHATSAPP
+================================ */
+
 .whatsapp{
     position:fixed;
     right:22px;
@@ -741,11 +822,55 @@ footer a{
     z-index:999;
 }
 
-/* MOBILE */
+
+/* ==============================
+   TABLET / MOBILE
+================================ */
+
 @media(max-width:900px){
+
+    .nav{
+        min-height:76px;
+    }
+
+    .menu-toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
 
     nav{
         display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        background:white;
+        border-top:1px solid #e5ebe7;
+        border-bottom:1px solid #e5ebe7;
+        padding:15px 4%;
+        flex-direction:column;
+        align-items:stretch;
+        gap:5px;
+        box-shadow:0 15px 30px rgba(0,0,0,.08);
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    nav a{
+        padding:13px 10px;
+        border-radius:8px;
+    }
+
+    nav a:hover{
+        background:#f1f7f3;
+    }
+
+    .nav-btn{
+        text-align:center;
+        margin-top:5px;
     }
 
     .hero-grid,
@@ -782,10 +907,69 @@ footer a{
     }
 }
 
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
 @media(max-width:600px){
+
+    .container{
+        width:min(92%,1180px);
+    }
 
     section{
         padding:70px 0;
+    }
+
+    .logo{
+        gap:9px;
+    }
+
+    .logo-mark{
+        width:40px;
+        height:40px;
+        border-radius:10px;
+        font-size:16px;
+    }
+
+    .logo-text strong{
+        font-size:12px;
+        letter-spacing:.8px;
+    }
+
+    .logo-text span{
+        font-size:7px;
+        letter-spacing:1px;
+    }
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:44px;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .hero-actions .btn{
+        width:100%;
+    }
+
+    .hero-card{
+        padding:27px;
+    }
+
+    .hero-card h2{
+        font-size:29px;
     }
 
     .trust-grid{
@@ -795,6 +979,10 @@ footer a{
     .trust-item{
         border-right:0;
         border-bottom:1px solid rgba(255,255,255,.18);
+    }
+
+    .trust-item:last-child{
+        border-bottom:0;
     }
 
     .why-grid,
@@ -817,520 +1005,1145 @@ footer a{
         font-size:38px;
     }
 
-    .hero-card{
-        padding:27px;
+    .travel h2{
+        font-size:45px;
     }
 
     .copyright{
         flex-direction:column;
         gap:7px;
     }
+
+    .whatsapp{
+        width:52px;
+        height:52px;
+        right:16px;
+        bottom:16px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- ==============================
+     HEADER
+================================ -->
+
 <header>
+
 <div class="container nav">
 
 <a href="#home" class="logo">
+
 <div class="logo-mark">RR</div>
+
 <div class="logo-text">
+
 <strong>RAAZ REBOOT GROUP</strong>
+
 <span>QATAR • BUSINESS • SERVICES</span>
+
 </div>
+
 </a>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#why">Why Us</a>
-<a href="#contact">Contact</a>
-<a class="nav-btn" href="https://wa.me/97471876497">WhatsApp</a>
+
+<button
+class="menu-toggle"
+onclick="toggleMenu()"
+aria-label="Open menu"
+aria-expanded="false"
+>
+☰
+</button>
+
+
+<nav id="mobileNav">
+
+<a href="#home" onclick="closeMenu()">Home</a>
+
+<a href="#about" onclick="closeMenu()">About</a>
+
+<a href="#services" onclick="closeMenu()">Services</a>
+
+<a href="#why" onclick="closeMenu()">Why Us</a>
+
+<a href="#contact" onclick="closeMenu()">Contact</a>
+
+<a
+class="nav-btn"
+href="https://wa.me/97471876497"
+target="_blank"
+rel="noopener"
+>
+WhatsApp
+</a>
+
 </nav>
 
 </div>
+
 </header>
+
 
 <main>
 
+
+<!-- ==============================
+     HERO
+================================ -->
+
 <section class="hero" id="home">
+
 <div class="container hero-grid">
 
 <div>
 
 <div class="eyebrow">
+
 <i></i>
+
 QATAR BASED BUSINESS GROUP
+
 </div>
+
 
 <h1>
+
 ONE TRUSTED GROUP.<br>
+
 <span>MULTIPLE SOLUTIONS.</span>
+
 </h1>
 
+
 <p>
-Your trusted partner for business, property, technology, hospitality,
-online services, government-related assistance and travel support in Qatar.
+
+Your trusted partner for business, property, technology,
+hospitality, online services, government-related assistance
+and travel support in Qatar.
+
 </p>
 
+
 <div class="hero-actions">
-<a class="btn btn-primary" href="#services">Explore Our Services</a>
-<a class="btn btn-secondary" href="#contact">Get a Consultation</a>
+
+<a
+class="btn btn-primary"
+href="#services"
+>
+Explore Our Services
+</a>
+
+<a
+class="btn btn-secondary"
+href="#contact"
+>
+Get a Consultation
+</a>
+
 </div>
 
 </div>
+
 
 <div class="hero-card">
 
 <small>RAAZ REBOOT GROUP</small>
 
 <h2>
+
 Business.<br>
 Property.<br>
 Technology.<br>
 Services.
+
 </h2>
 
 <p>
-One professional platform connecting multiple solutions for individuals,
-entrepreneurs and businesses in Qatar.
+
+One professional platform connecting multiple solutions
+for individuals, entrepreneurs and businesses in Qatar.
+
 </p>
 
 <div class="card-line"></div>
 
+
 <div class="card-stat">
+
 <span>Based in</span>
+
 <span>Doha, Qatar</span>
+
 </div>
 
+
 <div class="card-stat">
+
 <span>Service Divisions</span>
+
 <span>07</span>
+
 </div>
+
 
 <div class="card-stat">
+
 <span>Founder</span>
+
 <span>SANOAR HOSSEN</span>
-</div>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
+
+<!-- ==============================
+     TRUST
+================================ -->
+
 <div class="trust">
+
 <div class="container trust-grid">
 
-<div class="trust-item">QATAR BASED</div>
-<div class="trust-item">MULTI-SERVICE GROUP</div>
-<div class="trust-item">PROFESSIONAL SUPPORT</div>
+<div class="trust-item">
+QATAR BASED
+</div>
+
+<div class="trust-item">
+MULTI-SERVICE GROUP
+</div>
+
+<div class="trust-item">
+PROFESSIONAL SUPPORT
+</div>
 
 </div>
+
 </div>
+
+
+<!-- ==============================
+     ABOUT
+================================ -->
 
 <section class="about" id="about">
+
 <div class="container">
 
 <div class="section-head">
-<div class="kicker">ABOUT RAAZ REBOOT</div>
-<h2>Built to Make Life and Business Simpler.</h2>
-<p>
-RAAZ REBOOT GROUP brings multiple professional services together
-under one trusted group in Qatar.
-</p>
+
+<div class="kicker">
+ABOUT RAAZ REBOOT
 </div>
+
+<h2>
+Built to Make Life and Business Simpler.
+</h2>
+
+<p>
+RAAZ REBOOT GROUP brings multiple professional services
+together under one trusted group in Qatar.
+</p>
+
+</div>
+
 
 <div class="about-grid">
 
 <div>
+
 <p style="color:#65736c;font-size:16px;margin-bottom:20px;">
+
 From property and hospitality to technology, business formation,
 online assistance, government-related procedures and travel support,
 our goal is simple: make the process easier, clearer and more convenient.
+
 </p>
 
+
 <p style="color:#65736c;font-size:16px;">
+
 We combine practical experience, technology and customer-focused
 support to connect different business and service needs through
 one professional platform.
+
 </p>
+
 </div>
+
 
 <div class="about-box">
-<div class="big">01</div>
-<h3>One Group. Multiple Solutions.</h3>
+
+<div class="big">
+01
+</div>
+
+<h3>
+One Group. Multiple Solutions.
+</h3>
+
 <p>
-A growing Qatar-based business group designed to provide practical
-solutions across different industries and service categories.
+
+A growing Qatar-based business group designed to provide
+practical solutions across different industries and service categories.
+
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
+<!-- ==============================
+     FOUNDER
+================================ -->
+
 <section class="founder">
+
 <div class="container founder-grid">
 
 <div>
-<div class="founder-badge">SH</div>
+
+<div class="founder-badge">
+SH
 </div>
+
+</div>
+
 
 <div>
-<div class="role">FOUNDER & MANAGING DIRECTOR</div>
-<h2>SANOAR HOSSEN</h2>
+
+<div class="role">
+FOUNDER & MANAGING DIRECTOR
+</div>
+
+<h2>
+SANOAR HOSSEN
+</h2>
+
 <p>
-Building a modern, service-focused business group in Qatar with
-a vision to connect business, property, technology and professional
-support services under one trusted destination.
+
+Building a modern, service-focused business group in Qatar
+with a vision to connect business, property, technology
+and professional support services under one trusted destination.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
+
+<!-- ==============================
+     SERVICES
+================================ -->
+
 <section class="services" id="services">
+
 <div class="container">
 
 <div class="section-head">
-<div class="kicker">OUR GROUP</div>
-<h2>Seven Divisions. One Trusted Group.</h2>
+
+<div class="kicker">
+OUR GROUP
+</div>
+
+<h2>
+Seven Divisions. One Trusted Group.
+</h2>
+
 <p>
 Explore the professional services provided through
 RAAZ REBOOT GROUP.
 </p>
+
 </div>
+
 
 <div class="services-grid">
 
+
 <div class="service">
-<div class="service-number">01 — REAL ESTATE</div>
-<h3>RAAZ REBOOT REAL ESTATE</h3>
+
+<div class="service-number">
+01 — REAL ESTATE
+</div>
+
+<h3>
+RAAZ REBOOT REAL ESTATE
+</h3>
+
 <p>
+
 Property sales, rentals, buying and selling assistance,
 residential and commercial property support, property management
 and consultation.
+
 </p>
-<a href="#contact">DISCUSS YOUR PROPERTY →</a>
+
+<a href="#contact">
+DISCUSS YOUR PROPERTY →
+</a>
+
 </div>
 
-<div class="service">
-<div class="service-number">02 — HOSPITALITY</div>
-<h3>Cleaning & Hospitality</h3>
-<p>
-Residential, office, commercial, deep cleaning, move-in and
-move-out cleaning, property cleaning, hospitality support
-and regular contracts.
-</p>
-<a href="#contact">REQUEST A SERVICE →</a>
-</div>
 
 <div class="service">
-<div class="service-number">03 — TECHNOLOGY</div>
-<h3>RAAZ REBOOT TECHNOLOGY</h3>
-<p>
-Website design and development, business websites, e-commerce,
-digital branding, IT support, automation and digital solutions.
-</p>
-<a href="#contact">START A PROJECT →</a>
+
+<div class="service-number">
+02 — HOSPITALITY
 </div>
 
-<div class="service">
-<div class="service-number">04 — BUSINESS</div>
-<h3>Company Formation</h3>
+<h3>
+Cleaning & Hospitality
+</h3>
+
 <p>
-Business consultation, company setup support, documentation,
-activity guidance, registration support and ongoing business assistance.
+
+Residential, office, commercial, deep cleaning,
+move-in and move-out cleaning, property cleaning,
+hospitality support and regular contracts.
+
 </p>
-<a href="#contact">BUILD YOUR BUSINESS →</a>
+
+<a href="#contact">
+REQUEST A SERVICE →
+</a>
+
 </div>
 
-<div class="service">
-<div class="service-number">05 — ONLINE</div>
-<h3>Online Services</h3>
-<p>
-Online applications, forms, document preparation, digital assistance,
-online registrations and general online service support.
-</p>
-<a href="#contact">GET ONLINE SUPPORT →</a>
-</div>
 
 <div class="service">
-<div class="service-number">06 — GOVERNMENT</div>
-<h3>Government Services</h3>
+
+<div class="service-number">
+03 — TECHNOLOGY
+</div>
+
+<h3>
+RAAZ REBOOT TECHNOLOGY
+</h3>
+
 <p>
+
+Website design and development, business websites,
+e-commerce, digital branding, IT support, automation
+and digital solutions.
+
+</p>
+
+<a href="#contact">
+START A PROJECT →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+04 — BUSINESS
+</div>
+
+<h3>
+Company Formation
+</h3>
+
+<p>
+
+Business consultation, company setup support,
+documentation, activity guidance, registration support
+and ongoing business assistance.
+
+</p>
+
+<a href="#contact">
+BUILD YOUR BUSINESS →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+05 — ONLINE
+</div>
+
+<h3>
+Online Services
+</h3>
+
+<p>
+
+Online applications, forms, document preparation,
+digital assistance, online registrations and general
+online service support.
+
+</p>
+
+<a href="#contact">
+GET ONLINE SUPPORT →
+</a>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+06 — GOVERNMENT
+</div>
+
+<h3>
+Government Services
+</h3>
+
+<p>
+
 Assistance with eligible government-related applications,
-documentation, digital portals, application follow-up and
-administrative procedures.
+documentation, digital portals, application follow-up
+and administrative procedures.
+
 </p>
-<a href="#contact">GET ASSISTANCE →</a>
+
+<a href="#contact">
+GET ASSISTANCE →
+</a>
+
 </div>
+
 
 <div class="service">
-<div class="service-number">07 — TRAVEL</div>
-<h3>Travel & Tourist Visa</h3>
+
+<div class="service-number">
+07 — TRAVEL
+</div>
+
+<h3>
+Travel & Tourist Visa
+</h3>
+
 <p>
-Tourist visa assistance, visit visa support, document preparation,
-application guidance, submission assistance and travel documentation support.
+
+Tourist visa assistance, visit visa support,
+document preparation, application guidance,
+submission assistance and travel documentation support.
+
 </p>
-<a href="#travel">START VISA PROCESS →</a>
+
+<a href="#travel">
+START VISA PROCESS →
+</a>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
+
+<!-- ==============================
+     TRAVEL
+================================ -->
+
 <section class="travel" id="travel">
+
 <div class="container travel-grid">
 
 <div>
-<div class="kicker">TRAVEL & VISA SERVICES</div>
+
+<div class="kicker">
+TRAVEL & VISA SERVICES
+</div>
 
 <h2>
+
 YOUR JOURNEY<br>
 STARTS HERE.
+
 </h2>
 
 <p>
-Planning your next journey? RAAZ REBOOT GROUP provides practical
-assistance with tourist visa applications, visit visa documentation
-and travel-related processes.
+
+Planning your next journey? RAAZ REBOOT GROUP provides
+practical assistance with tourist visa applications,
+visit visa documentation and travel-related processes.
+
 </p>
 
-<a class="btn btn-primary" href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20am%20interested%20in%20tourist%20visa%20assistance.">
+
+<a
+class="btn btn-primary"
+href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20am%20interested%20in%20tourist%20visa%20assistance."
+target="_blank"
+rel="noopener"
+>
 START VISA PROCESS
 </a>
+
 </div>
+
 
 <div class="travel-box">
-<strong>Planning Your Next Journey?</strong>
+
+<strong>
+Planning Your Next Journey?
+</strong>
+
 <p>
-Speak with our team about your visa assistance and travel
-documentation requirements.
+
+Speak with our team about your visa assistance
+and travel documentation requirements.
+
 </p>
+
 </div>
 
 </div>
+
 </section>
 
+
+<!-- ==============================
+     WHY US
+================================ -->
+
 <section class="why" id="why">
+
 <div class="container">
 
 <div class="section-head">
-<div class="kicker">WHY RAAZ REBOOT</div>
-<h2>Designed Around Your Needs.</h2>
+
+<div class="kicker">
+WHY RAAZ REBOOT
+</div>
+
+<h2>
+Designed Around Your Needs.
+</h2>
+
 <p>
+
 Professional support across multiple service categories,
 all through one group.
+
 </p>
+
 </div>
+
 
 <div class="why-grid">
 
+
 <div class="why-card">
+
 <b>01</b>
-<h3>One Trusted Group</h3>
-<p>Multiple services available through one professional group.</p>
+
+<h3>
+One Trusted Group
+</h3>
+
+<p>
+Multiple services available through one professional group.
+</p>
+
 </div>
 
+
 <div class="why-card">
+
 <b>02</b>
-<h3>Qatar Focused</h3>
-<p>Services designed around the needs of customers and businesses in Qatar.</p>
+
+<h3>
+Qatar Focused
+</h3>
+
+<p>
+Services designed around the needs of customers
+and businesses in Qatar.
+</p>
+
 </div>
 
+
 <div class="why-card">
+
 <b>03</b>
-<h3>Professional Service</h3>
-<p>Clear communication and practical assistance throughout the process.</p>
+
+<h3>
+Professional Service
+</h3>
+
+<p>
+Clear communication and practical assistance
+throughout the process.
+</p>
+
 </div>
 
+
 <div class="why-card">
+
 <b>04</b>
-<h3>Technology Driven</h3>
-<p>Digital tools and technology used to make services more convenient.</p>
+
+<h3>
+Technology Driven
+</h3>
+
+<p>
+Digital tools and technology used to make services
+more convenient.
+</p>
+
 </div>
 
+
 <div class="why-card">
+
 <b>05</b>
-<h3>Customer First</h3>
-<p>We focus on understanding the customer's actual needs before recommending a solution.</p>
+
+<h3>
+Customer First
+</h3>
+
+<p>
+We focus on understanding the customer's actual needs
+before recommending a solution.
+</p>
+
 </div>
+
 
 <div class="why-card">
+
 <b>06</b>
-<h3>End-to-End Support</h3>
-<p>Assistance from initial consultation through relevant stages of the process.</p>
+
+<h3>
+End-to-End Support
+</h3>
+
+<p>
+Assistance from initial consultation through relevant
+stages of the process.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
+
+<!-- ==============================
+     PROCESS
+================================ -->
+
 <section class="process">
+
 <div class="container">
 
 <div class="section-head">
-<div class="kicker">HOW IT WORKS</div>
-<h2>Simple. Clear. Professional.</h2>
+
+<div class="kicker">
+HOW IT WORKS
 </div>
+
+<h2>
+Simple. Clear. Professional.
+</h2>
+
+</div>
+
 
 <div class="process-grid">
 
-<div class="step">
-<div class="step-number">01</div>
-<h3>Tell Us What You Need</h3>
-<p>Contact us and explain your requirement.</p>
-</div>
 
 <div class="step">
-<div class="step-number">02</div>
-<h3>Find the Right Solution</h3>
-<p>We identify the appropriate service for your needs.</p>
+
+<div class="step-number">
+01
 </div>
+
+<h3>
+Tell Us What You Need
+</h3>
+
+<p>
+Contact us and explain your requirement.
+</p>
+
+</div>
+
 
 <div class="step">
-<div class="step-number">03</div>
-<h3>We Assist With the Process</h3>
-<p>Our team helps with the relevant steps and documents.</p>
+
+<div class="step-number">
+02
 </div>
+
+<h3>
+Find the Right Solution
+</h3>
+
+<p>
+We identify the appropriate service for your needs.
+</p>
+
+</div>
+
 
 <div class="step">
-<div class="step-number">04</div>
-<h3>Move Forward</h3>
-<p>Complete the relevant process and move ahead.</p>
+
+<div class="step-number">
+03
+</div>
+
+<h3>
+We Assist With the Process
+</h3>
+
+<p>
+Our team helps with the relevant steps and documents.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+04
+</div>
+
+<h3>
+Move Forward
+</h3>
+
+<p>
+Complete the relevant process and move ahead.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
+
+<!-- ==============================
+     CONTACT
+================================ -->
+
 <section class="contact" id="contact">
+
 <div class="container">
 
 <div class="section-head">
-<div class="kicker">CONTACT US</div>
-<h2>Let's Talk About What You Need.</h2>
+
+<div class="kicker">
+CONTACT US
+</div>
+
+<h2>
+Let's Talk About What You Need.
+</h2>
+
 <p>
+
 Tell us what you are looking for and our team will help you
 identify the right service.
+
 </p>
+
 </div>
+
 
 <div class="contact-grid">
 
+
 <div class="contact-info">
 
-<div class="contact-item">
-<small>WHATSAPP</small>
-<strong>
-<a href="https://wa.me/97471876497">+974 7187 6497</a>
-</strong>
-</div>
 
 <div class="contact-item">
-<small>EMAIL</small>
+
+<small>
+WHATSAPP
+</small>
+
 <strong>
+
+<a
+href="https://wa.me/97471876497"
+target="_blank"
+rel="noopener"
+>
++974 7187 6497
+</a>
+
+</strong>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>
+EMAIL
+</small>
+
+<strong>
+
 <a href="mailto:raazrebootgroup@gmail.com">
 raazrebootgroup@gmail.com
 </a>
+
 </strong>
+
 </div>
+
 
 <div class="contact-item">
-<small>LOCATION</small>
-<strong>Al Muntazah, Doha, Qatar</strong>
+
+<small>
+LOCATION
+</small>
+
+<strong>
+Al Muntazah, Doha, Qatar
+</strong>
+
 </div>
+
 
 <div class="contact-item">
-<small>BUSINESS HOURS</small>
-<strong>4:00 PM – 12:00 AM</strong>
-</div>
+
+<small>
+BUSINESS HOURS
+</small>
+
+<strong>
+4:00 PM – 12:00 AM
+</strong>
 
 </div>
 
-<form class="form" onsubmit="sendWhatsApp(event)">
+
+</div>
+
+
+<form
+class="form"
+onsubmit="sendWhatsApp(event)"
+>
 
 <div class="form-grid">
 
-<div class="form-group">
-<label>FULL NAME</label>
-<input id="name" type="text" placeholder="Your full name" required>
-</div>
 
 <div class="form-group">
-<label>PHONE</label>
-<input id="phone" type="tel" placeholder="Your phone number" required>
+
+<label>
+FULL NAME
+</label>
+
+<input
+id="name"
+type="text"
+placeholder="Your full name"
+required
+>
+
 </div>
 
-<div class="form-group">
-<label>EMAIL</label>
-<input id="email" type="email" placeholder="Your email address">
-</div>
 
 <div class="form-group">
-<label>SERVICE</label>
+
+<label>
+PHONE
+</label>
+
+<input
+id="phone"
+type="tel"
+placeholder="Your phone number"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+EMAIL
+</label>
+
+<input
+id="email"
+type="email"
+placeholder="Your email address"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+SERVICE
+</label>
+
 <select id="service">
+
 <option>Real Estate</option>
-<option>Cleaning & Hospitality</option>
-<option>Technology</option>
-<option>Company Formation</option>
-<option>Online Services</option>
-<option>Government Services</option>
-<option>Travel & Tourist Visa</option>
-<option>Other</option>
+
+<option>
+Cleaning & Hospitality
+</option>
+
+<option>
+Technology
+</option>
+
+<option>
+Company Formation
+</option>
+
+<option>
+Online Services
+</option>
+
+<option>
+Government Services
+</option>
+
+<option>
+Travel & Tourist Visa
+</option>
+
+<option>
+Other
+</option>
+
 </select>
+
 </div>
 
-<div class="form-group full">
-<label>MESSAGE</label>
-<textarea id="message" placeholder="Tell us what you need..." required></textarea>
-</div>
 
 <div class="form-group full">
-<button class="btn btn-primary" type="submit">
+
+<label>
+MESSAGE
+</label>
+
+<textarea
+id="message"
+placeholder="Tell us what you need..."
+required
+></textarea>
+
+</div>
+
+
+<div class="form-group full">
+
+<button
+class="btn btn-primary"
+type="submit"
+>
 SEND INQUIRY VIA WHATSAPP
 </button>
-</div>
 
 </div>
+
+
+</div>
+
 
 <p style="font-size:11px;color:#75827c;margin-top:12px;">
+
 Your inquiry will open directly in WhatsApp.
+
 </p>
 
 </form>
 
+
 </div>
+
 </div>
+
 </section>
+
+
+<!-- ==============================
+     DISCLAIMER
+================================ -->
 
 <section class="disclaimer">
+
 <div class="container disclaimer-box">
 
-<h3>IMPORTANT SERVICE DISCLAIMER</h3>
+<h3>
+IMPORTANT SERVICE DISCLAIMER
+</h3>
+
 
 <p>
-RAAZ REBOOT GROUP is an independent service provider. We assist
-customers with eligible government-related procedures and applications.
-Government approvals, decisions, fees and processing times are determined
+
+RAAZ REBOOT GROUP is an independent service provider.
+We assist customers with eligible government-related
+procedures and applications. Government approvals,
+decisions, fees and processing times are determined
 by the relevant government authorities.
+
 </p>
 
+
 <p>
-Visa approvals are subject to the decision of the relevant embassy,
-immigration authority or government authority. RAAZ REBOOT GROUP provides
-application assistance and processing support and does not guarantee
-visa approval.
+
+Visa approvals are subject to the decision of the relevant
+embassy, immigration authority or government authority.
+RAAZ REBOOT GROUP provides application assistance
+and processing support and does not guarantee visa approval.
+
 </p>
 
 </div>
+
 </section>
 
+
 </main>
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
 
 <footer>
 
@@ -1338,76 +2151,221 @@ visa approval.
 
 <div class="footer-grid">
 
+
 <div>
-<h3>RAAZ REBOOT GROUP</h3>
+
+<h3>
+RAAZ REBOOT GROUP
+</h3>
+
 <p>
 ONE TRUSTED GROUP. MULTIPLE SOLUTIONS.
 </p>
+
 <p style="margin-top:10px;">
-Your trusted partner for business, property, technology
-and services in Qatar.
+
+Your trusted partner for business, property,
+technology and services in Qatar.
+
 </p>
+
 </div>
+
 
 <div>
-<h3>COMPANY</h3>
+
+<h3>
+COMPANY
+</h3>
+
 <div class="footer-links">
-<a href="#about">About Us</a>
-<a href="#services">Our Group</a>
-<a href="#why">Why Choose Us</a>
-<a href="#contact">Contact</a>
+
+<a href="#about">
+About Us
+</a>
+
+<a href="#services">
+Our Group
+</a>
+
+<a href="#why">
+Why Choose Us
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
 </div>
+
 </div>
+
 
 <div>
-<h3>SERVICES</h3>
+
+<h3>
+SERVICES
+</h3>
+
 <div class="footer-links">
-<a href="#services">Real Estate</a>
-<a href="#services">Cleaning & Hospitality</a>
-<a href="#services">Technology</a>
-<a href="#services">Company Formation</a>
-<a href="#services">Online Services</a>
-<a href="#services">Government Services</a>
-<a href="#travel">Travel & Visa</a>
-</div>
+
+<a href="#services">
+Real Estate
+</a>
+
+<a href="#services">
+Cleaning & Hospitality
+</a>
+
+<a href="#services">
+Technology
+</a>
+
+<a href="#services">
+Company Formation
+</a>
+
+<a href="#services">
+Online Services
+</a>
+
+<a href="#services">
+Government Services
+</a>
+
+<a href="#travel">
+Travel & Visa
+</a>
+
 </div>
 
 </div>
+
+
+</div>
+
 
 <div class="copyright">
-<span>© 2026 RAAZ REBOOT GROUP. All Rights Reserved.</span>
-<span>Qatar</span>
+
+<span>
+© 2026 RAAZ REBOOT GROUP. All Rights Reserved.
+</span>
+
+<span>
+Qatar
+</span>
+
 </div>
 
 </div>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/97471876497">WA</a>
+
+<!-- ==============================
+     FLOATING WHATSAPP
+================================ -->
+
+<a
+class="whatsapp"
+href="https://wa.me/97471876497"
+target="_blank"
+rel="noopener"
+aria-label="Contact RAAZ REBOOT GROUP on WhatsApp"
+>
+WA
+</a>
+
+
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
 
 <script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    const menu = document.getElementById("mobileNav");
+    const button = document.querySelector(".menu-toggle");
+
+    menu.classList.toggle("active");
+
+    const isOpen = menu.classList.contains("active");
+
+    button.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+
+}
+
+
+/* CLOSE MOBILE MENU */
+
+function closeMenu(){
+
+    const menu = document.getElementById("mobileNav");
+    const button = document.querySelector(".menu-toggle");
+
+    menu.classList.remove("active");
+
+    button.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+}
+
+
+/* WHATSAPP CONTACT FORM */
+
 function sendWhatsApp(event){
 
-event.preventDefault();
+    event.preventDefault();
 
-const name=document.getElementById("name").value;
-const phone=document.getElementById("phone").value;
-const email=document.getElementById("email").value;
-const service=document.getElementById("service").value;
-const message=document.getElementById("message").value;
+    const name =
+        document.getElementById("name").value.trim();
 
-const text=
-"Hello RAAZ REBOOT GROUP,%0A%0A"+
-"*New Website Inquiry*%0A%0A"+
-"Name: "+encodeURIComponent(name)+"%0A"+
-"Phone: "+encodeURIComponent(phone)+"%0A"+
-"Email: "+encodeURIComponent(email)+"%0A"+
-"Service: "+encodeURIComponent(service)+"%0A"+
-"Message: "+encodeURIComponent(message);
+    const phone =
+        document.getElementById("phone").value.trim();
 
-window.open("https://wa.me/97471876497?text="+text,"_blank");
+    const email =
+        document.getElementById("email").value.trim();
+
+    const service =
+        document.getElementById("service").value;
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    const text =
+        "Hello RAAZ REBOOT GROUP,\n\n" +
+        "*New Website Inquiry*\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Email: " + email + "\n" +
+        "Service: " + service + "\n" +
+        "Message: " + message;
+
+
+    const whatsappURL =
+        "https://wa.me/97471876497?text=" +
+        encodeURIComponent(text);
+
+
+    window.open(
+        whatsappURL,
+        "_blank",
+        "noopener"
+    );
+
 }
+
 </script>
+
 
 </body>
 </html>
