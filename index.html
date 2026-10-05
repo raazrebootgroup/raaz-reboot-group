@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RAAZ REBOOT GROUP | Business, Property, Technology & Services in Qatar</title>
 
-<meta name="description" content="RAAZ REBOOT GROUP is a Qatar-based business group providing real estate, cleaning & hospitality, technology, company formation, online, government-related and travel visa support services.">
-
-<meta name="keywords" content="RAAZ REBOOT GROUP, Qatar business group, company formation Qatar, real estate Qatar, cleaning services Qatar, technology services Qatar, online services Qatar, government services Qatar, tourist visa Qatar">
+<meta name="description" content="RAAZ REBOOT GROUP is a Qatar-based multi-service group providing real estate, cleaning and hospitality, technology, business formation, online, government-related and travel assistance services.">
+<meta name="keywords" content="RAAZ REBOOT GROUP, company formation Qatar, business setup Qatar, cleaning services Qatar, real estate Qatar, property services Qatar, technology services Qatar, online services Qatar, government services Qatar, tourist visa Qatar">
+<meta name="author" content="SANOAR HOSSEN">
 
 <style>
 
-/* ==============================
-   GLOBAL
-================================ */
+:root{
+    --green:#087443;
+    --green-dark:#055c35;
+    --green-light:#eaf7f0;
+    --maroon:#8a1538;
+    --maroon-dark:#69102b;
+    --gold:#c8a95a;
+    --dark:#10231a;
+    --text:#34443b;
+    --muted:#718078;
+    --white:#ffffff;
+    --light:#f5f8f6;
+    --border:#dfe8e3;
+    --shadow:0 18px 50px rgba(16,35,26,.10);
+    --radius:20px;
+}
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
@@ -28,21 +41,25 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f7faf8;
-    color:#102019;
-    line-height:1.6;
+    background:var(--white);
+    color:var(--text);
+    line-height:1.7;
+}
+
+body.rtl{
+    direction:rtl;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 button,
 input,
 select,
 textarea{
-    font-family:inherit;
+    font:inherit;
 }
 
 .container{
@@ -50,47 +67,45 @@ textarea{
     margin:auto;
 }
 
-
-/* ==============================
-   HEADER
-================================ */
+/* HEADER */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.97);
-    border-bottom:1px solid #e5ebe7;
-    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
 }
 
-.nav{
-    min-height:82px;
+.header-inner{
+    min-height:78px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:30px;
+    gap:20px;
 }
 
 .logo{
     display:flex;
     align-items:center;
     gap:12px;
+    flex-shrink:0;
 }
 
 .logo-mark{
-    width:45px;
-    height:45px;
-    flex-shrink:0;
+    width:46px;
+    height:46px;
     border-radius:12px;
-    background:#087443;
+    background:linear-gradient(135deg,var(--green),var(--maroon));
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:18px;
     font-weight:900;
-    box-shadow:0 8px 20px rgba(8,116,67,.2);
+    font-size:17px;
+    letter-spacing:-1px;
+    box-shadow:0 8px 20px rgba(8,116,67,.20);
 }
 
 .logo-text strong{
@@ -98,13 +113,14 @@ header{
     font-size:15px;
     letter-spacing:1.1px;
     line-height:1.2;
+    color:var(--dark);
     white-space:nowrap;
 }
 
 .logo-text span{
     display:block;
     margin-top:4px;
-    color:#087443;
+    color:var(--green);
     font-size:9px;
     font-weight:800;
     letter-spacing:1.4px;
@@ -114,213 +130,226 @@ header{
 nav{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:6px;
 }
 
 nav a{
+    padding:9px 12px;
     font-size:13px;
     font-weight:700;
-    color:#52605a;
+    color:var(--dark);
+    border-radius:9px;
     transition:.2s;
 }
 
 nav a:hover{
-    color:#087443;
+    background:var(--green-light);
+    color:var(--green);
 }
 
 .nav-btn{
-    background:#087443;
+    background:var(--green)!important;
     color:white!important;
-    padding:12px 18px;
-    border-radius:8px;
+    padding:10px 16px!important;
+}
+
+.nav-btn:hover{
+    background:var(--green-dark)!important;
+}
+
+.language-switch{
+    display:flex;
+    gap:4px;
+    padding:4px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:white;
+}
+
+.language-switch button{
+    border:0;
+    background:transparent;
+    cursor:pointer;
+    padding:6px 9px;
+    border-radius:7px;
+    font-size:12px;
+    font-weight:800;
+}
+
+.language-switch button.active{
+    background:var(--maroon);
+    color:white;
 }
 
 .menu-toggle{
     display:none;
     border:0;
-    background:#087443;
+    background:var(--green);
     color:white;
     width:44px;
     height:44px;
     border-radius:10px;
-    font-size:24px;
     cursor:pointer;
+    font-size:22px;
 }
 
-
-/* ==============================
-   HERO
-================================ */
+/* HERO */
 
 .hero{
     position:relative;
     overflow:hidden;
     background:
-        radial-gradient(circle at 85% 20%,rgba(123,23,50,.12),transparent 30%),
-        radial-gradient(circle at 10% 80%,rgba(8,116,67,.12),transparent 30%),
-        #ffffff;
-    padding:105px 0 90px;
+        radial-gradient(circle at 85% 20%,rgba(8,116,67,.15),transparent 30%),
+        radial-gradient(circle at 10% 80%,rgba(138,21,56,.10),transparent 30%),
+        linear-gradient(135deg,#f8fcfa,#ffffff);
+    padding:95px 0 75px;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    right:-100px;
+    top:-130px;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    border:70px solid rgba(138,21,56,.05);
 }
 
 .hero-grid{
+    position:relative;
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:1.25fr .75fr;
+    gap:55px;
     align-items:center;
-    gap:70px;
 }
 
 .eyebrow{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    background:#edf7f1;
-    color:#087443;
-    border:1px solid #d5eadf;
-    padding:8px 13px;
-    border-radius:30px;
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:1px;
-    margin-bottom:25px;
+    color:var(--green);
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    margin-bottom:16px;
 }
 
-.eyebrow i{
-    width:7px;
-    height:7px;
-    background:#087443;
-    border-radius:50%;
+.eyebrow:before{
+    content:"";
+    width:30px;
+    height:3px;
+    background:var(--maroon);
+    border-radius:10px;
 }
 
 .hero h1{
-    font-size:clamp(46px,6vw,78px);
-    line-height:.98;
-    letter-spacing:-3px;
-    margin-bottom:25px;
+    color:var(--dark);
+    font-size:clamp(40px,6vw,72px);
+    line-height:1.02;
+    letter-spacing:-2px;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:#087443;
+    color:var(--green);
 }
 
 .hero p{
     max-width:650px;
-    color:#5d6a64;
-    font-size:17px;
-    margin-bottom:32px;
+    font-size:18px;
+    color:var(--muted);
+    margin-bottom:30px;
 }
 
-.hero-actions{
+.hero-buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:13px;
+    gap:12px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:15px 23px;
-    border-radius:9px;
-    font-size:13px;
+    min-height:48px;
+    padding:0 20px;
+    border-radius:10px;
+    font-size:14px;
     font-weight:800;
-    transition:.25s;
-    border:0;
+    border:1px solid transparent;
+    transition:.2s;
     cursor:pointer;
 }
 
 .btn-primary{
-    background:#087443;
+    background:var(--green);
     color:white;
-    box-shadow:0 10px 25px rgba(8,116,67,.18);
 }
 
 .btn-primary:hover{
+    background:var(--green-dark);
     transform:translateY(-2px);
 }
 
 .btn-secondary{
-    border:1px solid #d5ded9;
     background:white;
+    border-color:var(--border);
+    color:var(--dark);
 }
 
 .btn-secondary:hover{
-    border-color:#087443;
-    color:#087443;
+    border-color:var(--green);
+    color:var(--green);
 }
-
-
-/* ==============================
-   HERO CARD
-================================ */
 
 .hero-card{
-    background:#102019;
-    color:white;
-    border-radius:24px;
-    padding:34px;
-    box-shadow:0 25px 70px rgba(16,32,25,.2);
-    position:relative;
-    overflow:hidden;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:26px;
+    padding:32px;
+    box-shadow:var(--shadow);
 }
 
-.hero-card:after{
-    content:"";
-    position:absolute;
-    width:190px;
-    height:190px;
-    border-radius:50%;
-    background:#7b1732;
-    opacity:.25;
-    right:-70px;
-    top:-70px;
+.hero-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
 }
 
-.hero-card small{
-    color:#b9c8c1;
-    letter-spacing:2px;
-    font-weight:700;
+.hero-card-badge{
+    color:var(--green);
+    background:var(--green-light);
+    padding:7px 12px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:900;
 }
 
-.hero-card h2{
-    font-size:34px;
-    line-height:1.1;
-    margin:20px 0;
+.qatar-line{
+    height:5px;
+    background:linear-gradient(to right,var(--maroon) 0 33%,white 33% 66%,var(--green) 66%);
+    border-radius:20px;
+    margin:25px 0;
+}
+
+.hero-card h3{
+    color:var(--dark);
+    font-size:24px;
+    margin-bottom:10px;
 }
 
 .hero-card p{
-    color:#b9c8c1;
     font-size:14px;
+    margin:0;
 }
 
-.card-line{
-    height:1px;
-    background:rgba(255,255,255,.12);
-    margin:28px 0;
-}
-
-.card-stat{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding:11px 0;
-}
-
-.card-stat span:first-child{
-    color:#aab9b2;
-}
-
-.card-stat span:last-child{
-    font-weight:800;
-    text-align:right;
-}
-
-
-/* ==============================
-   TRUST
-================================ */
+/* TRUST */
 
 .trust{
-    background:#087443;
+    background:var(--dark);
     color:white;
 }
 
@@ -330,283 +359,326 @@ nav a:hover{
 }
 
 .trust-item{
-    padding:23px;
+    padding:24px 20px;
     text-align:center;
-    border-right:1px solid rgba(255,255,255,.18);
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1.5px;
+    border-right:1px solid rgba(255,255,255,.12);
 }
 
 .trust-item:last-child{
     border-right:0;
 }
 
+.trust-item strong{
+    display:block;
+    font-size:13px;
+    letter-spacing:1.4px;
+}
 
-/* ==============================
-   GENERAL
-================================ */
+.trust-item span{
+    color:#b7c6be;
+    font-size:11px;
+}
+
+/* GENERAL */
 
 section{
-    padding:95px 0;
+    padding:90px 0;
 }
 
 .section-head{
     max-width:700px;
-    margin-bottom:50px;
+    margin-bottom:45px;
 }
 
-.kicker{
-    color:#087443;
-    font-size:11px;
+.section-head.center{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.section-label{
+    color:var(--maroon);
+    font-size:12px;
     font-weight:900;
-    letter-spacing:2px;
-    margin-bottom:12px;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    margin-bottom:10px;
 }
 
 .section-head h2{
-    font-size:clamp(34px,4vw,53px);
-    line-height:1.05;
-    letter-spacing:-2px;
-    margin-bottom:18px;
+    color:var(--dark);
+    font-size:clamp(30px,4vw,48px);
+    line-height:1.1;
+    margin-bottom:15px;
+    letter-spacing:-1px;
 }
 
 .section-head p{
-    color:#68756f;
+    color:var(--muted);
 }
 
-
-/* ==============================
-   ABOUT
-================================ */
+/* ABOUT */
 
 .about{
-    background:white;
+    background:var(--white);
 }
 
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:70px;
+    gap:55px;
     align-items:center;
 }
 
 .about-box{
-    background:#f1f7f3;
-    border:1px solid #dceae2;
-    border-radius:20px;
-    padding:40px;
-}
-
-.about-box .big{
-    font-size:65px;
-    font-weight:900;
-    color:#087443;
-    line-height:1;
+    background:var(--light);
+    border:1px solid var(--border);
+    padding:35px;
+    border-radius:var(--radius);
 }
 
 .about-box h3{
-    margin:15px 0 10px;
-    font-size:24px;
+    color:var(--dark);
+    font-size:25px;
+    margin-bottom:15px;
 }
 
 .about-box p{
-    color:#65736c;
+    color:var(--muted);
+    margin-bottom:18px;
 }
 
+.check-list{
+    list-style:none;
+}
 
-/* ==============================
-   FOUNDER
-================================ */
+.check-list li{
+    margin:10px 0;
+    font-size:14px;
+    font-weight:700;
+    color:var(--dark);
+}
+
+.check-list li:before{
+    content:"✓";
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:22px;
+    height:22px;
+    margin-right:9px;
+    background:var(--green);
+    color:white;
+    border-radius:50%;
+    font-size:12px;
+}
+
+/* FOUNDER */
 
 .founder{
-    background:#102019;
-    color:white;
+    background:var(--light);
 }
 
 .founder-grid{
     display:grid;
     grid-template-columns:.7fr 1.3fr;
-    gap:60px;
+    gap:55px;
     align-items:center;
 }
 
-.founder-badge{
-    width:190px;
-    height:190px;
+.founder-card{
+    background:linear-gradient(145deg,var(--dark),#173a2a);
+    color:white;
+    border-radius:25px;
+    padding:38px;
+    min-height:310px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    box-shadow:var(--shadow);
+}
+
+.founder-initial{
+    width:80px;
+    height:80px;
     border-radius:50%;
-    background:#087443;
+    background:linear-gradient(135deg,var(--green),var(--maroon));
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:38px;
+    font-size:25px;
     font-weight:900;
-    border:8px solid rgba(255,255,255,.08);
+    margin-bottom:auto;
 }
 
-.founder h2{
-    font-size:46px;
-    line-height:1.05;
-    margin:12px 0;
+.founder-card h3{
+    font-size:25px;
 }
 
-.founder p{
-    color:#b6c4be;
-    max-width:650px;
+.founder-card p{
+    color:#b9c8c1;
+    font-size:13px;
 }
 
-.role{
-    color:#8fd2ae;
-    font-weight:800;
-    letter-spacing:2px;
-    font-size:12px;
+.founder-text h2{
+    color:var(--dark);
+    font-size:40px;
+    line-height:1.1;
+    margin-bottom:18px;
 }
 
+.founder-text p{
+    color:var(--muted);
+    margin-bottom:18px;
+}
 
-/* ==============================
-   SERVICES
-================================ */
+/* SERVICES */
 
 .services{
-    background:#f7faf8;
+    background:white;
 }
 
 .services-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.service{
-    background:white;
-    border:1px solid #e1e9e4;
-    border-radius:18px;
-    padding:30px;
-    transition:.25s;
-    position:relative;
-}
-
-.service:hover{
-    transform:translateY(-5px);
-    border-color:#b7d9c7;
-    box-shadow:0 18px 45px rgba(20,50,35,.08);
-}
-
-.service-number{
-    color:#087443;
-    font-weight:900;
-    font-size:12px;
-    letter-spacing:1px;
-}
-
-.service h3{
-    font-size:25px;
-    margin:14px 0 10px;
-}
-
-.service p{
-    color:#68756f;
-    font-size:14px;
-    margin-bottom:22px;
-}
-
-.service a{
-    color:#087443;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:.5px;
-}
-
-
-/* ==============================
-   TRAVEL
-================================ */
-
-.travel{
-    background:#7b1732;
-    color:white;
-    overflow:hidden;
-}
-
-.travel-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.travel .kicker{
-    color:#f2bdca;
-}
-
-.travel h2{
-    font-size:clamp(42px,5vw,65px);
-    line-height:.98;
-    letter-spacing:-2px;
-    margin-bottom:20px;
-}
-
-.travel p{
-    color:#f0dce1;
-    margin-bottom:28px;
-}
-
-.travel-box{
-    border:1px solid rgba(255,255,255,.22);
-    padding:35px;
-    border-radius:20px;
-    background:rgba(0,0,0,.1);
-}
-
-.travel-box strong{
-    display:block;
-    font-size:27px;
-    margin-bottom:8px;
-}
-
-
-/* ==============================
-   WHY
-================================ */
-
-.why{
-    background:white;
-}
-
-.why-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
-.why-card{
+.service-card{
+    position:relative;
     padding:28px;
-    border:1px solid #e3eae6;
-    border-radius:16px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:white;
+    transition:.25s;
+    overflow:hidden;
 }
 
-.why-card b{
-    font-size:13px;
-    color:#087443;
+.service-card:after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:3px;
+    background:linear-gradient(to right,var(--green),var(--maroon));
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.25s;
 }
 
-.why-card h3{
-    margin:12px 0 8px;
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.service-card:hover:after{
+    transform:scaleX(1);
+}
+
+.service-number{
+    color:var(--maroon);
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    color:var(--dark);
     font-size:19px;
+    margin-bottom:10px;
 }
 
-.why-card p{
-    color:#6b7771;
+.service-card p{
+    color:var(--muted);
     font-size:13px;
 }
 
+/* TRAVEL */
 
-/* ==============================
-   PROCESS
-================================ */
+.travel{
+    background:
+        linear-gradient(120deg,rgba(8,116,67,.97),rgba(5,92,53,.97)),
+        url("");
+    color:white;
+}
+
+.travel-grid{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:50px;
+    align-items:center;
+}
+
+.travel .section-label{
+    color:#d5b96d;
+}
+
+.travel h2{
+    font-size:clamp(32px,4vw,52px);
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.travel p{
+    color:#d1ded7;
+    max-width:650px;
+    margin-bottom:25px;
+}
+
+.travel-box{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+    padding:30px;
+    border-radius:22px;
+}
+
+.travel-box strong{
+    display:block;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.travel-box span{
+    color:#c9d9d0;
+    font-size:13px;
+}
+
+/* WHY */
+
+.why{
+    background:var(--light);
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.why-card{
+    padding:25px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:17px;
+}
+
+.why-card strong{
+    display:block;
+    color:var(--dark);
+    margin-bottom:8px;
+}
+
+.why-card span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* PROCESS */
 
 .process{
-    background:#f7faf8;
+    background:white;
 }
 
 .process-grid{
@@ -615,73 +687,93 @@ section{
     gap:15px;
 }
 
-.step{
-    background:white;
-    border-radius:16px;
-    padding:27px;
-    border:1px solid #e1e9e4;
+.process-card{
+    text-align:center;
+    padding:25px 15px;
 }
 
-.step-number{
-    font-size:28px;
+.process-number{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--green-light);
+    color:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
     font-weight:900;
-    color:#087443;
 }
 
-.step h3{
-    margin:12px 0 7px;
-    font-size:17px;
+.process-card h3{
+    color:var(--dark);
+    font-size:16px;
+    margin-bottom:8px;
 }
 
-.step p{
-    color:#6a7771;
-    font-size:13px;
+.process-card p{
+    color:var(--muted);
+    font-size:12px;
 }
 
-
-/* ==============================
-   CONTACT
-================================ */
+/* CONTACT */
 
 .contact{
-    background:white;
+    background:var(--light);
 }
 
 .contact-grid{
     display:grid;
-    grid-template-columns:.75fr 1.25fr;
-    gap:55px;
+    grid-template-columns:.8fr 1.2fr;
+    gap:40px;
+    align-items:start;
 }
 
 .contact-info{
-    display:grid;
-    gap:14px;
+    background:var(--dark);
+    color:white;
+    border-radius:22px;
+    padding:32px;
+}
+
+.contact-info h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.contact-info > p{
+    color:#b9c8c1;
+    font-size:14px;
+    margin-bottom:25px;
 }
 
 .contact-item{
-    border:1px solid #e1e9e4;
-    border-radius:14px;
-    padding:20px;
+    padding:15px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.contact-item:last-child{
+    border-bottom:0;
 }
 
 .contact-item small{
     display:block;
-    color:#087443;
+    color:#8fa49a;
     font-size:10px;
-    font-weight:900;
-    letter-spacing:1.5px;
-    margin-bottom:5px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 .contact-item strong{
-    font-size:15px;
+    font-size:14px;
 }
 
-.form{
-    background:#f5f8f6;
-    padding:30px;
-    border-radius:18px;
-    border:1px solid #e1e9e4;
+.contact-form{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:32px;
 }
 
 .form-grid{
@@ -691,186 +783,181 @@ section{
 }
 
 .form-group{
-    display:flex;
-    flex-direction:column;
-    gap:7px;
+    margin-bottom:15px;
 }
 
 .form-group.full{
-    grid-column:1/-1;
+    grid-column:1 / -1;
 }
 
-.form label{
-    font-size:11px;
+.form-group label{
+    display:block;
+    font-size:12px;
     font-weight:800;
-    color:#52605a;
+    color:var(--dark);
+    margin-bottom:6px;
 }
 
-.form input,
-.form select,
-.form textarea{
+.form-group input,
+.form-group select,
+.form-group textarea{
     width:100%;
-    border:1px solid #d9e3dd;
-    background:white;
-    border-radius:8px;
-    padding:13px;
-    font:inherit;
-    outline:none;
+    border:1px solid var(--border);
+    border-radius:9px;
+    padding:12px 13px;
+    outline:0;
+    background:#fbfdfc;
+    color:var(--dark);
 }
 
-.form input:focus,
-.form select:focus,
-.form textarea:focus{
-    border-color:#087443;
-}
-
-.form textarea{
-    min-height:130px;
+.form-group textarea{
+    min-height:120px;
     resize:vertical;
 }
 
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:var(--green);
+}
 
-/* ==============================
-   DISCLAIMER
-================================ */
+/* DISCLAIMER */
 
 .disclaimer{
-    background:#fff8fa;
-    border-top:1px solid #f0dce1;
-    border-bottom:1px solid #f0dce1;
+    padding:35px 0;
+    background:white;
 }
 
 .disclaimer-box{
-    max-width:900px;
-    margin:auto;
+    border-left:4px solid var(--maroon);
+    background:#fafafa;
+    padding:20px 22px;
+    border-radius:8px;
 }
 
-.disclaimer h3{
-    color:#7b1732;
-    margin-bottom:10px;
+.disclaimer-box strong{
+    color:var(--dark);
+    display:block;
+    margin-bottom:6px;
 }
 
-.disclaimer p{
-    color:#6c6668;
-    font-size:13px;
-    margin-bottom:10px;
+.disclaimer-box p{
+    color:var(--muted);
+    font-size:12px;
 }
 
-
-/* ==============================
-   FOOTER
-================================ */
+/* FOOTER */
 
 footer{
-    background:#0b1711;
+    background:#08150f;
     color:white;
-    padding:60px 0 25px;
+    padding:50px 0 20px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
-    gap:50px;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:30px;
+    padding-bottom:35px;
+    border-bottom:1px solid rgba(255,255,255,.10);
 }
 
-footer h3{
-    font-size:17px;
+.footer-col h3{
+    font-size:14px;
     margin-bottom:15px;
 }
 
-footer p,
-footer a{
-    color:#aab8b1;
-    font-size:13px;
+.footer-col p,
+.footer-col a{
+    display:block;
+    color:#9eaea6;
+    font-size:12px;
+    margin:7px 0;
 }
 
-.footer-links{
-    display:grid;
-    gap:8px;
+.footer-col a:hover{
+    color:white;
+}
+
+.footer-brand strong{
+    font-size:17px;
+    letter-spacing:1px;
+}
+
+.footer-brand p{
+    max-width:300px;
+    margin-top:12px;
 }
 
 .copyright{
-    border-top:1px solid rgba(255,255,255,.1);
-    margin-top:40px;
     padding-top:20px;
-    color:#7f8e87;
+    color:#72837b;
     font-size:11px;
     display:flex;
     justify-content:space-between;
+    gap:20px;
 }
 
+/* WHATSAPP */
 
-/* ==============================
-   WHATSAPP
-================================ */
-
-.whatsapp{
+.whatsapp-float{
     position:fixed;
     right:22px;
     bottom:22px;
-    width:58px;
-    height:58px;
+    width:56px;
+    height:56px;
     border-radius:50%;
-    background:#087443;
+    background:#25D366;
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:13px;
+    font-size:24px;
     font-weight:900;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
     z-index:999;
+    transition:.2s;
 }
 
+.whatsapp-float:hover{
+    transform:scale(1.08);
+}
 
-/* ==============================
-   TABLET / MOBILE
-================================ */
+/* RTL */
 
-@media(max-width:900px){
+body.rtl .eyebrow:before{
+    order:2;
+}
 
-    .nav{
-        min-height:76px;
-    }
+body.rtl .check-list li:before{
+    margin-right:0;
+    margin-left:9px;
+}
 
-    .menu-toggle{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-    }
+body.rtl .service-card:after{
+    transform-origin:right;
+}
+
+body.rtl .contact-info{
+    text-align:right;
+}
+
+body.rtl .whatsapp-float{
+    right:auto;
+    left:22px;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
 
     nav{
-        display:none;
-        position:absolute;
-        top:76px;
-        left:0;
-        right:0;
-        background:white;
-        border-top:1px solid #e5ebe7;
-        border-bottom:1px solid #e5ebe7;
-        padding:15px 4%;
-        flex-direction:column;
-        align-items:stretch;
-        gap:5px;
-        box-shadow:0 15px 30px rgba(0,0,0,.08);
-    }
-
-    nav.active{
-        display:flex;
+        gap:2px;
     }
 
     nav a{
-        padding:13px 10px;
-        border-radius:8px;
-    }
-
-    nav a:hover{
-        background:#f1f7f3;
-    }
-
-    .nav-btn{
-        text-align:center;
-        margin-top:5px;
+        padding:8px 8px;
+        font-size:12px;
     }
 
     .hero-grid,
@@ -881,95 +968,87 @@ footer a{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        padding:75px 0;
-    }
-
-    .hero h1{
-        letter-spacing:-2px;
-    }
-
     .services-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
     }
 
     .why-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:repeat(2,1fr);
     }
 
     .process-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:repeat(2,1fr);
     }
 
     .footer-grid{
-        grid-template-columns:1fr;
-        gap:30px;
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
+@media(max-width:760px){
 
-/* ==============================
-   SMALL MOBILE
-================================ */
-
-@media(max-width:600px){
-
-    .container{
-        width:min(92%,1180px);
+    .header-inner{
+        min-height:70px;
     }
 
-    section{
-        padding:70px 0;
+    .menu-toggle{
+        display:block;
     }
 
-    .logo{
-        gap:9px;
+    .header-right{
+        display:flex;
+        align-items:center;
+        gap:7px;
     }
 
-    .logo-mark{
-        width:40px;
-        height:40px;
-        border-radius:10px;
-        font-size:16px;
+    nav{
+        position:absolute;
+        top:70px;
+        left:4%;
+        right:4%;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        padding:12px;
+        background:white;
+        border:1px solid var(--border);
+        border-radius:15px;
+        box-shadow:var(--shadow);
     }
 
-    .logo-text strong{
-        font-size:12px;
-        letter-spacing:.8px;
+    nav.active{
+        display:flex;
     }
 
-    .logo-text span{
-        font-size:7px;
-        letter-spacing:1px;
+    nav a{
+        width:100%;
+        text-align:center;
+        padding:12px;
+    }
+
+    .language-switch{
+        order:1;
+    }
+
+    .menu-toggle{
+        order:2;
     }
 
     .hero{
-        padding:65px 0;
+        padding:65px 0 55px;
     }
 
     .hero h1{
-        font-size:44px;
-        letter-spacing:-2px;
+        font-size:43px;
+        letter-spacing:-1.5px;
     }
 
     .hero p{
-        font-size:15px;
+        font-size:16px;
     }
 
-    .hero-actions{
-        flex-direction:column;
-    }
-
-    .hero-actions .btn{
-        width:100%;
-    }
-
-    .hero-card{
-        padding:27px;
-    }
-
-    .hero-card h2{
-        font-size:29px;
+    section{
+        padding:65px 0;
     }
 
     .trust-grid{
@@ -978,15 +1057,17 @@ footer a{
 
     .trust-item{
         border-right:0;
-        border-bottom:1px solid rgba(255,255,255,.18);
+        border-bottom:1px solid rgba(255,255,255,.12);
     }
 
     .trust-item:last-child{
         border-bottom:0;
     }
 
+    .services-grid,
     .why-grid,
     .process-grid,
+    .footer-grid,
     .form-grid{
         grid-template-columns:1fr;
     }
@@ -995,107 +1076,71 @@ footer a{
         grid-column:auto;
     }
 
-    .founder-badge{
-        width:145px;
-        height:145px;
-        font-size:30px;
-    }
-
-    .founder h2{
-        font-size:38px;
-    }
-
-    .travel h2{
-        font-size:45px;
-    }
-
     .copyright{
         flex-direction:column;
-        gap:7px;
     }
 
-    .whatsapp{
-        width:52px;
-        height:52px;
-        right:16px;
-        bottom:16px;
+    .logo-text strong{
+        font-size:13px;
+    }
+
+    .logo-text span{
+        font-size:8px;
     }
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ==============================
-     HEADER
-================================ -->
+<!-- HEADER -->
 
 <header>
+<div class="container header-inner">
 
-<div class="container nav">
-
-<a href="#home" class="logo">
-
-<div class="logo-mark">RR</div>
-
-<div class="logo-text">
-
-<strong>RAAZ REBOOT GROUP</strong>
-
-<span>QATAR • BUSINESS • SERVICES</span>
-
-</div>
-
+<a href="#home" class="logo" onclick="closeMenu()">
+    <div class="logo-mark">RR</div>
+    <div class="logo-text">
+        <strong>RAAZ REBOOT GROUP</strong>
+        <span data-en="QATAR • BUSINESS • SERVICES" data-ar="قطر • أعمال • خدمات">QATAR • BUSINESS • SERVICES</span>
+    </div>
 </a>
 
+<div class="header-right">
 
-<button
-class="menu-toggle"
-onclick="toggleMenu()"
-aria-label="Open menu"
-aria-expanded="false"
->
-☰
+<div class="language-switch">
+    <button id="enBtn" class="active" onclick="setLanguage('en')">EN</button>
+    <button id="arBtn" onclick="setLanguage('ar')">العربية</button>
+</div>
+
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+    ☰
 </button>
-
 
 <nav id="mobileNav">
 
-<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#home" onclick="closeMenu()" data-en="Home" data-ar="الرئيسية">Home</a>
+<a href="#about" onclick="closeMenu()" data-en="About" data-ar="من نحن">About</a>
+<a href="#services" onclick="closeMenu()" data-en="Services" data-ar="الخدمات">Services</a>
+<a href="#why" onclick="closeMenu()" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+<a href="#contact" onclick="closeMenu()" data-en="Contact" data-ar="تواصل معنا">Contact</a>
 
-<a href="#about" onclick="closeMenu()">About</a>
-
-<a href="#services" onclick="closeMenu()">Services</a>
-
-<a href="#why" onclick="closeMenu()">Why Us</a>
-
-<a href="#contact" onclick="closeMenu()">Contact</a>
-
-<a
-class="nav-btn"
-href="https://wa.me/97471876497"
-target="_blank"
-rel="noopener"
->
-WhatsApp
-</a>
+<a class="nav-btn"
+   href="https://wa.me/97471876497"
+   target="_blank"
+   rel="noopener"
+   data-en="WhatsApp"
+   data-ar="واتساب">WhatsApp</a>
 
 </nav>
 
 </div>
-
+</div>
 </header>
 
 
-<main>
-
-
-<!-- ==============================
-     HERO
-================================ -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -1103,47 +1148,38 @@ WhatsApp
 
 <div>
 
-<div class="eyebrow">
-
-<i></i>
-
-QATAR BASED BUSINESS GROUP
-
+<div class="eyebrow"
+     data-en="QATAR BASED • MULTI-SERVICE GROUP"
+     data-ar="مجموعة متعددة الخدمات • مقرها قطر">
+QATAR BASED • MULTI-SERVICE GROUP
 </div>
 
-
 <h1>
-
-ONE TRUSTED GROUP.<br>
-
-<span>MULTIPLE SOLUTIONS.</span>
-
+    <span data-en="ONE TRUSTED GROUP." data-ar="مجموعة موثوقة واحدة.">ONE TRUSTED GROUP.</span><br>
+    <span data-en="MULTIPLE SOLUTIONS." data-ar="حلول متعددة.">MULTIPLE SOLUTIONS.</span>
 </h1>
 
-
-<p>
-
-Your trusted partner for business, property, technology,
-hospitality, online services, government-related assistance
-and travel support in Qatar.
-
+<p
+data-en="Your trusted partner for business, property, technology, hospitality, online services and professional support in Qatar."
+data-ar="شريككم الموثوق في الأعمال والعقارات والتكنولوجيا والضيافة والخدمات الإلكترونية والدعم المهني في قطر.">
+Your trusted partner for business, property, technology, hospitality, online services and professional support in Qatar.
 </p>
 
+<div class="hero-buttons">
 
-<div class="hero-actions">
-
-<a
-class="btn btn-primary"
-href="#services"
->
+<a class="btn btn-primary" href="#services"
+data-en="Explore Our Services"
+data-ar="استكشف خدماتنا">
 Explore Our Services
 </a>
 
-<a
-class="btn btn-secondary"
-href="#contact"
->
-Get a Consultation
+<a class="btn btn-secondary"
+href="https://wa.me/97471876497"
+target="_blank"
+rel="noopener"
+data-en="Talk to Us on WhatsApp"
+data-ar="تواصل معنا عبر واتساب">
+Talk to Us on WhatsApp
 </a>
 
 </div>
@@ -1153,88 +1189,64 @@ Get a Consultation
 
 <div class="hero-card">
 
-<small>RAAZ REBOOT GROUP</small>
+<div class="hero-card-top">
 
-<h2>
+<div class="hero-card-badge"
+data-en="QATAR • DOHA"
+data-ar="قطر • الدوحة">
+QATAR • DOHA
+</div>
 
-Business.<br>
-Property.<br>
-Technology.<br>
-Services.
+<strong>RR</strong>
 
-</h2>
+</div>
 
-<p>
+<div class="qatar-line"></div>
 
-One professional platform connecting multiple solutions
-for individuals, entrepreneurs and businesses in Qatar.
+<h3
+data-en="Business Made Simpler."
+data-ar="نجعل الأعمال أكثر سهولة.">
+Business Made Simpler.
+</h3>
 
+<p
+data-en="One group connecting practical services under one trusted name."
+data-ar="مجموعة واحدة تجمع الخدمات العملية تحت اسم موثوق واحد.">
+One group connecting practical services under one trusted name.
 </p>
 
-<div class="card-line"></div>
-
-
-<div class="card-stat">
-
-<span>Based in</span>
-
-<span>Doha, Qatar</span>
-
-</div>
-
-
-<div class="card-stat">
-
-<span>Service Divisions</span>
-
-<span>07</span>
-
-</div>
-
-
-<div class="card-stat">
-
-<span>Founder</span>
-
-<span>SANOAR HOSSEN</span>
-
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- ==============================
-     TRUST
-================================ -->
+<!-- TRUST -->
 
 <div class="trust">
 
 <div class="container trust-grid">
 
 <div class="trust-item">
-QATAR BASED
+<strong data-en="QATAR BASED" data-ar="مقرنا في قطر">QATAR BASED</strong>
+<span data-en="Serving customers in Qatar" data-ar="نخدم العملاء في قطر">Serving customers in Qatar</span>
 </div>
 
 <div class="trust-item">
-MULTI-SERVICE GROUP
+<strong data-en="MULTI-SERVICE GROUP" data-ar="مجموعة متعددة الخدمات">MULTI-SERVICE GROUP</strong>
+<span data-en="Multiple solutions under one group" data-ar="حلول متعددة تحت مجموعة واحدة">Multiple solutions under one group</span>
 </div>
 
 <div class="trust-item">
-PROFESSIONAL SUPPORT
+<strong data-en="PROFESSIONAL SUPPORT" data-ar="دعم احترافي">PROFESSIONAL SUPPORT</strong>
+<span data-en="Clear guidance and practical assistance" data-ar="إرشاد واضح ومساعدة عملية">Clear guidance and practical assistance</span>
 </div>
 
 </div>
-
 </div>
 
 
-<!-- ==============================
-     ABOUT
-================================ -->
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -1242,17 +1254,22 @@ PROFESSIONAL SUPPORT
 
 <div class="section-head">
 
-<div class="kicker">
-ABOUT RAAZ REBOOT
+<div class="section-label"
+data-en="ABOUT RAAZ REBOOT GROUP"
+data-ar="عن مجموعة رااز ريبوت">
+ABOUT RAAZ REBOOT GROUP
 </div>
 
-<h2>
+<h2
+data-en="Built to Make Life and Business Simpler."
+data-ar="صُممت لتجعل الحياة والأعمال أكثر سهولة.">
 Built to Make Life and Business Simpler.
 </h2>
 
-<p>
-RAAZ REBOOT GROUP brings multiple professional services
-together under one trusted group in Qatar.
+<p
+data-en="RAAZ REBOOT GROUP brings together practical business and service solutions for individuals, entrepreneurs and companies in Qatar."
+data-ar="تجمع مجموعة رااز ريبوت بين الحلول العملية للأعمال والخدمات للأفراد ورواد الأعمال والشركات في قطر.">
+RAAZ REBOOT GROUP brings together practical business and service solutions for individuals, entrepreneurs and companies in Qatar.
 </p>
 
 </div>
@@ -1262,115 +1279,149 @@ together under one trusted group in Qatar.
 
 <div>
 
-<p style="color:#65736c;font-size:16px;margin-bottom:20px;">
+<h3
+style="font-size:28px;color:var(--dark);margin-bottom:15px;"
+data-en="One Group. Multiple Solutions."
+data-ar="مجموعة واحدة. حلول متعددة.">
+One Group. Multiple Solutions.
+</h3>
 
-From property and hospitality to technology, business formation,
-online assistance, government-related procedures and travel support,
-our goal is simple: make the process easier, clearer and more convenient.
-
+<p
+style="color:var(--muted);margin-bottom:20px;"
+data-en="From property and hospitality to technology, company formation, online assistance, government-related procedures and travel support, our goal is to make services easier to access."
+data-ar="من العقارات والضيافة إلى التكنولوجيا وتأسيس الشركات والمساعدة الإلكترونية والإجراءات الحكومية ذات الصلة ودعم السفر، هدفنا هو تسهيل الوصول إلى الخدمات.">
+From property and hospitality to technology, company formation, online assistance, government-related procedures and travel support, our goal is to make services easier to access.
 </p>
 
+<ul class="check-list">
 
-<p style="color:#65736c;font-size:16px;">
+<li data-en="Qatar-focused service solutions" data-ar="حلول خدمات مخصصة للسوق القطري">Qatar-focused service solutions</li>
 
-We combine practical experience, technology and customer-focused
-support to connect different business and service needs through
-one professional platform.
+<li data-en="Practical support for individuals and businesses" data-ar="دعم عملي للأفراد والشركات">Practical support for individuals and businesses</li>
 
-</p>
+<li data-en="Clear communication and guidance" data-ar="تواصل وإرشاد واضح">Clear communication and guidance</li>
+
+<li data-en="Multiple services under one trusted group" data-ar="خدمات متعددة تحت مجموعة موثوقة واحدة">Multiple services under one trusted group</li>
+
+</ul>
 
 </div>
 
 
 <div class="about-box">
 
-<div class="big">
-01
-</div>
+<h3
+data-en="Our Vision"
+data-ar="رؤيتنا">
+Our Vision
+</h3>
 
-<h3>
-One Group. Multiple Solutions.
+<p
+data-en="To build a trusted Qatar-based service group that connects people, businesses and practical solutions through professionalism, technology and commitment."
+data-ar="بناء مجموعة خدمات موثوقة مقرها قطر تربط بين الأشخاص والشركات والحلول العملية من خلال الاحترافية والتكنولوجيا والالتزام.">
+To build a trusted Qatar-based service group that connects people, businesses and practical solutions through professionalism, technology and commitment.
+</p>
+
+<h3
+data-en="Our Values"
+data-ar="قيمنا">
+Our Values
 </h3>
 
 <p>
-
-A growing Qatar-based business group designed to provide
-practical solutions across different industries and service categories.
-
+<strong>INTEGRITY</strong> &nbsp; | &nbsp;
+<strong>INNOVATION</strong> &nbsp; | &nbsp;
+<strong>COMMITMENT</strong> &nbsp; | &nbsp;
+<strong>EXCELLENCE</strong>
 </p>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ==============================
-     FOUNDER
-================================ -->
+<!-- FOUNDER -->
 
 <section class="founder">
 
 <div class="container founder-grid">
 
-<div>
+<div class="founder-card">
 
-<div class="founder-badge">
-SH
+<div class="founder-initial">SH</div>
+
+<h3>SANOAR HOSSEN</h3>
+
+<p
+data-en="Founder & Managing Director"
+data-ar="المؤسس والعضو المنتدب">
+Founder & Managing Director
+</p>
+
 </div>
 
+
+<div class="founder-text">
+
+<div class="section-label"
+data-en="LEADERSHIP"
+data-ar="القيادة">
+LEADERSHIP
 </div>
 
-
-<div>
-
-<div class="role">
-FOUNDER & MANAGING DIRECTOR
-</div>
-
-<h2>
-SANOAR HOSSEN
+<h2
+data-en="Driven by Trust. Built for Growth."
+data-ar="الثقة أساسنا. والنمو هدفنا.">
+Driven by Trust. Built for Growth.
 </h2>
 
+<p
+data-en="RAAZ REBOOT GROUP was created with a simple idea: bring useful services together and make them easier for customers and businesses to access."
+data-ar="تم إنشاء مجموعة رااز ريبوت بفكرة بسيطة: جمع الخدمات المفيدة معًا وجعل الوصول إليها أسهل للعملاء والشركات.">
+RAAZ REBOOT GROUP was created with a simple idea: bring useful services together and make them easier for customers and businesses to access.
+</p>
+
 <p>
-
-Building a modern, service-focused business group in Qatar
-with a vision to connect business, property, technology
-and professional support services under one trusted destination.
-
+<strong>SANOAR HOSSEN</strong> —
+<span
+data-en="Founder & Managing Director of RAAZ REBOOT GROUP."
+data-ar="المؤسس والعضو المنتدب لمجموعة رااز ريبوت.">
+Founder & Managing Director of RAAZ REBOOT GROUP.
+</span>
 </p>
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- ==============================
-     SERVICES
-================================ -->
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
 <div class="container">
 
-<div class="section-head">
+<div class="section-head center">
 
-<div class="kicker">
-OUR GROUP
+<div class="section-label"
+data-en="OUR DIVISIONS"
+data-ar="قطاعاتنا">
+OUR DIVISIONS
 </div>
 
-<h2>
-Seven Divisions. One Trusted Group.
+<h2
+data-en="Multiple Services. One Trusted Group."
+data-ar="خدمات متعددة. مجموعة موثوقة واحدة.">
+Multiple Services. One Trusted Group.
 </h2>
 
-<p>
-Explore the professional services provided through
-RAAZ REBOOT GROUP.
+<p
+data-en="Explore our core service divisions designed to support individuals, entrepreneurs and companies in Qatar."
+data-ar="اكتشف قطاعات خدماتنا الأساسية المصممة لدعم الأفراد ورواد الأعمال والشركات في قطر.">
+Explore our core service divisions designed to support individuals, entrepreneurs and companies in Qatar.
 </p>
 
 </div>
@@ -1379,225 +1430,115 @@ RAAZ REBOOT GROUP.
 <div class="services-grid">
 
 
-<div class="service">
-
-<div class="service-number">
-01 — REAL ESTATE
-</div>
-
-<h3>
-RAAZ REBOOT REAL ESTATE
-</h3>
-
-<p>
-
-Property sales, rentals, buying and selling assistance,
-residential and commercial property support, property management
-and consultation.
-
+<div class="service-card">
+<div class="service-number">01</div>
+<h3 data-en="Real Estate" data-ar="العقارات">Real Estate</h3>
+<p data-en="Property-related support, rental assistance, property services and practical real estate solutions."
+data-ar="دعم متعلق بالعقارات والمساعدة في الإيجار وخدمات الممتلكات والحلول العقارية العملية.">
+Property-related support, rental assistance, property services and practical real estate solutions.
 </p>
-
-<a href="#contact">
-DISCUSS YOUR PROPERTY →
-</a>
-
 </div>
 
 
-<div class="service">
-
-<div class="service-number">
-02 — HOSPITALITY
-</div>
-
-<h3>
-Cleaning & Hospitality
-</h3>
-
-<p>
-
-Residential, office, commercial, deep cleaning,
-move-in and move-out cleaning, property cleaning,
-hospitality support and regular contracts.
-
+<div class="service-card">
+<div class="service-number">02</div>
+<h3 data-en="Cleaning & Hospitality" data-ar="التنظيف والضيافة">Cleaning & Hospitality</h3>
+<p data-en="Cleaning, hospitality and property support solutions designed for homes, businesses and facilities."
+data-ar="حلول التنظيف والضيافة ودعم الممتلكات للمنازل والشركات والمنشآت.">
+Cleaning, hospitality and property support solutions designed for homes, businesses and facilities.
 </p>
-
-<a href="#contact">
-REQUEST A SERVICE →
-</a>
-
 </div>
 
 
-<div class="service">
-
-<div class="service-number">
-03 — TECHNOLOGY
-</div>
-
-<h3>
-RAAZ REBOOT TECHNOLOGY
-</h3>
-
-<p>
-
-Website design and development, business websites,
-e-commerce, digital branding, IT support, automation
-and digital solutions.
-
+<div class="service-card">
+<div class="service-number">03</div>
+<h3 data-en="Technology Services" data-ar="الخدمات التقنية">Technology Services</h3>
+<p data-en="Website, digital, technology and online business support for individuals and companies."
+data-ar="خدمات المواقع الإلكترونية والحلول الرقمية والتقنية ودعم الأعمال عبر الإنترنت للأفراد والشركات.">
+Website, digital, technology and online business support for individuals and companies.
 </p>
-
-<a href="#contact">
-START A PROJECT →
-</a>
-
 </div>
 
 
-<div class="service">
-
-<div class="service-number">
-04 — BUSINESS
-</div>
-
-<h3>
-Company Formation
-</h3>
-
-<p>
-
-Business consultation, company setup support,
-documentation, activity guidance, registration support
-and ongoing business assistance.
-
+<div class="service-card">
+<div class="service-number">04</div>
+<h3 data-en="Business & Company Formation" data-ar="الأعمال وتأسيس الشركات">Business & Company Formation</h3>
+<p data-en="Business setup guidance, company formation support and practical assistance for entrepreneurs in Qatar."
+data-ar="إرشاد لتأسيس الأعمال ودعم تأسيس الشركات ومساعدة عملية لرواد الأعمال في قطر.">
+Business setup guidance, company formation support and practical assistance for entrepreneurs in Qatar.
 </p>
-
-<a href="#contact">
-BUILD YOUR BUSINESS →
-</a>
-
 </div>
 
 
-<div class="service">
-
-<div class="service-number">
-05 — ONLINE
-</div>
-
-<h3>
-Online Services
-</h3>
-
-<p>
-
-Online applications, forms, document preparation,
-digital assistance, online registrations and general
-online service support.
-
+<div class="service-card">
+<div class="service-number">05</div>
+<h3 data-en="Online Services" data-ar="الخدمات الإلكترونية">Online Services</h3>
+<p data-en="Digital applications, document assistance, online procedures and other convenient support services."
+data-ar="الطلبات الرقمية ومساعدة المستندات والإجراءات الإلكترونية وخدمات الدعم المريحة الأخرى.">
+Digital applications, document assistance, online procedures and other convenient support services.
 </p>
-
-<a href="#contact">
-GET ONLINE SUPPORT →
-</a>
-
 </div>
 
 
-<div class="service">
-
-<div class="service-number">
-06 — GOVERNMENT
-</div>
-
-<h3>
-Government Services
-</h3>
-
-<p>
-
-Assistance with eligible government-related applications,
-documentation, digital portals, application follow-up
-and administrative procedures.
-
+<div class="service-card">
+<div class="service-number">06</div>
+<h3 data-en="Government Services" data-ar="الخدمات الحكومية">Government Services</h3>
+<p data-en="Assistance with eligible government-related applications and procedures through the relevant authorities."
+data-ar="المساعدة في الطلبات والإجراءات الحكومية ذات الصلة من خلال الجهات المختصة."
+>
+Assistance with eligible government-related applications and procedures through the relevant authorities.
 </p>
-
-<a href="#contact">
-GET ASSISTANCE →
-</a>
-
 </div>
 
 
-<div class="service">
-
-<div class="service-number">
-07 — TRAVEL
-</div>
-
-<h3>
-Travel & Tourist Visa
-</h3>
-
-<p>
-
-Tourist visa assistance, visit visa support,
-document preparation, application guidance,
-submission assistance and travel documentation support.
-
+<div class="service-card">
+<div class="service-number">07</div>
+<h3 data-en="Travel & Tourist Visa Services" data-ar="خدمات السفر والتأشيرات السياحية">Travel & Tourist Visa Services</h3>
+<p data-en="Application assistance and processing support for selected tourist and travel visa requirements."
+data-ar="المساعدة في تقديم الطلبات ودعم إجراءات بعض متطلبات التأشيرات السياحية والسفر.">
+Application assistance and processing support for selected tourist and travel visa requirements.
 </p>
-
-<a href="#travel">
-START VISA PROCESS →
-</a>
-
 </div>
 
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ==============================
-     TRAVEL
-================================ -->
+<!-- TRAVEL -->
 
-<section class="travel" id="travel">
+<section class="travel">
 
 <div class="container travel-grid">
 
 <div>
 
-<div class="kicker">
-TRAVEL & VISA SERVICES
+<div class="section-label"
+data-en="TRAVEL SUPPORT"
+data-ar="دعم السفر">
+TRAVEL SUPPORT
 </div>
 
-<h2>
-
-YOUR JOURNEY<br>
-STARTS HERE.
-
+<h2
+data-en="YOUR JOURNEY STARTS HERE."
+data-ar="رحلتك تبدأ من هنا.">
+YOUR JOURNEY STARTS HERE.
 </h2>
 
-<p>
-
-Planning your next journey? RAAZ REBOOT GROUP provides
-practical assistance with tourist visa applications,
-visit visa documentation and travel-related processes.
-
+<p
+data-en="Planning your next journey? Our team can assist with selected tourist and travel visa application processes and related documentation."
+data-ar="تخطط لرحلتك القادمة؟ يمكن لفريقنا مساعدتك في بعض إجراءات طلبات التأشيرات السياحية والسفر والمستندات ذات الصلة.">
+Planning your next journey? Our team can assist with selected tourist and travel visa application processes and related documentation.
 </p>
 
-
-<a
-class="btn btn-primary"
-href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20am%20interested%20in%20tourist%20visa%20assistance."
+<a class="btn btn-secondary"
+href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20would%20like%20assistance%20with%20a%20travel%20or%20tourist%20visa."
 target="_blank"
 rel="noopener"
->
-START VISA PROCESS
+data-en="Start Visa Process"
+data-ar="ابدأ إجراءات التأشيرة">
+Start Visa Process
 </a>
 
 </div>
@@ -1605,47 +1546,48 @@ START VISA PROCESS
 
 <div class="travel-box">
 
-<strong>
-Planning Your Next Journey?
+<strong
+data-en="Professional Application Support"
+data-ar="دعم احترافي للطلبات">
+Professional Application Support
 </strong>
 
-<p>
-
-Speak with our team about your visa assistance
-and travel documentation requirements.
-
-</p>
-
-</div>
+<span
+data-en="Visa decisions and approvals remain the responsibility of the relevant embassy, immigration authority or government department."
+data-ar="تبقى قرارات وإصدار التأشيرات من مسؤولية السفارة أو جهة الهجرة أو الجهة الحكومية المختصة.">
+Visa decisions and approvals remain the responsibility of the relevant embassy, immigration authority or government department.
+</span>
 
 </div>
 
+</div>
 </section>
 
 
-<!-- ==============================
-     WHY US
-================================ -->
+<!-- WHY US -->
 
 <section class="why" id="why">
 
 <div class="container">
 
-<div class="section-head">
+<div class="section-head center">
 
-<div class="kicker">
+<div class="section-label"
+data-en="WHY RAAZ REBOOT"
+data-ar="لماذا رااز ريبوت">
 WHY RAAZ REBOOT
 </div>
 
-<h2>
-Designed Around Your Needs.
+<h2
+data-en="Why Choose Us?"
+data-ar="لماذا تختارنا؟">
+Why Choose Us?
 </h2>
 
-<p>
-
-Professional support across multiple service categories,
-all through one group.
-
+<p
+data-en="We focus on practical solutions, clear communication and professional support."
+data-ar="نركز على الحلول العملية والتواصل الواضح والدعم الاحترافي.">
+We focus on practical solutions, clear communication and professional support.
 </p>
 
 </div>
@@ -1653,124 +1595,48 @@ all through one group.
 
 <div class="why-grid">
 
+<div class="why-card">
+<strong data-en="One Group" data-ar="مجموعة واحدة">One Group</strong>
+<span data-en="Multiple service solutions under one trusted name." data-ar="حلول خدمات متعددة تحت اسم موثوق واحد.">Multiple service solutions under one trusted name.</span>
+</div>
 
 <div class="why-card">
-
-<b>01</b>
-
-<h3>
-One Trusted Group
-</h3>
-
-<p>
-Multiple services available through one professional group.
-</p>
-
+<strong data-en="Qatar Focused" data-ar="تركيز على قطر">Qatar Focused</strong>
+<span data-en="Services designed around the Qatar market and customers." data-ar="خدمات مصممة لتناسب السوق والعملاء في قطر.">Services designed around the Qatar market and customers.</span>
 </div>
-
 
 <div class="why-card">
-
-<b>02</b>
-
-<h3>
-Qatar Focused
-</h3>
-
-<p>
-Services designed around the needs of customers
-and businesses in Qatar.
-</p>
-
+<strong data-en="Professional" data-ar="احترافي">Professional</strong>
+<span data-en="Clear communication and organized service support." data-ar="تواصل واضح ودعم منظم للخدمات.">Clear communication and organized service support.</span>
 </div>
-
 
 <div class="why-card">
-
-<b>03</b>
-
-<h3>
-Professional Service
-</h3>
-
-<p>
-Clear communication and practical assistance
-throughout the process.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<b>04</b>
-
-<h3>
-Technology Driven
-</h3>
-
-<p>
-Digital tools and technology used to make services
-more convenient.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<b>05</b>
-
-<h3>
-Customer First
-</h3>
-
-<p>
-We focus on understanding the customer's actual needs
-before recommending a solution.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<b>06</b>
-
-<h3>
-End-to-End Support
-</h3>
-
-<p>
-Assistance from initial consultation through relevant
-stages of the process.
-</p>
-
-</div>
-
-
+<strong data-en="Technology Driven" data-ar="مدفوع بالتكنولوجيا">Technology Driven</strong>
+<span data-en="Using digital tools to make processes easier and faster." data-ar="استخدام الأدوات الرقمية لجعل الإجراءات أسهل وأسرع.">Using digital tools to make processes easier and faster.</span>
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-<!-- ==============================
-     PROCESS
-================================ -->
+<!-- PROCESS -->
 
 <section class="process">
 
 <div class="container">
 
-<div class="section-head">
+<div class="section-head center">
 
-<div class="kicker">
-HOW IT WORKS
+<div class="section-label"
+data-en="HOW WE WORK"
+data-ar="كيف نعمل">
+HOW WE WORK
 </div>
 
-<h2>
+<h2
+data-en="Simple. Clear. Professional."
+data-ar="بسيط. واضح. احترافي.">
 Simple. Clear. Professional.
 </h2>
 
@@ -1779,85 +1645,36 @@ Simple. Clear. Professional.
 
 <div class="process-grid">
 
-
-<div class="step">
-
-<div class="step-number">
-01
+<div class="process-card">
+<div class="process-number">01</div>
+<h3 data-en="Tell Us" data-ar="أخبرنا">Tell Us</h3>
+<p data-en="Tell us what service you need." data-ar="أخبرنا بالخدمة التي تحتاجها.">Tell us what service you need.</p>
 </div>
 
-<h3>
-Tell Us What You Need
-</h3>
-
-<p>
-Contact us and explain your requirement.
-</p>
-
+<div class="process-card">
+<div class="process-number">02</div>
+<h3 data-en="Understand" data-ar="نفهم احتياجك">Understand</h3>
+<p data-en="We review your requirements and explain the process." data-ar="نراجع متطلباتك ونشرح لك الإجراءات.">We review your requirements and explain the process.</p>
 </div>
 
-
-<div class="step">
-
-<div class="step-number">
-02
+<div class="process-card">
+<div class="process-number">03</div>
+<h3 data-en="Assist" data-ar="نساعدك">Assist</h3>
+<p data-en="We provide practical assistance with the selected service." data-ar="نقدم المساعدة العملية في الخدمة المختارة.">We provide practical assistance with the selected service.</p>
 </div>
 
-<h3>
-Find the Right Solution
-</h3>
-
-<p>
-We identify the appropriate service for your needs.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">
-03
-</div>
-
-<h3>
-We Assist With the Process
-</h3>
-
-<p>
-Our team helps with the relevant steps and documents.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">
-04
-</div>
-
-<h3>
-Move Forward
-</h3>
-
-<p>
-Complete the relevant process and move ahead.
-</p>
-
-</div>
-
-
+<div class="process-card">
+<div class="process-number">04</div>
+<h3 data-en="Complete" data-ar="إتمام الخدمة">Complete</h3>
+<p data-en="We guide you through the next steps until completion." data-ar="نرشدك خلال الخطوات التالية حتى إتمام الخدمة.">We guide you through the next steps until completion.</p>
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-<!-- ==============================
-     CONTACT
-================================ -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -1865,19 +1682,22 @@ Complete the relevant process and move ahead.
 
 <div class="section-head">
 
-<div class="kicker">
-CONTACT US
+<div class="section-label"
+data-en="GET IN TOUCH"
+data-ar="تواصل معنا">
+GET IN TOUCH
 </div>
 
-<h2>
+<h2
+data-en="Let's Talk About What You Need."
+data-ar="لنتحدث عما تحتاج إليه.">
 Let's Talk About What You Need.
 </h2>
 
-<p>
-
-Tell us what you are looking for and our team will help you
-identify the right service.
-
+<p
+data-en="Send us your requirements and our team will contact you."
+data-ar="أرسل لنا متطلباتك وسيتواصل معك فريقنا.">
+Send us your requirements and our team will contact you.
 </p>
 
 </div>
@@ -1888,165 +1708,119 @@ identify the right service.
 
 <div class="contact-info">
 
+<h3
+data-en="RAAZ REBOOT GROUP"
+data-ar="مجموعة رااز ريبوت">
+RAAZ REBOOT GROUP
+</h3>
 
-<div class="contact-item">
-
-<small>
-WHATSAPP
-</small>
-
-<strong>
-
-<a
-href="https://wa.me/97471876497"
-target="_blank"
-rel="noopener"
->
-+974 7187 6497
-</a>
-
-</strong>
-
-</div>
+<p
+data-en="Your trusted partner for business, property, technology and services in Qatar."
+data-ar="شريككم الموثوق في الأعمال والعقارات والتكنولوجيا والخدمات في قطر.">
+Your trusted partner for business, property, technology and services in Qatar.
+</p>
 
 
 <div class="contact-item">
-
-<small>
-EMAIL
-</small>
-
-<strong>
-
-<a href="mailto:raazrebootgroup@gmail.com">
-raazrebootgroup@gmail.com
-</a>
-
-</strong>
-
+<small data-en="Location" data-ar="الموقع">Location</small>
+<strong>Al Muntazah, Doha, Qatar</strong>
 </div>
-
 
 <div class="contact-item">
-
-<small>
-LOCATION
-</small>
-
-<strong>
-Al Muntazah, Doha, Qatar
-</strong>
-
+<small data-en="Business Hours" data-ar="ساعات العمل">Business Hours</small>
+<strong>4:00 PM – 12:00 AM</strong>
 </div>
-
 
 <div class="contact-item">
+<small data-en="WhatsApp" data-ar="واتساب">WhatsApp</small>
+<strong>+974 7187 6497</strong>
+</div>
 
-<small>
-BUSINESS HOURS
-</small>
-
-<strong>
-4:00 PM – 12:00 AM
-</strong>
+<div class="contact-item">
+<small data-en="Email" data-ar="البريد الإلكتروني">Email</small>
+<strong>raazrebootgroup@gmail.com</strong>
+</div>
 
 </div>
 
 
-</div>
+<div class="contact-form">
 
-
-<form
-class="form"
-onsubmit="sendWhatsApp(event)"
->
+<form onsubmit="sendWhatsApp(event)">
 
 <div class="form-grid">
 
-
 <div class="form-group">
 
-<label>
-FULL NAME
-</label>
+<label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
 
-<input
-id="name"
+<input id="name"
 type="text"
-placeholder="Your full name"
 required
->
+placeholder="Your name">
 
 </div>
 
 
 <div class="form-group">
 
-<label>
-PHONE
-</label>
+<label data-en="Phone" data-ar="رقم الهاتف">Phone</label>
 
-<input
-id="phone"
+<input id="phone"
 type="tel"
-placeholder="Your phone number"
 required
->
+placeholder="+974">
 
 </div>
 
 
 <div class="form-group">
 
-<label>
-EMAIL
-</label>
+<label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
 
-<input
-id="email"
+<input id="email"
 type="email"
-placeholder="Your email address"
->
+placeholder="Your email">
 
 </div>
 
 
 <div class="form-group">
 
-<label>
-SERVICE
-</label>
+<label data-en="Service" data-ar="الخدمة">Service</label>
 
-<select id="service">
+<select id="service" required>
 
-<option>Real Estate</option>
+<option value="" data-en="Select a service" data-ar="اختر الخدمة">
+Select a service
+</option>
 
-<option>
+<option value="Real Estate" data-en="Real Estate" data-ar="العقارات">
+Real Estate
+</option>
+
+<option value="Cleaning & Hospitality" data-en="Cleaning & Hospitality" data-ar="التنظيف والضيافة">
 Cleaning & Hospitality
 </option>
 
-<option>
-Technology
+<option value="Technology Services" data-en="Technology Services" data-ar="الخدمات التقنية">
+Technology Services
 </option>
 
-<option>
-Company Formation
+<option value="Business & Company Formation" data-en="Business & Company Formation" data-ar="الأعمال وتأسيس الشركات">
+Business & Company Formation
 </option>
 
-<option>
+<option value="Online Services" data-en="Online Services" data-ar="الخدمات الإلكترونية">
 Online Services
 </option>
 
-<option>
+<option value="Government Services" data-en="Government Services" data-ar="الخدمات الحكومية">
 Government Services
 </option>
 
-<option>
-Travel & Tourist Visa
-</option>
-
-<option>
-Other
+<option value="Travel & Tourist Visa Services" data-en="Travel & Tourist Visa Services" data-ar="خدمات السفر والتأشيرات السياحية">
+Travel & Tourist Visa Services
 </option>
 
 </select>
@@ -2056,94 +1830,60 @@ Other
 
 <div class="form-group full">
 
-<label>
-MESSAGE
-</label>
+<label data-en="Message" data-ar="الرسالة">Message</label>
 
-<textarea
-id="message"
-placeholder="Tell us what you need..."
+<textarea id="message"
 required
-></textarea>
+placeholder="Tell us what you need..."></textarea>
+
+</div>
 
 </div>
 
 
-<div class="form-group full">
-
-<button
-class="btn btn-primary"
+<button class="btn btn-primary"
 type="submit"
->
-SEND INQUIRY VIA WHATSAPP
+style="width:100%;"
+data-en="Send Inquiry on WhatsApp"
+data-ar="إرسال الطلب عبر واتساب">
+Send Inquiry on WhatsApp
 </button>
-
-</div>
-
-
-</div>
-
-
-<p style="font-size:11px;color:#75827c;margin-top:12px;">
-
-Your inquiry will open directly in WhatsApp.
-
-</p>
 
 </form>
 
-
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-<!-- ==============================
-     DISCLAIMER
-================================ -->
+<!-- DISCLAIMER -->
 
 <section class="disclaimer">
 
-<div class="container disclaimer-box">
+<div class="container">
 
-<h3>
-IMPORTANT SERVICE DISCLAIMER
-</h3>
+<div class="disclaimer-box">
 
+<strong
+data-en="Important Service Disclaimer"
+data-ar="إخلاء مسؤولية مهم">
+Important Service Disclaimer
+</strong>
 
-<p>
-
-RAAZ REBOOT GROUP is an independent service provider.
-We assist customers with eligible government-related
-procedures and applications. Government approvals,
-decisions, fees and processing times are determined
-by the relevant government authorities.
-
-</p>
-
-
-<p>
-
-Visa approvals are subject to the decision of the relevant
-embassy, immigration authority or government authority.
-RAAZ REBOOT GROUP provides application assistance
-and processing support and does not guarantee visa approval.
-
+<p
+data-en="RAAZ REBOOT GROUP is an independent service provider. We assist customers with eligible government-related procedures and applications. Government approvals, decisions, official fees and processing times are determined by the relevant authorities. RAAZ REBOOT GROUP does not claim to be a government entity or government partner and does not guarantee government or visa approval."
+data-ar="مجموعة رااز ريبوت هي مزود خدمات مستقل. نساعد العملاء في الإجراءات والطلبات الحكومية المؤهلة ذات الصلة. تحدد الجهات المختصة الموافقات والقرارات والرسوم الرسمية وأوقات المعالجة. لا تدعي مجموعة رااز ريبوت أنها جهة حكومية أو شريك حكومي، ولا تضمن الموافقة على الطلبات الحكومية أو التأشيرات.">
+RAAZ REBOOT GROUP is an independent service provider. We assist customers with eligible government-related procedures and applications. Government approvals, decisions, official fees and processing times are determined by the relevant authorities. RAAZ REBOOT GROUP does not claim to be a government entity or government partner and does not guarantee government or visa approval.
 </p>
 
 </div>
-
+</div>
 </section>
 
 
-</main>
-
-
-<!-- ==============================
-     FOOTER
-================================ -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2152,92 +1892,56 @@ and processing support and does not guarantee visa approval.
 <div class="footer-grid">
 
 
-<div>
+<div class="footer-col footer-brand">
 
-<h3>
-RAAZ REBOOT GROUP
-</h3>
+<strong>RAAZ REBOOT GROUP</strong>
 
-<p>
+<p
+data-en="ONE TRUSTED GROUP. MULTIPLE SOLUTIONS."
+data-ar="مجموعة موثوقة واحدة. حلول متعددة.">
 ONE TRUSTED GROUP. MULTIPLE SOLUTIONS.
 </p>
 
-<p style="margin-top:10px;">
-
-Your trusted partner for business, property,
-technology and services in Qatar.
-
+<p
+data-en="Your Trusted Partner for Business, Property, Technology & Services in Qatar."
+data-ar="شريككم الموثوق في الأعمال والعقارات والتكنولوجيا والخدمات في قطر.">
+Your Trusted Partner for Business, Property, Technology & Services in Qatar.
 </p>
 
 </div>
 
 
-<div>
+<div class="footer-col">
 
-<h3>
-COMPANY
-</h3>
+<h3 data-en="Services" data-ar="الخدمات">Services</h3>
 
-<div class="footer-links">
-
-<a href="#about">
-About Us
-</a>
-
-<a href="#services">
-Our Group
-</a>
-
-<a href="#why">
-Why Choose Us
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-</div>
+<a href="#services" data-en="Real Estate" data-ar="العقارات">Real Estate</a>
+<a href="#services" data-en="Cleaning & Hospitality" data-ar="التنظيف والضيافة">Cleaning & Hospitality</a>
+<a href="#services" data-en="Technology" data-ar="التكنولوجيا">Technology</a>
+<a href="#services" data-en="Company Formation" data-ar="تأسيس الشركات">Company Formation</a>
 
 </div>
 
 
-<div>
+<div class="footer-col">
 
-<h3>
-SERVICES
-</h3>
+<h3 data-en="More Services" data-ar="خدمات أخرى">More Services</h3>
 
-<div class="footer-links">
-
-<a href="#services">
-Real Estate
-</a>
-
-<a href="#services">
-Cleaning & Hospitality
-</a>
-
-<a href="#services">
-Technology
-</a>
-
-<a href="#services">
-Company Formation
-</a>
-
-<a href="#services">
-Online Services
-</a>
-
-<a href="#services">
-Government Services
-</a>
-
-<a href="#travel">
-Travel & Visa
-</a>
+<a href="#services" data-en="Online Services" data-ar="الخدمات الإلكترونية">Online Services</a>
+<a href="#services" data-en="Government Services" data-ar="الخدمات الحكومية">Government Services</a>
+<a href="#services" data-en="Travel & Visa" data-ar="السفر والتأشيرات">Travel & Visa</a>
 
 </div>
+
+
+<div class="footer-col">
+
+<h3 data-en="Contact" data-ar="تواصل معنا">Contact</h3>
+
+<a href="tel:+97471876497">+974 7187 6497</a>
+<a href="tel:+97451133654">+974 5113 3654</a>
+<a href="mailto:raazrebootgroup@gmail.com">raazrebootgroup@gmail.com</a>
+<a href="https://wa.me/97471876497" target="_blank" rel="noopener">WhatsApp</a>
 
 </div>
 
@@ -2248,42 +1952,80 @@ Travel & Visa
 <div class="copyright">
 
 <span>
-© 2026 RAAZ REBOOT GROUP. All Rights Reserved.
+© <span id="year"></span> RAAZ REBOOT GROUP.
+<span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span>
 </span>
 
 <span>
-Qatar
+SANOAR HOSSEN — Founder & Managing Director
 </span>
 
 </div>
 
 </div>
-
 </footer>
 
 
-<!-- ==============================
-     FLOATING WHATSAPP
-================================ -->
+<!-- WHATSAPP -->
 
-<a
-class="whatsapp"
+<a class="whatsapp-float"
 href="https://wa.me/97471876497"
 target="_blank"
 rel="noopener"
-aria-label="Contact RAAZ REBOOT GROUP on WhatsApp"
->
-WA
+aria-label="WhatsApp">
+✆
 </a>
 
 
-<!-- ==============================
-     JAVASCRIPT
-================================ -->
-
 <script>
 
-/* MOBILE MENU */
+let currentLanguage = "en";
+
+function setLanguage(language){
+
+    currentLanguage = language;
+
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+
+    document.body.classList.toggle("rtl", language === "ar");
+
+    document.getElementById("enBtn").classList.toggle(
+        "active",
+        language === "en"
+    );
+
+    document.getElementById("arBtn").classList.toggle(
+        "active",
+        language === "ar"
+    );
+
+    document.querySelectorAll("[data-en]").forEach(function(element){
+
+        if(element.tagName === "INPUT" || element.tagName === "TEXTAREA"){
+
+            element.placeholder =
+                element.getAttribute("data-" + language) || element.placeholder;
+
+        }else{
+
+            element.textContent =
+                element.getAttribute("data-" + language);
+
+        }
+
+    });
+
+    document.querySelectorAll("option[data-en]").forEach(function(option){
+
+        option.textContent =
+            option.getAttribute("data-" + language);
+
+    });
+
+    localStorage.setItem("raazLanguage", language);
+}
+
 
 function toggleMenu(){
 
@@ -2298,11 +2040,8 @@ function toggleMenu(){
         "aria-expanded",
         isOpen ? "true" : "false"
     );
-
 }
 
-
-/* CLOSE MOBILE MENU */
 
 function closeMenu(){
 
@@ -2315,11 +2054,8 @@ function closeMenu(){
         "aria-expanded",
         "false"
     );
-
 }
 
-
-/* WHATSAPP CONTACT FORM */
 
 function sendWhatsApp(event){
 
@@ -2361,11 +2097,27 @@ function sendWhatsApp(event){
         "_blank",
         "noopener"
     );
+}
+
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+const savedLanguage =
+    localStorage.getItem("raazLanguage");
+
+if(savedLanguage === "ar"){
+
+    setLanguage("ar");
+
+}else{
+
+    setLanguage("en");
 
 }
 
 </script>
-
 
 </body>
 </html>
