@@ -4,15 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RAAZ REBOOT GROUP | Business, Property, Technology & Services in Qatar</title>
+<title>RAAZ REBOOT GROUP | Qatar Based Business Group</title>
 
-<meta name="description" content="RAAZ REBOOT GROUP is a Qatar-based multi-service group providing real estate, cleaning and hospitality, technology, company formation, online services, government assistance and travel visa support.">
-<meta name="keywords" content="RAAZ REBOOT GROUP, company formation Qatar, business setup Qatar, real estate Qatar, cleaning services Qatar, hospitality Qatar, technology services Qatar, online services Qatar, government services Qatar, tourist visa Qatar">
-<meta name="author" content="SANOAR HOSSEN">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="description" content="RAAZ REBOOT GROUP — Qatar based business group providing Real Estate, Cleaning & Hospitality, Technology, Company Formation, Online Services, Government Services and Travel & Tourist Visa Services.">
+<meta name="keywords" content="RAAZ REBOOT GROUP, Qatar business group, company formation Qatar, real estate Qatar, cleaning services Qatar, technology Qatar, tourist visa Qatar, government services Qatar">
+<meta name="author" content="RAAZ REBOOT GROUP">
 
 <style>
 :root{
@@ -22,11 +18,9 @@
     --maroon-dark:#650f29;
     --maroon-light:#f7e9ee;
     --gray:#666666;
-    --gray-dark:#222222;
     --light:#f7f7f7;
     --border:#e5e5e5;
-    --shadow:0 20px 60px rgba(0,0,0,.09);
-    --radius:20px;
+    --shadow:0 18px 50px rgba(0,0,0,.08);
 }
 
 *{
@@ -37,19 +31,20 @@
 }
 
 html{
-    scroll-padding-top:90px;
+    scroll-behavior:smooth;
 }
 
 body{
-    font-family:"Inter","Cairo",Arial,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     color:var(--black);
     background:var(--white);
-    line-height:1.65;
+    line-height:1.7;
     overflow-x:hidden;
 }
 
 body.rtl{
-    font-family:"Cairo","Inter",Arial,sans-serif;
+    direction:rtl;
+    text-align:right;
 }
 
 img{
@@ -58,8 +53,8 @@ img{
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 button,
@@ -74,224 +69,44 @@ textarea{
     margin:auto;
 }
 
-.section{
-    padding:100px 0;
-}
-
-.section-head{
-    max-width:760px;
-    margin-bottom:55px;
+section{
+    padding:95px 0;
 }
 
 .section-label{
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
+    display:inline-block;
     color:var(--maroon);
     font-size:12px;
     font-weight:900;
     letter-spacing:2px;
     text-transform:uppercase;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
-.section-label::before{
-    content:"";
-    width:28px;
-    height:3px;
-    background:var(--maroon);
-    border-radius:10px;
-}
-
-.section-head h2{
+.section-title{
     font-size:clamp(32px,4vw,52px);
     line-height:1.1;
-    letter-spacing:-1.5px;
     margin-bottom:18px;
+    font-weight:900;
 }
 
-.section-head p{
+.section-text{
+    max-width:720px;
     color:var(--gray);
     font-size:17px;
-}
-
-/* HEADER */
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid var(--border);
-}
-
-.navbar{
-    min-height:82px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:13px;
-    min-width:220px;
-}
-
-.brand img{
-    width:58px;
-    height:58px;
-    object-fit:contain;
-}
-
-.brand-text strong{
-    display:block;
-    font-size:15px;
-    line-height:1.15;
-    letter-spacing:1.1px;
-    white-space:nowrap;
-}
-
-.brand-text span{
-    display:block;
-    margin-top:4px;
-    color:var(--maroon);
-    font-size:8px;
-    font-weight:900;
-    letter-spacing:1.4px;
-    line-height:1.2;
-    white-space:nowrap;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-nav a{
-    font-size:13px;
-    font-weight:700;
-    transition:.25s;
-}
-
-nav a:hover{
-    color:var(--maroon);
-}
-
-.nav-btn{
-    background:var(--maroon);
-    color:var(--white)!important;
-    padding:11px 17px;
-    border-radius:9px;
-}
-
-.nav-btn:hover{
-    background:var(--maroon-dark);
-}
-
-.language{
-    display:flex;
-    align-items:center;
-    border:1px solid var(--border);
-    border-radius:9px;
-    overflow:hidden;
-}
-
-.language button{
-    border:0;
-    background:var(--white);
-    padding:8px 10px;
-    cursor:pointer;
-    font-size:12px;
-    font-weight:800;
-}
-
-.language button.active{
-    background:var(--maroon);
-    color:var(--white);
-}
-
-.menu-toggle{
-    display:none;
-    width:42px;
-    height:42px;
-    border:1px solid var(--border);
-    border-radius:9px;
-    background:var(--white);
-    cursor:pointer;
-    font-size:23px;
-}
-
-/* HERO */
-.hero{
-    padding:165px 0 90px;
-    background:
-        radial-gradient(circle at 90% 15%,rgba(138,21,56,.10),transparent 30%),
-        linear-gradient(135deg,#fff 0%,#fafafa 100%);
-    position:relative;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    gap:70px;
-    align-items:center;
-}
-
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 13px;
-    background:var(--maroon-light);
-    color:var(--maroon);
-    border-radius:50px;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1.2px;
-    margin-bottom:22px;
-}
-
-.hero h1{
-    font-size:clamp(44px,6vw,76px);
-    line-height:.98;
-    letter-spacing:-3px;
-    margin-bottom:25px;
-}
-
-.hero h1 span{
-    color:var(--maroon);
-}
-
-.hero-text{
-    max-width:650px;
-    color:var(--gray);
-    font-size:18px;
-    margin-bottom:32px;
-}
-
-.hero-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:13px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:9px;
-    min-height:50px;
-    padding:0 21px;
-    border-radius:10px;
-    font-size:13px;
-    font-weight:900;
-    transition:.25s;
+    gap:10px;
+    padding:15px 24px;
+    border-radius:8px;
+    font-weight:800;
+    border:2px solid transparent;
+    transition:.3s ease;
+    cursor:pointer;
 }
 
 .btn-primary{
@@ -305,8 +120,9 @@ nav a:hover{
 }
 
 .btn-outline{
-    border:1px solid var(--black);
     background:var(--white);
+    color:var(--black);
+    border-color:var(--black);
 }
 
 .btn-outline:hover{
@@ -314,74 +130,251 @@ nav a:hover{
     color:var(--white);
 }
 
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:.7s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(12px);
+}
+
+.navbar{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+}
+
+.logo-text strong{
+    display:block;
+    font-size:15px;
+    letter-spacing:1.1px;
+    line-height:1.2;
+    white-space:nowrap;
+}
+
+.logo-text span{
+    display:block;
+    margin-top:4px;
+    color:var(--maroon);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1.4px;
+    line-height:1.2;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+nav a{
+    font-size:13px;
+    font-weight:800;
+    transition:.25s ease;
+}
+
+nav a:hover{
+    color:var(--maroon);
+}
+
+.nav-btn{
+    background:var(--maroon);
+    color:var(--white);
+    padding:10px 17px;
+    border-radius:7px;
+}
+
+.nav-btn:hover{
+    background:var(--maroon-dark);
+    color:var(--white);
+}
+
+.language-switch{
+    display:flex;
+    border:1px solid var(--border);
+    border-radius:7px;
+    overflow:hidden;
+}
+
+.language-switch button{
+    border:0;
+    background:var(--white);
+    padding:7px 10px;
+    cursor:pointer;
+    font-size:12px;
+    font-weight:800;
+}
+
+.language-switch button.active{
+    background:var(--maroon);
+    color:var(--white);
+}
+
+.menu-toggle{
+    display:none;
+    border:0;
+    background:var(--black);
+    color:var(--white);
+    width:42px;
+    height:42px;
+    border-radius:7px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:calc(100vh - 82px);
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at 90% 20%,rgba(138,21,56,.10),transparent 30%),
+        var(--white);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
+    align-items:center;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--maroon-light);
+    color:var(--maroon);
+    padding:8px 13px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(45px,6vw,82px);
+    line-height:.98;
+    font-weight:950;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--maroon);
+}
+
+.hero p{
+    max-width:680px;
+    color:var(--gray);
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
 .hero-card{
     background:var(--black);
     color:var(--white);
-    border-radius:28px;
-    padding:35px;
-    min-height:430px;
+    padding:45px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
     position:relative;
     overflow:hidden;
-    box-shadow:var(--shadow);
 }
 
-.hero-card::before{
+.hero-card:before{
     content:"";
     position:absolute;
-    width:260px;
-    height:260px;
-    border:45px solid var(--maroon);
+    width:220px;
+    height:220px;
     border-radius:50%;
-    right:-100px;
-    top:-100px;
+    background:var(--maroon);
+    top:-90px;
+    right:-80px;
     opacity:.8;
 }
 
 .hero-card-logo{
-    width:145px;
-    height:145px;
-    object-fit:contain;
+    position:relative;
+    z-index:2;
     background:var(--white);
-    padding:12px;
-    border-radius:20px;
-    margin-bottom:45px;
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:30px;
+}
+
+.hero-card-logo img{
+    width:180px;
+    height:100px;
+    object-fit:contain;
+    margin:auto;
 }
 
 .hero-card h3{
+    position:relative;
+    z-index:2;
     font-size:27px;
-    line-height:1.15;
-    max-width:380px;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .hero-card p{
-    color:#d4d4d4;
-    max-width:390px;
-}
-
-.hero-card-line{
-    width:60px;
-    height:4px;
-    background:var(--maroon);
-    margin-top:25px;
+    position:relative;
+    z-index:2;
+    color:#ddd;
+    font-size:15px;
+    margin:0;
 }
 
 /* TRUST */
-.trust{
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    background:var(--white);
+.trust-bar{
+    background:var(--black);
+    color:var(--white);
+    padding:25px 0;
 }
 
 .trust-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
+    text-align:center;
 }
 
 .trust-item{
-    padding:28px 20px;
-    text-align:center;
-    border-right:1px solid var(--border);
+    padding:10px;
+    border-right:1px solid #333;
 }
 
 .trust-item:last-child{
@@ -390,184 +383,139 @@ nav a:hover{
 
 .trust-item strong{
     display:block;
+    color:var(--white);
     font-size:13px;
-    letter-spacing:1px;
+    letter-spacing:1.4px;
 }
 
 .trust-item span{
-    color:var(--gray);
+    display:block;
+    color:#aaa;
     font-size:11px;
+    margin-top:4px;
 }
 
 /* ABOUT */
 .about-grid{
     display:grid;
-    grid-template-columns:.9fr 1.1fr;
+    grid-template-columns:1fr 1fr;
     gap:70px;
     align-items:center;
 }
 
-.about-visual{
-    background:var(--black);
-    border-radius:25px;
-    min-height:480px;
-    padding:45px;
-    color:var(--white);
-    position:relative;
-    overflow:hidden;
-}
-
-.about-visual::after{
-    content:"";
-    position:absolute;
-    width:280px;
-    height:280px;
-    border:35px solid var(--maroon);
-    border-radius:50%;
-    bottom:-150px;
-    right:-100px;
-}
-
-.about-logo{
-    width:160px;
-    height:160px;
-    object-fit:contain;
-    background:white;
+.about-logo-box{
+    background:var(--light);
+    border:1px solid var(--border);
+    min-height:390px;
     border-radius:20px;
-    padding:14px;
-    margin-bottom:55px;
-}
-
-.about-number{
-    font-size:72px;
-    line-height:1;
-    font-weight:900;
-    color:var(--maroon);
-}
-
-.about-small{
-    color:#ddd;
-    font-size:14px;
-    max-width:250px;
-}
-
-.about-content h2{
-    font-size:clamp(32px,4vw,50px);
-    line-height:1.1;
-    letter-spacing:-1.5px;
-    margin-bottom:22px;
-}
-
-.about-content>p{
-    color:var(--gray);
-    font-size:17px;
-    margin-bottom:30px;
-}
-
-.check-list{
-    display:grid;
-    gap:14px;
-}
-
-.check{
-    display:flex;
-    gap:12px;
-    align-items:flex-start;
-    font-weight:700;
-}
-
-.check i{
-    width:23px;
-    height:23px;
-    flex:0 0 23px;
-    background:var(--maroon);
-    color:var(--white);
-    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:12px;
-    font-style:normal;
-    margin-top:2px;
+    padding:50px;
 }
 
-/* FOUNDER */
-.founder{
+.about-logo-box img{
+    width:min(350px,90%);
+    max-height:260px;
+    object-fit:contain;
+}
+
+.about-points{
+    margin-top:28px;
+    display:grid;
+    gap:13px;
+}
+
+.about-point{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.about-point b{
+    color:var(--maroon);
+    font-size:20px;
+}
+
+.about-point span{
+    color:var(--gray);
+}
+
+/* PEOPLE */
+.people-section{
     background:var(--light);
 }
 
-.founder-grid{
+.people-grid{
     display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:70px;
-    align-items:center;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:45px;
 }
 
-.founder-photo{
+.person-card{
     background:var(--white);
-    border-radius:25px;
-    padding:12px;
-    box-shadow:var(--shadow);
     border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
-.founder-photo img{
+.person-image{
+    height:390px;
+    background:var(--maroon-light);
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    overflow:hidden;
+}
+
+.person-image img{
     width:100%;
-    height:500px;
+    height:100%;
     object-fit:cover;
-    object-position:center top;
-    border-radius:17px;
 }
 
-.founder-content h2{
-    font-size:clamp(34px,4vw,52px);
-    line-height:1.05;
+.person-info{
+    padding:25px;
+}
+
+.person-info .role{
+    display:inline-block;
+    color:var(--maroon);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:7px;
+}
+
+.person-info h3{
+    font-size:25px;
+    line-height:1.2;
     margin-bottom:8px;
 }
 
-.founder-title{
-    color:var(--maroon);
-    font-weight:900;
-    letter-spacing:1px;
-    margin-bottom:25px;
-}
-
-.founder-content p{
+.person-info p{
     color:var(--gray);
-    font-size:17px;
-    margin-bottom:25px;
-}
-
-.signature{
-    border-left:4px solid var(--maroon);
-    padding-left:18px;
-}
-
-.signature strong{
-    display:block;
-    font-size:18px;
-}
-
-.signature span{
-    color:var(--gray);
-    font-size:13px;
+    font-size:14px;
 }
 
 /* SERVICES */
 .services-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:45px;
 }
 
 .service-card{
     border:1px solid var(--border);
-    border-radius:20px;
-    padding:30px;
+    padding:28px;
+    border-radius:15px;
     background:var(--white);
-    transition:.3s;
-    position:relative;
-    overflow:hidden;
+    transition:.3s ease;
+    min-height:245px;
 }
 
 .service-card:hover{
@@ -577,14 +525,14 @@ nav a:hover{
 }
 
 .service-number{
-    font-size:12px;
-    font-weight:900;
     color:var(--maroon);
+    font-weight:900;
+    font-size:12px;
     letter-spacing:1px;
 }
 
 .service-card h3{
-    font-size:21px;
+    font-size:20px;
     line-height:1.2;
     margin:18px 0 12px;
 }
@@ -592,189 +540,123 @@ nav a:hover{
 .service-card p{
     color:var(--gray);
     font-size:14px;
-    margin-bottom:22px;
-}
-
-.service-card a{
-    color:var(--maroon);
-    font-size:12px;
-    font-weight:900;
-}
-
-.service-card.featured{
-    background:var(--black);
-    color:var(--white);
-    border-color:var(--black);
-}
-
-.service-card.featured p{
-    color:#ccc;
-}
-
-.service-card.featured a{
-    color:var(--white);
-}
-
-.service-card.featured .service-number{
-    color:#e99ab2;
 }
 
 /* TRAVEL */
 .travel{
     background:var(--black);
     color:var(--white);
-    position:relative;
-    overflow:hidden;
-}
-
-.travel::before{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:600px;
-    border:100px solid var(--maroon);
-    border-radius:50%;
-    right:-280px;
-    top:-250px;
-    opacity:.6;
 }
 
 .travel-grid{
-    position:relative;
     display:grid;
-    grid-template-columns:1fr .8fr;
-    gap:70px;
+    grid-template-columns:1fr .7fr;
+    gap:60px;
     align-items:center;
 }
 
-.travel h2{
-    font-size:clamp(36px,5vw,64px);
-    line-height:1.05;
-    letter-spacing:-2px;
-    margin-bottom:22px;
+.travel .section-label{
+    color:#d89bad;
 }
 
-.travel h2 span{
-    color:#d9809d;
-}
-
-.travel p{
-    color:#ccc;
-    max-width:650px;
-    font-size:17px;
-    margin-bottom:30px;
+.travel .section-text{
+    color:#bbb;
 }
 
 .travel-box{
     border:1px solid #333;
-    border-radius:22px;
-    padding:30px;
-    background:#090909;
+    border-radius:18px;
+    padding:35px;
+    background:#0b0b0b;
 }
 
 .travel-box strong{
     display:block;
-    font-size:18px;
-    margin-bottom:20px;
+    color:var(--white);
+    margin-bottom:8px;
 }
 
-.travel-list{
-    display:grid;
-    gap:12px;
-}
-
-.travel-list div{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding-bottom:12px;
-    border-bottom:1px solid #292929;
-    font-size:13px;
-}
-
-.travel-list span{
-    color:#aaa;
+.travel-box span{
+    display:block;
+    color:#999;
+    font-size:14px;
+    margin-bottom:18px;
 }
 
 /* WHY */
 .why{
-    background:var(--light);
+    background:var(--maroon);
+    color:var(--white);
+}
+
+.why .section-label{
+    color:#f3ccd7;
+}
+
+.why .section-text{
+    color:#f0dfe4;
 }
 
 .why-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
+    margin-top:45px;
 }
 
 .why-card{
-    background:var(--white);
-    border:1px solid var(--border);
-    padding:28px;
-    border-radius:18px;
-}
-
-.why-icon{
-    width:45px;
-    height:45px;
-    border-radius:12px;
-    background:var(--maroon);
-    color:var(--white);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-    margin-bottom:22px;
+    background:rgba(0,0,0,.18);
+    border:1px solid rgba(255,255,255,.18);
+    padding:30px;
+    border-radius:15px;
 }
 
 .why-card h3{
-    font-size:17px;
-    margin-bottom:9px;
+    margin-bottom:10px;
+    font-size:19px;
 }
 
 .why-card p{
-    color:var(--gray);
-    font-size:13px;
+    color:#f1dfe4;
+    font-size:14px;
 }
 
 /* REVIEWS */
-.reviews-grid{
+.reviews{
+    background:var(--light);
+}
+
+.review-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
+    margin-top:45px;
 }
 
 .review-card{
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:30px;
     background:var(--white);
-    transition:.3s;
-}
-
-.review-card:hover{
-    transform:translateY(-5px);
-    box-shadow:var(--shadow);
-    border-color:var(--maroon);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
 }
 
 .stars{
     color:var(--maroon);
     letter-spacing:3px;
-    font-size:16px;
-    margin-bottom:20px;
+    font-size:17px;
+    margin-bottom:18px;
 }
 
 .review-card p{
     color:var(--gray);
-    font-size:14px;
-    min-height:100px;
-    margin-bottom:25px;
+    font-size:15px;
+    margin-bottom:22px;
 }
 
 .reviewer{
     border-top:1px solid var(--border);
-    padding-top:17px;
+    padding-top:15px;
 }
 
 .reviewer strong{
@@ -783,422 +665,293 @@ nav a:hover{
 }
 
 .reviewer span{
-    color:var(--gray);
+    color:var(--maroon);
     font-size:11px;
+    font-weight:800;
 }
 
 .review-cta{
     margin-top:35px;
-    background:var(--maroon);
-    color:var(--white);
-    border-radius:20px;
-    padding:30px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:28px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:20px;
 }
 
-.review-cta h3{
-    font-size:24px;
-}
-
-.review-cta p{
-    color:#f2d8e0;
-    font-size:13px;
-}
-
 /* PROCESS */
-.process{
-    background:var(--light);
-}
-
 .process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:18px;
+    gap:20px;
+    margin-top:45px;
 }
 
 .process-card{
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:18px;
+    position:relative;
     padding:28px;
+    border:1px solid var(--border);
+    border-radius:15px;
 }
 
-.process-number{
+.process-card .num{
     color:var(--maroon);
-    font-size:32px;
+    font-size:34px;
     font-weight:900;
-    margin-bottom:18px;
 }
 
 .process-card h3{
-    font-size:17px;
-    margin-bottom:9px;
+    margin:8px 0;
+    font-size:18px;
 }
 
 .process-card p{
     color:var(--gray);
-    font-size:13px;
+    font-size:14px;
 }
 
 /* CONTACT */
+.contact{
+    background:var(--light);
+}
+
 .contact-grid{
     display:grid;
-    grid-template-columns:.75fr 1.25fr;
+    grid-template-columns:.8fr 1.2fr;
     gap:60px;
+    align-items:start;
 }
 
-.contact-info h2{
-    font-size:clamp(34px,4vw,52px);
-    line-height:1.05;
-    margin-bottom:20px;
-}
-
-.contact-info>p{
-    color:var(--gray);
-    margin-bottom:30px;
+.contact-info{
+    display:grid;
+    gap:20px;
+    margin-top:30px;
 }
 
 .contact-item{
-    display:flex;
-    gap:14px;
-    margin-bottom:20px;
+    border-left:4px solid var(--maroon);
+    padding-left:16px;
 }
 
-.contact-icon{
-    width:42px;
-    height:42px;
-    border-radius:10px;
-    background:var(--maroon);
-    color:var(--white);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex:0 0 42px;
-    font-size:13px;
-    font-weight:900;
+body.rtl .contact-item{
+    border-left:0;
+    border-right:4px solid var(--maroon);
+    padding-left:0;
+    padding-right:16px;
 }
 
 .contact-item strong{
     display:block;
-    font-size:13px;
+    font-size:12px;
+    color:var(--maroon);
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
 .contact-item span{
     color:var(--gray);
-    font-size:13px;
+    font-size:15px;
 }
 
-.contact-form{
+.form-box{
+    background:var(--white);
+    padding:35px;
+    border-radius:18px;
     border:1px solid var(--border);
-    border-radius:22px;
-    padding:32px;
     box-shadow:var(--shadow);
 }
 
 .form-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:16px;
+    gap:15px;
 }
 
-.field{
+.form-group{
     display:flex;
     flex-direction:column;
     gap:7px;
+    margin-bottom:15px;
 }
 
-.field.full{
+.form-group.full{
     grid-column:1/-1;
 }
 
-.field label{
+.form-group label{
     font-size:12px;
     font-weight:800;
 }
 
-.field input,
-.field select,
-.field textarea{
+.form-group input,
+.form-group select,
+.form-group textarea{
     width:100%;
     border:1px solid var(--border);
-    border-radius:9px;
-    padding:13px 14px;
+    padding:13px;
+    border-radius:7px;
     outline:none;
     background:var(--white);
-    color:var(--black);
 }
 
-.field textarea{
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:var(--maroon);
+}
+
+.form-group textarea{
     min-height:130px;
     resize:vertical;
 }
 
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-    border-color:var(--maroon);
-}
-
-.form-note{
-    color:var(--gray);
-    font-size:11px;
-    margin-top:13px;
-}
-
 /* DISCLAIMER */
 .disclaimer{
-    background:var(--maroon-light);
-    border-top:1px solid #ecd0d9;
-    border-bottom:1px solid #ecd0d9;
+    padding:35px 0;
+    background:var(--white);
 }
 
 .disclaimer-box{
-    padding:25px 0;
+    border:1px solid var(--border);
+    border-left:5px solid var(--maroon);
+    padding:22px;
+    border-radius:10px;
+    color:var(--gray);
+    font-size:13px;
 }
 
-.disclaimer strong{
-    display:block;
-    color:var(--maroon);
-    margin-bottom:6px;
-}
-
-.disclaimer p{
-    color:#555;
-    font-size:12px;
+body.rtl .disclaimer-box{
+    border-left:1px solid var(--border);
+    border-right:5px solid var(--maroon);
 }
 
 /* FOOTER */
 footer{
     background:var(--black);
     color:var(--white);
-    padding:60px 0 25px;
+    padding:55px 0 25px;
 }
 
 .footer-grid{
     display:grid;
     grid-template-columns:1.4fr 1fr 1fr 1fr;
     gap:40px;
-    padding-bottom:45px;
+    padding-bottom:40px;
+    border-bottom:1px solid #2b2b2b;
 }
 
-.footer-brand img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
+.footer-logo{
     background:var(--white);
-    padding:8px;
-    border-radius:15px;
-    margin-bottom:20px;
+    padding:12px;
+    width:max-content;
+    border-radius:8px;
+    margin-bottom:18px;
 }
 
-.footer-brand h3{
-    font-size:19px;
-    letter-spacing:1px;
-}
-
-.footer-brand p{
-    color:#aaa;
-    font-size:13px;
-    margin-top:10px;
-    max-width:320px;
+.footer-logo img{
+    width:150px;
+    height:65px;
+    object-fit:contain;
 }
 
 footer h4{
-    font-size:12px;
-    letter-spacing:1px;
-    margin-bottom:18px;
-    color:#fff;
+    margin-bottom:15px;
+    font-size:14px;
 }
 
-.footer-links{
-    display:grid;
-    gap:9px;
-}
-
-.footer-links a{
+footer p,
+footer li,
+footer a{
     color:#aaa;
-    font-size:12px;
+    font-size:13px;
 }
 
-.footer-links a:hover{
+footer ul{
+    list-style:none;
+    display:grid;
+    gap:8px;
+}
+
+footer a:hover{
     color:var(--white);
 }
 
 .footer-bottom{
-    border-top:1px solid #292929;
     padding-top:22px;
     display:flex;
     justify-content:space-between;
     gap:20px;
     color:#777;
-    font-size:11px;
+    font-size:12px;
 }
 
-/* FLOATING */
+/* FLOATING BUTTONS */
 .whatsapp-float{
     position:fixed;
-    right:20px;
-    bottom:20px;
-    width:57px;
-    height:57px;
+    right:22px;
+    bottom:22px;
+    z-index:999;
+    width:55px;
+    height:55px;
     border-radius:50%;
     background:var(--maroon);
     color:var(--white);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:23px;
     font-weight:900;
-    z-index:999;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-.top-btn{
+.scroll-top{
     position:fixed;
-    right:20px;
-    bottom:88px;
+    right:22px;
+    bottom:90px;
     width:42px;
     height:42px;
-    border:1px solid var(--border);
-    background:var(--white);
-    color:var(--black);
+    border:0;
     border-radius:50%;
+    background:var(--black);
+    color:var(--white);
     cursor:pointer;
-    z-index:998;
     display:none;
-    font-weight:900;
+    z-index:998;
 }
 
-.top-btn.show{
+.scroll-top.show{
     display:block;
 }
 
 /* RTL */
-body.rtl{
+body.rtl .hero-grid,
+body.rtl .about-grid,
+body.rtl .travel-grid,
+body.rtl .contact-grid{
     direction:rtl;
 }
 
-body.rtl .section-label::before{
-    order:2;
-}
-
-body.rtl .check{
-    flex-direction:row-reverse;
-}
-
-body.rtl .signature{
-    border-left:0;
-    border-right:4px solid var(--maroon);
-    padding-left:0;
-    padding-right:18px;
-}
-
-body.rtl .contact-item{
-    flex-direction:row-reverse;
-}
-
-body.rtl .hero-card::before{
-    right:auto;
-    left:-100px;
-}
-
-body.rtl .travel::before{
-    right:auto;
-    left:-280px;
-}
-
-body.rtl .brand-text strong,
-body.rtl .brand-text span{
-    letter-spacing:0;
-}
-
-body.rtl .reviewer,
-body.rtl .contact-form{
+body.rtl .logo-text{
     text-align:right;
 }
 
-/* REVEAL */
-.reveal{
-    opacity:0;
-    transform:translateY(25px);
-    transition:.7s ease;
-}
-
-.reveal.visible{
-    opacity:1;
-    transform:translateY(0);
-}
-
 /* MOBILE */
-@media(max-width:1050px){
-
-    nav{
-        gap:15px;
-    }
-
-    .brand{
-        min-width:auto;
-    }
-
-    .brand-text strong{
-        font-size:13px;
-    }
-
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .process-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:820px){
-
-    .navbar{
-        min-height:72px;
-    }
-
-    .brand img{
-        width:48px;
-        height:48px;
-    }
-
-    .brand-text strong{
-        font-size:12px;
-    }
-
-    .brand-text span{
-        font-size:7px;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
+@media(max-width:1000px){
 
     nav{
         position:absolute;
-        top:72px;
+        top:82px;
         left:0;
-        width:100%;
+        right:0;
         background:var(--white);
         border-bottom:1px solid var(--border);
-        padding:15px 4%;
+        padding:20px;
         display:none;
         flex-direction:column;
         align-items:stretch;
-        gap:5px;
+        gap:8px;
         box-shadow:0 15px 30px rgba(0,0,0,.08);
     }
 
@@ -1208,57 +961,84 @@ body.rtl .contact-form{
 
     nav a{
         padding:12px;
-        border-radius:8px;
+        border-bottom:1px solid var(--border);
     }
 
-    nav a:hover{
-        background:var(--maroon-light);
+    .nav-btn{
+        text-align:center;
+        border-bottom:0;
     }
 
-    .language{
-        align-self:flex-start;
-    }
-
-    .hero{
-        padding-top:125px;
+    .menu-toggle{
+        display:block;
     }
 
     .hero-grid,
     .about-grid,
-    .founder-grid,
     .travel-grid,
     .contact-grid{
         grid-template-columns:1fr;
         gap:40px;
     }
 
-    .hero-card{
-        min-height:auto;
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-card-logo{
-        width:120px;
-        height:120px;
-        margin-bottom:30px;
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .founder-photo img{
-        height:450px;
-    }
-
-    .reviews-grid{
+    .review-grid{
         grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .people-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:70px 0;
     }
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
 
-    .section{
+    section{
         padding:70px 0;
     }
 
-    .container{
-        width:min(92%,520px);
+    .navbar{
+        min-height:72px;
+    }
+
+    nav{
+        top:72px;
+    }
+
+    .logo img{
+        width:43px;
+        height:43px;
+    }
+
+    .logo-text strong{
+        font-size:13px;
+    }
+
+    .logo-text span{
+        font-size:8px;
+    }
+
+    .language-switch button{
+        padding:6px 8px;
     }
 
     .hero h1{
@@ -1266,7 +1046,7 @@ body.rtl .contact-form{
         letter-spacing:-2px;
     }
 
-    .hero-text{
+    .hero p{
         font-size:16px;
     }
 
@@ -1274,8 +1054,12 @@ body.rtl .contact-form{
         flex-direction:column;
     }
 
-    .btn{
+    .hero-buttons .btn{
         width:100%;
+    }
+
+    .hero-card{
+        padding:28px;
     }
 
     .trust-grid{
@@ -1284,40 +1068,29 @@ body.rtl .contact-form{
 
     .trust-item{
         border-right:0;
-        border-bottom:1px solid var(--border);
+        border-bottom:1px solid #333;
+        padding:14px;
     }
 
     .trust-item:last-child{
         border-bottom:0;
     }
 
-    .about-visual{
-        min-height:390px;
-        padding:30px;
-    }
-
-    .about-logo{
-        width:125px;
-        height:125px;
-        margin-bottom:40px;
-    }
-
     .services-grid,
-    .why-grid,
     .process-grid{
         grid-template-columns:1fr;
+    }
+
+    .person-image{
+        height:350px;
     }
 
     .form-grid{
         grid-template-columns:1fr;
     }
 
-    .field.full{
+    .form-group.full{
         grid-column:auto;
-    }
-
-    .contact-form{
-        padding:22px;
     }
 
     .review-cta{
@@ -1338,9 +1111,9 @@ body.rtl .contact-form{
         bottom:15px;
     }
 
-    .top-btn{
+    .scroll-top{
         right:15px;
-        bottom:82px;
+        bottom:80px;
     }
 }
 </style>
@@ -1351,911 +1124,763 @@ body.rtl .contact-form{
 <header>
 <div class="container navbar">
 
-<a href="#home" class="brand">
-    <img src="raaz-reboot-group-logo-transparent.png" alt="RAAZ REBOOT GROUP Logo">
-    <div class="brand-text">
-        <strong>RAAZ REBOOT GROUP</strong>
-        <span data-en="QATAR • BUSINESS • SERVICES" data-ar="قطر • أعمال • خدمات">QATAR • BUSINESS • SERVICES</span>
-    </div>
-</a>
-
-<button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-    ☰
-</button>
-
-<nav id="mobileNav">
-
-    <a href="#home" onclick="closeMenu()" data-en="Home" data-ar="الرئيسية">Home</a>
-
-    <a href="#about" onclick="closeMenu()" data-en="About" data-ar="من نحن">About</a>
-
-    <a href="#services" onclick="closeMenu()" data-en="Services" data-ar="الخدمات">Services</a>
-
-    <a href="#reviews" onclick="closeMenu()" data-en="Reviews" data-ar="آراء العملاء">Reviews</a>
-
-    <a href="#why" onclick="closeMenu()" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
-
-    <a href="#contact" onclick="closeMenu()" data-en="Contact" data-ar="تواصل معنا">Contact</a>
-
-    <a class="nav-btn" href="https://wa.me/97471876497" target="_blank" rel="noopener">
-        WhatsApp
+    <a href="#home" class="logo">
+        <img src="raaz-reboot-group-logo-transparent.png" alt="RAAZ REBOOT GROUP Logo">
+        <div class="logo-text">
+            <strong>RAAZ REBOOT GROUP</strong>
+            <span data-en="QATAR • BUSINESS • SERVICES" data-ar="قطر • الأعمال • الخدمات">QATAR • BUSINESS • SERVICES</span>
+        </div>
     </a>
 
-    <div class="language">
-        <button id="enBtn" class="active" onclick="setLanguage('en')">EN</button>
-        <button id="arBtn" onclick="setLanguage('ar')">العربية</button>
-    </div>
+    <nav id="mobileNav">
+        <a href="#home" onclick="closeMenu()" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#about" onclick="closeMenu()" data-en="About" data-ar="من نحن">About</a>
+        <a href="#services" onclick="closeMenu()" data-en="Services" data-ar="الخدمات">Services</a>
+        <a href="#people" onclick="closeMenu()" data-en="Leadership" data-ar="الإدارة">Leadership</a>
+        <a href="#reviews" onclick="closeMenu()" data-en="Reviews" data-ar="آراء العملاء">Reviews</a>
+        <a href="#why" onclick="closeMenu()" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+        <a href="#contact" onclick="closeMenu()" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+        <a class="nav-btn" href="https://wa.me/97471876497" target="_blank" rel="noopener" data-en="WhatsApp" data-ar="واتساب">WhatsApp</a>
+    </nav>
 
-</nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+        <div class="language-switch">
+            <button id="enBtn" class="active" onclick="setLanguage('en')">EN</button>
+            <button id="arBtn" onclick="setLanguage('ar')">العربية</button>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+    </div>
 
 </div>
 </header>
 
 
-<main>
-
 <!-- HERO -->
 <section class="hero" id="home">
 <div class="container hero-grid">
 
-<div class="hero-content reveal">
+    <div class="reveal">
+        <div class="hero-badge" data-en="QATAR BASED BUSINESS GROUP" data-ar="مجموعة أعمال مقرها دولة قطر">
+            QATAR BASED BUSINESS GROUP
+        </div>
 
-    <div class="hero-badge"
-         data-en="QATAR BASED • MULTI-SERVICE GROUP"
-         data-ar="مجموعة متعددة الخدمات • مقرها قطر">
-        QATAR BASED • MULTI-SERVICE GROUP
+        <h1>
+            <span data-en="ONE TRUSTED GROUP." data-ar="مجموعة موثوقة واحدة.">ONE TRUSTED GROUP.</span><br>
+            <span style="color:var(--black);" data-en="MULTIPLE SOLUTIONS." data-ar="حلول متعددة.">MULTIPLE SOLUTIONS.</span>
+        </h1>
+
+        <p data-en="Your Trusted Partner for Business, Property, Technology & Services in Qatar."
+           data-ar="شريككم الموثوق للأعمال والعقارات والتكنولوجيا والخدمات في دولة قطر.">
+            Your Trusted Partner for Business, Property, Technology & Services in Qatar.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary" data-en="EXPLORE SERVICES →" data-ar="استكشف الخدمات ←">
+                EXPLORE SERVICES →
+            </a>
+
+            <a href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+               target="_blank"
+               rel="noopener"
+               class="btn btn-outline"
+               data-en="CONTACT US" data-ar="تواصل معنا">
+                CONTACT US
+            </a>
+        </div>
     </div>
 
-    <h1>
-        <span data-en="ONE TRUSTED GROUP." data-ar="مجموعة موثوقة واحدة.">
-            ONE TRUSTED GROUP.
-        </span>
-        <br>
-        <span style="color:#000"
-              data-en="MULTIPLE SOLUTIONS."
-              data-ar="حلول متعددة.">
-            MULTIPLE SOLUTIONS.
-        </span>
-    </h1>
+    <div class="hero-card reveal">
+        <div class="hero-card-logo">
+            <img src="raaz-reboot-group-logo-transparent.png" alt="RAAZ REBOOT GROUP">
+        </div>
 
-    <p class="hero-text"
-       data-en="Your trusted partner for business, property, technology, services and everyday solutions in Qatar."
-       data-ar="شريكك الموثوق في الأعمال والعقارات والتكنولوجيا والخدمات والحلول اليومية في قطر.">
-        Your trusted partner for business, property, technology, services and everyday solutions in Qatar.
-    </p>
+        <h3 data-en="One Group. Multiple Solutions." data-ar="مجموعة واحدة. حلول متعددة.">
+            One Group. Multiple Solutions.
+        </h3>
 
-    <div class="hero-buttons">
-
-        <a class="btn btn-primary"
-           href="#services"
-           data-en="EXPLORE SERVICES →"
-           data-ar="استكشف الخدمات ←">
-            EXPLORE SERVICES →
-        </a>
-
-        <a class="btn btn-outline"
-           href="https://wa.me/97471876497"
-           target="_blank"
-           rel="noopener"
-           data-en="TALK TO US"
-           data-ar="تواصل معنا">
-            TALK TO US
-        </a>
-
+        <p data-en="Professional support across business, property, technology, hospitality, online services, government-related assistance and travel visa services."
+           data-ar="دعم احترافي في الأعمال والعقارات والتكنولوجيا والضيافة والخدمات الإلكترونية والمساعدة في الإجراءات الحكومية وخدمات تأشيرات السفر.">
+            Professional support across business, property, technology, hospitality, online services, government-related assistance and travel visa services.
+        </p>
     </div>
-
-</div>
-
-
-<div class="hero-card reveal">
-
-    <img class="hero-card-logo"
-         src="raaz-reboot-group-logo-transparent.png"
-         alt="RAAZ REBOOT GROUP">
-
-    <h3 data-en="Business. Property. Technology. Services."
-        data-ar="الأعمال. العقارات. التكنولوجيا. الخدمات.">
-        Business. Property. Technology. Services.
-    </h3>
-
-    <p data-en="One group designed to make life and business simpler."
-       data-ar="مجموعة واحدة مصممة لجعل الحياة والأعمال أكثر سهولة.">
-        One group designed to make life and business simpler.
-    </p>
-
-    <div class="hero-card-line"></div>
-
-</div>
 
 </div>
 </section>
 
 
 <!-- TRUST -->
-<section class="trust">
+<div class="trust-bar">
 <div class="container trust-grid">
 
-<div class="trust-item">
-    <strong data-en="QATAR BASED" data-ar="مقرنا قطر">QATAR BASED</strong>
-    <span data-en="Local understanding & support" data-ar="فهم ودعم محلي">Local understanding & support</span>
-</div>
+    <div class="trust-item">
+        <strong data-en="QATAR BASED" data-ar="مقرنا قطر">QATAR BASED</strong>
+        <span data-en="Local business support" data-ar="دعم أعمال محلي">Local business support</span>
+    </div>
 
-<div class="trust-item">
-    <strong data-en="MULTI-SERVICE GROUP" data-ar="مجموعة متعددة الخدمات">MULTI-SERVICE GROUP</strong>
-    <span data-en="Multiple solutions under one group" data-ar="حلول متعددة تحت مجموعة واحدة">Multiple solutions under one group</span>
-</div>
+    <div class="trust-item">
+        <strong data-en="MULTI-SERVICE GROUP" data-ar="مجموعة متعددة الخدمات">MULTI-SERVICE GROUP</strong>
+        <span data-en="Multiple solutions under one group" data-ar="حلول متعددة تحت مجموعة واحدة">Multiple solutions under one group</span>
+    </div>
 
-<div class="trust-item">
-    <strong data-en="PROFESSIONAL SUPPORT" data-ar="دعم احترافي">PROFESSIONAL SUPPORT</strong>
-    <span data-en="Clear communication & service" data-ar="تواصل وخدمة واضحة">Clear communication & service</span>
-</div>
+    <div class="trust-item">
+        <strong data-en="PROFESSIONAL SUPPORT" data-ar="دعم احترافي">PROFESSIONAL SUPPORT</strong>
+        <span data-en="Practical and responsive assistance" data-ar="مساعدة عملية وسريعة الاستجابة">Practical and responsive assistance</span>
+    </div>
 
 </div>
-</section>
+</div>
 
 
 <!-- ABOUT -->
-<section class="section" id="about">
+<section id="about">
 <div class="container about-grid">
 
-<div class="about-visual reveal">
-
-    <img class="about-logo"
-         src="raaz-reboot-group-logo-transparent.png"
-         alt="RAAZ REBOOT GROUP Logo">
-
-    <div class="about-number">01</div>
-
-    <div class="about-small"
-         data-en="One group. Multiple solutions. Built for Qatar."
-         data-ar="مجموعة واحدة. حلول متعددة. مصممة لقطر.">
-        One group. Multiple solutions. Built for Qatar.
+    <div class="about-logo-box reveal">
+        <img src="raaz-reboot-group-logo-transparent.png" alt="RAAZ REBOOT GROUP Logo">
     </div>
 
-</div>
+    <div class="reveal">
+        <span class="section-label" data-en="ABOUT RAAZ REBOOT GROUP" data-ar="عن مجموعة رايز ريبوت">
+            ABOUT RAAZ REBOOT GROUP
+        </span>
 
+        <h2 class="section-title" data-en="Built to Make Life and Business Simpler."
+            data-ar="صُممت لجعل الحياة والأعمال أكثر سهولة.">
+            Built to Make Life and Business Simpler.
+        </h2>
 
-<div class="about-content reveal">
+        <p class="section-text"
+           data-en="RAAZ REBOOT GROUP is a Qatar-based business group bringing multiple professional services together under one trusted name."
+           data-ar="RAAZ REBOOT GROUP هي مجموعة أعمال مقرها دولة قطر، تجمع العديد من الخدمات المهنية تحت اسم موثوق واحد.">
+            RAAZ REBOOT GROUP is a Qatar-based business group bringing multiple professional services together under one trusted name.
+        </p>
 
-    <div class="section-label"
-         data-en="ABOUT RAAZ REBOOT"
-         data-ar="عن رَاز ريبوت">
-        ABOUT RAAZ REBOOT
+        <div class="about-points">
+
+            <div class="about-point">
+                <b>01</b>
+                <span data-en="Business-focused solutions for individuals, entrepreneurs and companies."
+                      data-ar="حلول تركز على الأعمال للأفراد ورواد الأعمال والشركات.">
+                    Business-focused solutions for individuals, entrepreneurs and companies.
+                </span>
+            </div>
+
+            <div class="about-point">
+                <b>02</b>
+                <span data-en="Multiple service divisions designed to make everyday processes easier."
+                      data-ar="أقسام خدمات متعددة مصممة لتسهيل الإجراءات اليومية.">
+                    Multiple service divisions designed to make everyday processes easier.
+                </span>
+            </div>
+
+            <div class="about-point">
+                <b>03</b>
+                <span data-en="Professional support with clear communication and practical assistance."
+                      data-ar="دعم احترافي مع تواصل واضح ومساعدة عملية.">
+                    Professional support with clear communication and practical assistance.
+                </span>
+            </div>
+
+        </div>
     </div>
-
-    <h2 data-en="Built to Make Life and Business Simpler."
-        data-ar="صُممت لجعل الحياة والأعمال أكثر سهولة.">
-        Built to Make Life and Business Simpler.
-    </h2>
-
-    <p data-en="RAAZ REBOOT GROUP is a Qatar-based multi-service business group bringing different solutions together under one trusted name."
-       data-ar="RAAZ REBOOT GROUP هي مجموعة أعمال متعددة الخدمات مقرها قطر، تجمع حلولاً مختلفة تحت اسم موثوق واحد.">
-        RAAZ REBOOT GROUP is a Qatar-based multi-service business group bringing different solutions together under one trusted name.
-    </p>
-
-    <div class="check-list">
-
-        <div class="check">
-            <i>✓</i>
-            <span data-en="Practical solutions for individuals and businesses"
-                  data-ar="حلول عملية للأفراد والشركات">
-                Practical solutions for individuals and businesses
-            </span>
-        </div>
-
-        <div class="check">
-            <i>✓</i>
-            <span data-en="Professional and transparent communication"
-                  data-ar="تواصل احترافي وشفاف">
-                Professional and transparent communication
-            </span>
-        </div>
-
-        <div class="check">
-            <i>✓</i>
-            <span data-en="Multiple services under one group"
-                  data-ar="خدمات متعددة تحت مجموعة واحدة">
-                Multiple services under one group
-            </span>
-        </div>
-
-        <div class="check">
-            <i>✓</i>
-            <span data-en="Qatar-focused service and support"
-                  data-ar="خدمات ودعم يركزان على قطر">
-                Qatar-focused service and support
-            </span>
-        </div>
-
-    </div>
-
-</div>
 
 </div>
 </section>
 
 
-<!-- FOUNDER -->
-<section class="section founder">
-<div class="container founder-grid">
+<!-- LEADERSHIP / PEOPLE -->
+<section class="people-section" id="people">
+<div class="container">
 
-<div class="founder-photo reveal">
+    <div class="reveal">
+        <span class="section-label" data-en="OUR PEOPLE" data-ar="فريقنا">OUR PEOPLE</span>
 
-    <img src="Untitled-1.jpg"
-         alt="SANOAR HOSSEN - Founder & Managing Director">
+        <h2 class="section-title"
+            data-en="Leadership & Qatar Partnership"
+            data-ar="الإدارة والشراكة القطرية">
+            Leadership & Qatar Partnership
+        </h2>
 
-</div>
-
-
-<div class="founder-content reveal">
-
-    <div class="section-label"
-         data-en="LEADERSHIP"
-         data-ar="الإدارة">
-        LEADERSHIP
+        <p class="section-text"
+           data-en="Meet the people behind RAAZ REBOOT GROUP and our Qatar-based business presence."
+           data-ar="تعرفوا على الأشخاص الذين يقفون وراء RAAZ REBOOT GROUP وحضورنا التجاري في دولة قطر.">
+            Meet the people behind RAAZ REBOOT GROUP and our Qatar-based business presence.
+        </p>
     </div>
 
-    <h2>SANOAR HOSSEN</h2>
 
-    <div class="founder-title"
-         data-en="Founder & Managing Director"
-         data-ar="المؤسس والمدير العام">
-        Founder & Managing Director
+    <div class="people-grid">
+
+        <!-- FOUNDER -->
+        <div class="person-card reveal">
+
+            <div class="person-image">
+                <img src="Untitled-1.jpg"
+                     alt="SANOAR HOSSEN - Founder & Managing Director">
+            </div>
+
+            <div class="person-info">
+                <span class="role"
+                      data-en="Founder & Managing Director"
+                      data-ar="المؤسس والعضو المنتدب">
+                    Founder & Managing Director
+                </span>
+
+                <h3>SANOAR HOSSEN</h3>
+
+                <p data-en="Founder & Managing Director of RAAZ REBOOT GROUP, focused on building professional business and service solutions in Qatar."
+                   data-ar="مؤسس وعضو منتدب في RAAZ REBOOT GROUP، يركز على تطوير حلول الأعمال والخدمات المهنية في دولة قطر.">
+                    Founder & Managing Director of RAAZ REBOOT GROUP, focused on building professional business and service solutions in Qatar.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- QATARI SPONSOR -->
+        <div class="person-card reveal">
+
+            <div class="person-image">
+                <img src="WhatsApp Image 2026-10-07 at 12.59.29 PM.jpeg"
+                     alt="ABDULLA MOHAMED H A ALMARRI - Qatari Sponsor">
+            </div>
+
+            <div class="person-info">
+
+                <span class="role"
+                      data-en="Qatari Sponsor"
+                      data-ar="الكفيل القطري">
+                    Qatari Sponsor
+                </span>
+
+                <h3>ABDULLA MOHAMED H A ALMARRI</h3>
+
+                <p data-en="Qatari Sponsor of RAAZ REBOOT GROUP, supporting our Qatar-based business presence."
+                   data-ar="الكفيل القطري لمجموعة RAAZ REBOOT GROUP، ويدعم حضورنا التجاري في دولة قطر.">
+                    Qatari Sponsor of RAAZ REBOOT GROUP, supporting our Qatar-based business presence.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
-
-    <p data-en="RAAZ REBOOT GROUP is driven by a simple idea: bring useful services together and make the process easier, clearer and more professional for customers."
-       data-ar="تقوم RAAZ REBOOT GROUP على فكرة بسيطة: جمع الخدمات المفيدة معاً وجعل الإجراءات أسهل وأوضح وأكثر احترافية للعملاء.">
-        RAAZ REBOOT GROUP is driven by a simple idea: bring useful services together and make the process easier, clearer and more professional for customers.
-    </p>
-
-    <div class="signature">
-        <strong>SANOAR HOSSEN</strong>
-        <span data-en="Founder & Managing Director — RAAZ REBOOT GROUP"
-              data-ar="المؤسس والمدير العام — RAAZ REBOOT GROUP">
-            Founder & Managing Director — RAAZ REBOOT GROUP
-        </span>
-    </div>
-
-</div>
 
 </div>
 </section>
 
 
 <!-- SERVICES -->
-<section class="section" id="services">
+<section id="services">
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
+        <span class="section-label" data-en="OUR DIVISIONS" data-ar="أقسامنا">OUR DIVISIONS</span>
 
-    <div class="section-label"
-         data-en="OUR DIVISIONS"
-         data-ar="أقسامنا">
-        OUR DIVISIONS
+        <h2 class="section-title"
+            data-en="Multiple Services. One Trusted Group."
+            data-ar="خدمات متعددة. مجموعة موثوقة واحدة.">
+            Multiple Services. One Trusted Group.
+        </h2>
+
+        <p class="section-text"
+           data-en="Explore our core service divisions."
+           data-ar="استكشف أقسام خدماتنا الرئيسية.">
+            Explore our core service divisions.
+        </p>
     </div>
 
-    <h2 data-en="Multiple Services. One Group."
-        data-ar="خدمات متعددة. مجموعة واحدة.">
-        Multiple Services. One Group.
-    </h2>
 
-    <p data-en="Explore the core divisions of RAAZ REBOOT GROUP."
-       data-ar="اكتشف الأقسام الرئيسية في RAAZ REBOOT GROUP.">
-        Explore the core divisions of RAAZ REBOOT GROUP.
-    </p>
+    <div class="services-grid">
 
-</div>
+        <div class="service-card reveal">
+            <span class="service-number">01</span>
+            <h3 data-en="RAAZ REBOOT REAL ESTATE" data-ar="رايز ريبوت للعقارات">
+                RAAZ REBOOT REAL ESTATE
+            </h3>
+            <p data-en="Property-related services, rental support and real estate solutions in Qatar."
+               data-ar="خدمات متعلقة بالعقارات ودعم الإيجارات وحلول العقارات في قطر.">
+                Property-related services, rental support and real estate solutions in Qatar.
+            </p>
+        </div>
 
+        <div class="service-card reveal">
+            <span class="service-number">02</span>
+            <h3 data-en="CLEANING & HOSPITALITY" data-ar="التنظيف والضيافة">
+                CLEANING & HOSPITALITY
+            </h3>
+            <p data-en="Professional cleaning, hospitality and property support services."
+               data-ar="خدمات التنظيف والضيافة ودعم العقارات بشكل احترافي.">
+                Professional cleaning, hospitality and property support services.
+            </p>
+        </div>
 
-<div class="services-grid">
+        <div class="service-card reveal">
+            <span class="service-number">03</span>
+            <h3 data-en="TECHNOLOGY" data-ar="التكنولوجيا">
+                TECHNOLOGY
+            </h3>
+            <p data-en="Technology solutions, digital support, websites and business technology services."
+               data-ar="حلول التكنولوجيا والدعم الرقمي والمواقع الإلكترونية وخدمات تقنية الأعمال.">
+                Technology solutions, digital support, websites and business technology services.
+            </p>
+        </div>
 
-<div class="service-card reveal">
-    <div class="service-number">01 / REAL ESTATE</div>
-    <h3>RAAZ REBOOT REAL ESTATE</h3>
-    <p data-en="Property support, rental assistance, property-related solutions and real estate services."
-       data-ar="دعم العقارات والمساعدة في الإيجار والحلول والخدمات المتعلقة بالعقارات.">
-        Property support, rental assistance, property-related solutions and real estate services.
-    </p>
-    <a href="#contact">LEARN MORE →</a>
-</div>
+        <div class="service-card reveal">
+            <span class="service-number">04</span>
+            <h3 data-en="BUSINESS & COMPANY FORMATION" data-ar="الأعمال وتأسيس الشركات">
+                BUSINESS & COMPANY FORMATION
+            </h3>
+            <p data-en="Business setup and company formation support for entrepreneurs and businesses."
+               data-ar="دعم تأسيس الأعمال والشركات لرواد الأعمال والشركات.">
+                Business setup and company formation support for entrepreneurs and businesses.
+            </p>
+        </div>
 
+        <div class="service-card reveal">
+            <span class="service-number">05</span>
+            <h3 data-en="ONLINE SERVICES" data-ar="الخدمات الإلكترونية">
+                ONLINE SERVICES
+            </h3>
+            <p data-en="Online applications, digital tasks and various internet-related services."
+               data-ar="الطلبات الإلكترونية والمهام الرقمية ومختلف الخدمات المتعلقة بالإنترنت.">
+                Online applications, digital tasks and various internet-related services.
+            </p>
+        </div>
 
-<div class="service-card featured reveal">
-    <div class="service-number">02 / HOSPITALITY</div>
-    <h3>RAAZ REBOOT CLEANING & HOSPITALITY</h3>
-    <p data-en="Cleaning, hospitality support and practical services for homes, properties and businesses."
-       data-ar="خدمات التنظيف والضيافة والخدمات العملية للمنازل والعقارات والشركات.">
-        Cleaning, hospitality support and practical services for homes, properties and businesses.
-    </p>
-    <a href="#contact">LEARN MORE →</a>
-</div>
+        <div class="service-card reveal">
+            <span class="service-number">06</span>
+            <h3 data-en="GOVERNMENT SERVICES" data-ar="الخدمات الحكومية">
+                GOVERNMENT SERVICES
+            </h3>
+            <p data-en="Assistance with eligible Qatar government-related procedures and applications."
+               data-ar="المساعدة في الإجراءات والطلبات المتعلقة بالجهات الحكومية القطرية المؤهلة.">
+                Assistance with eligible Qatar government-related procedures and applications.
+            </p>
+        </div>
 
+        <div class="service-card reveal">
+            <span class="service-number">07</span>
+            <h3 data-en="TRAVEL & TOURIST VISA SERVICES" data-ar="السفر وخدمات التأشيرات السياحية">
+                TRAVEL & TOURIST VISA SERVICES
+            </h3>
+            <p data-en="Travel planning and tourist visa application assistance for selected destinations."
+               data-ar="التخطيط للسفر والمساعدة في طلبات التأشيرات السياحية لوجهات مختارة.">
+                Travel planning and tourist visa application assistance for selected destinations.
+            </p>
+        </div>
 
-<div class="service-card reveal">
-    <div class="service-number">03 / TECHNOLOGY</div>
-    <h3>RAAZ REBOOT TECHNOLOGY</h3>
-    <p data-en="Technology solutions, digital support, websites, IT assistance and business technology services."
-       data-ar="حلول تقنية ودعم رقمي ومواقع إلكترونية ومساعدة تقنية وخدمات تكنولوجيا الأعمال.">
-        Technology solutions, digital support, websites, IT assistance and business technology services.
-    </p>
-    <a href="#contact">LEARN MORE →</a>
-</div>
+        <div class="service-card reveal">
+            <span class="service-number">08</span>
+            <h3 data-en="MORE SOLUTIONS, ONE GROUP" data-ar="حلول إضافية، مجموعة واحدة">
+                MORE SOLUTIONS, ONE GROUP
+            </h3>
+            <p data-en="Tell us what you need and our team will guide you toward the appropriate solution."
+               data-ar="أخبرنا بما تحتاجه وسيوجهك فريقنا نحو الحل المناسب.">
+                Tell us what you need and our team will guide you toward the appropriate solution.
+            </p>
+        </div>
 
-
-<div class="service-card reveal">
-    <div class="service-number">04 / BUSINESS</div>
-    <h3>RAAZ REBOOT BUSINESS & COMPANY FORMATION</h3>
-    <p data-en="Business setup guidance, company formation assistance and support for entrepreneurs in Qatar."
-       data-ar="إرشاد تأسيس الأعمال والمساعدة في تأسيس الشركات ودعم رواد الأعمال في قطر.">
-        Business setup guidance, company formation assistance and support for entrepreneurs in Qatar.
-    </p>
-    <a href="#contact">LEARN MORE →</a>
-</div>
-
-
-<div class="service-card reveal">
-    <div class="service-number">05 / ONLINE</div>
-    <h3>RAAZ REBOOT ONLINE SERVICES</h3>
-    <p data-en="Online applications, digital services, document support and other internet-based solutions."
-       data-ar="الطلبات الإلكترونية والخدمات الرقمية ودعم المستندات والحلول الأخرى عبر الإنترنت.">
-        Online applications, digital services, document support and other internet-based solutions.
-    </p>
-    <a href="#contact">LEARN MORE →</a>
-</div>
-
-
-<div class="service-card reveal">
-    <div class="service-number">06 / GOVERNMENT</div>
-    <h3>RAAZ REBOOT GOVERNMENT SERVICES</h3>
-    <p data-en="Assistance with eligible government-related procedures and applications in Qatar."
-       data-ar="المساعدة في الإجراءات والطلبات الحكومية المؤهلة في قطر.">
-        Assistance with eligible government-related procedures and applications in Qatar.
-    </p>
-    <a href="#contact">LEARN MORE →</a>
-</div>
-
-
-<div class="service-card featured reveal">
-    <div class="service-number">07 / TRAVEL</div>
-    <h3>RAAZ REBOOT TRAVEL & TOURIST VISA SERVICES</h3>
-    <p data-en="Travel planning and tourist visa application assistance for selected destinations."
-       data-ar="تخطيط السفر والمساعدة في طلبات التأشيرات السياحية لبعض الوجهات.">
-        Travel planning and tourist visa application assistance for selected destinations.
-    </p>
-    <a href="#travel">START PROCESS →</a>
-</div>
-
-
-<div class="service-card reveal">
-    <div class="service-number">08 / MORE SOLUTIONS</div>
-    <h3 data-en="MORE SOLUTIONS. ONE GROUP."
-        data-ar="حلول أكثر. مجموعة واحدة.">
-        MORE SOLUTIONS. ONE GROUP.
-    </h3>
-    <p data-en="Have a specific requirement? Tell us what you need and we will guide you to the right solution."
-       data-ar="لديك طلب محدد؟ أخبرنا بما تحتاج وسنوجهك إلى الحل المناسب.">
-        Have a specific requirement? Tell us what you need and we will guide you to the right solution.
-    </p>
-    <a href="#contact">CONTACT US →</a>
-</div>
-
-</div>
+    </div>
 </div>
 </section>
 
 
 <!-- TRAVEL -->
-<section class="section travel" id="travel">
+<section class="travel">
 <div class="container travel-grid">
 
-<div class="reveal">
+    <div class="reveal">
+        <span class="section-label"
+              data-en="TRAVEL & VISA SUPPORT"
+              data-ar="دعم السفر والتأشيرات">
+            TRAVEL & VISA SUPPORT
+        </span>
 
-    <div class="section-label"
-         style="color:#d9809d"
-         data-en="TRAVEL & VISA SERVICES"
-         data-ar="خدمات السفر والتأشيرات">
-        TRAVEL & VISA SERVICES
+        <h2 class="section-title"
+            data-en="YOUR JOURNEY STARTS HERE."
+            data-ar="رحلتك تبدأ من هنا.">
+            YOUR JOURNEY STARTS HERE.
+        </h2>
+
+        <p class="section-text"
+           data-en="Planning your next journey? Our team can assist with selected tourist visa application processes and travel-related support."
+           data-ar="تخطط لرحلتك القادمة؟ يمكن لفريقنا مساعدتك في إجراءات طلبات التأشيرات السياحية المختارة والدعم المتعلق بالسفر.">
+            Planning your next journey? Our team can assist with selected tourist visa application processes and travel-related support.
+        </p>
+
+        <br>
+
+        <a href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20want%20to%20start%20a%20tourist%20visa%20process."
+           target="_blank"
+           rel="noopener"
+           class="btn btn-primary"
+           data-en="START VISA PROCESS →"
+           data-ar="ابدأ إجراءات التأشيرة ←">
+            START VISA PROCESS →
+        </a>
     </div>
 
-    <h2>
-        <span data-en="YOUR JOURNEY" data-ar="رحلتك">YOUR JOURNEY</span><br>
-        <span data-en="STARTS HERE." data-ar="تبدأ هنا.">STARTS HERE.</span>
-    </h2>
+    <div class="travel-box reveal">
 
-    <p data-en="Planning your next journey? RAAZ REBOOT can assist with selected tourist visa applications and travel-related support."
-       data-ar="تخطط لرحلتك القادمة؟ يمكن لـ RAAZ REBOOT مساعدتك في بعض طلبات التأشيرات السياحية والدعم المتعلق بالسفر.">
-        Planning your next journey? RAAZ REBOOT can assist with selected tourist visa applications and travel-related support.
-    </p>
+        <strong data-en="Professional Application Support"
+                data-ar="دعم احترافي للطلبات">
+            Professional Application Support
+        </strong>
 
-    <a class="btn btn-primary"
-       href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20would%20like%20to%20start%20a%20tourist%20visa%20process."
-       target="_blank"
-       rel="noopener"
-       data-en="START VISA PROCESS →"
-       data-ar="ابدأ إجراءات التأشيرة ←">
-        START VISA PROCESS →
-    </a>
+        <span data-en="We help organize application information and guide customers through the process."
+              data-ar="نساعد في تنظيم معلومات الطلبات وتوجيه العملاء خلال الإجراءات.">
+            We help organize application information and guide customers through the process.
+        </span>
 
-</div>
+        <strong data-en="Clear Communication"
+                data-ar="تواصل واضح">
+            Clear Communication
+        </strong>
 
-
-<div class="travel-box reveal">
-
-    <strong data-en="Travel Support" data-ar="دعم السفر">
-        Travel Support
-    </strong>
-
-    <div class="travel-list">
-
-        <div>
-            <span data-en="Tourist Visa Assistance" data-ar="مساعدة التأشيرات السياحية">
-                Tourist Visa Assistance
-            </span>
-            <b>01</b>
-        </div>
-
-        <div>
-            <span data-en="Application Support" data-ar="دعم الطلبات">
-                Application Support
-            </span>
-            <b>02</b>
-        </div>
-
-        <div>
-            <span data-en="Document Guidance" data-ar="إرشاد المستندات">
-                Document Guidance
-            </span>
-            <b>03</b>
-        </div>
-
-        <div>
-            <span data-en="Travel Planning Support" data-ar="دعم تخطيط السفر">
-                Travel Planning Support
-            </span>
-            <b>04</b>
-        </div>
+        <span data-en="We keep customers informed about the information and documents required."
+              data-ar="نحرص على إبقاء العملاء على اطلاع بالمعلومات والمستندات المطلوبة.">
+            We keep customers informed about the information and documents required.
+        </span>
 
     </div>
-
-</div>
 
 </div>
 </section>
 
 
-<!-- WHY -->
-<section class="section why" id="why">
+<!-- WHY US -->
+<section class="why" id="why">
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
+        <span class="section-label"
+              data-en="WHY RAAZ REBOOT GROUP"
+              data-ar="لماذا رايز ريبوت">
+            WHY RAAZ REBOOT GROUP
+        </span>
 
-    <div class="section-label"
-         data-en="WHY RAAZ REBOOT"
-         data-ar="لماذا RAAZ REBOOT">
-        WHY RAAZ REBOOT
+        <h2 class="section-title"
+            data-en="One Trusted Group. Multiple Solutions."
+            data-ar="مجموعة موثوقة واحدة. حلول متعددة.">
+            One Trusted Group. Multiple Solutions.
+        </h2>
+
+        <p class="section-text"
+           data-en="We aim to make professional services easier to access through one trusted business group."
+           data-ar="نسعى إلى جعل الوصول إلى الخدمات المهنية أكثر سهولة من خلال مجموعة أعمال موثوقة واحدة.">
+            We aim to make professional services easier to access through one trusted business group.
+        </p>
     </div>
 
-    <h2 data-en="Built Around Trust."
-        data-ar="نبني على الثقة.">
-        Built Around Trust.
-    </h2>
+    <div class="why-grid">
 
-    <p data-en="We focus on clear communication, practical solutions and professional customer support."
-       data-ar="نركز على التواصل الواضح والحلول العملية والدعم الاحترافي للعملاء.">
-        We focus on clear communication, practical solutions and professional customer support.
-    </p>
+        <div class="why-card reveal">
+            <h3 data-en="Professional" data-ar="احترافي">Professional</h3>
+            <p data-en="We focus on clear communication and practical service."
+               data-ar="نركز على التواصل الواضح والخدمة العملية.">
+                We focus on clear communication and practical service.
+            </p>
+        </div>
 
-</div>
+        <div class="why-card reveal">
+            <h3 data-en="Multi-Service" data-ar="متعدد الخدمات">Multi-Service</h3>
+            <p data-en="Multiple business and personal service solutions under one group."
+               data-ar="حلول متعددة للأعمال والأفراد تحت مجموعة واحدة.">
+                Multiple business and personal service solutions under one group.
+            </p>
+        </div>
 
+        <div class="why-card reveal">
+            <h3 data-en="Qatar Based" data-ar="مقرنا قطر">Qatar Based</h3>
+            <p data-en="Our operations and service focus are based in Qatar."
+               data-ar="عملياتنا وتركيز خدماتنا قائم على دولة قطر.">
+                Our operations and service focus are based in Qatar.
+            </p>
+        </div>
 
-<div class="why-grid">
+    </div>
 
-<div class="why-card reveal">
-    <div class="why-icon">01</div>
-    <h3 data-en="One Group" data-ar="مجموعة واحدة">One Group</h3>
-    <p data-en="Multiple service divisions connected under one brand."
-       data-ar="أقسام خدمات متعددة تحت علامة تجارية واحدة.">
-        Multiple service divisions connected under one brand.
-    </p>
-</div>
-
-<div class="why-card reveal">
-    <div class="why-icon">02</div>
-    <h3 data-en="Clear Process" data-ar="إجراءات واضحة">Clear Process</h3>
-    <p data-en="We explain the next steps and requirements clearly."
-       data-ar="نوضح الخطوات والمتطلبات التالية بشكل واضح.">
-        We explain the next steps and requirements clearly.
-    </p>
-</div>
-
-<div class="why-card reveal">
-    <div class="why-icon">03</div>
-    <h3 data-en="Local Focus" data-ar="تركيز محلي">Local Focus</h3>
-    <p data-en="Built around customers and businesses operating in Qatar."
-       data-ar="مصمم لخدمة العملاء والشركات العاملة في قطر.">
-        Built around customers and businesses operating in Qatar.
-    </p>
-</div>
-
-<div class="why-card reveal">
-    <div class="why-icon">04</div>
-    <h3 data-en="Professional Support" data-ar="دعم احترافي">Professional Support</h3>
-    <p data-en="Responsive communication and practical service support."
-       data-ar="تواصل سريع ودعم عملي للخدمات.">
-        Responsive communication and practical service support.
-    </p>
-</div>
-
-</div>
 </div>
 </section>
 
 
 <!-- REVIEWS -->
-<section class="section" id="reviews">
+<section class="reviews" id="reviews">
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
+        <span class="section-label"
+              data-en="CUSTOMER REVIEWS"
+              data-ar="آراء العملاء">
+            CUSTOMER REVIEWS
+        </span>
 
-    <div class="section-label"
-         data-en="CUSTOMER REVIEWS"
-         data-ar="آراء العملاء">
-        CUSTOMER REVIEWS
+        <h2 class="section-title"
+            data-en="What Our Customers Say"
+            data-ar="ماذا يقول عملاؤنا">
+            What Our Customers Say
+        </h2>
+
+        <p class="section-text"
+           data-en="Real customer feedback will be featured here. We only publish genuine reviews with customer permission."
+           data-ar="سيتم عرض آراء العملاء الحقيقية هنا. ننشر فقط التقييمات الحقيقية بموافقة العملاء.">
+            Real customer feedback will be featured here. We only publish genuine reviews with customer permission.
+        </p>
     </div>
 
-    <h2 data-en="What Our Customers Say."
-        data-ar="ماذا يقول عملاؤنا؟">
-        What Our Customers Say.
-    </h2>
+    <div class="review-grid">
 
-    <p data-en="Real customer experiences will be featured here as we receive genuine feedback."
-       data-ar="سيتم عرض تجارب العملاء الحقيقية هنا عند استلام تقييماتهم وملاحظاتهم.">
-        Real customer experiences will be featured here as we receive genuine feedback.
-    </p>
+        <div class="review-card reveal">
+            <div class="stars">★★★★★</div>
 
-</div>
+            <p data-en="Your real customer review will appear here. We will publish genuine feedback with the customer's permission."
+               data-ar="سيظهر تقييم العميل الحقيقي هنا. سننشر الملاحظات الحقيقية بموافقة العميل.">
+                Your real customer review will appear here. We will publish genuine feedback with the customer's permission.
+            </p>
 
+            <div class="reviewer">
+                <strong data-en="Customer Review" data-ar="تقييم عميل">Customer Review</strong>
+                <span data-en="RAAZ REBOOT GROUP" data-ar="RAAZ REBOOT GROUP">RAAZ REBOOT GROUP</span>
+            </div>
+        </div>
 
-<div class="reviews-grid">
+        <div class="review-card reveal">
+            <div class="stars">★★★★★</div>
 
-<div class="review-card reveal">
+            <p data-en="Have you used one of our services? Share your genuine experience and help others make an informed decision."
+               data-ar="هل استخدمت إحدى خدماتنا؟ شارك تجربتك الحقيقية وساعد الآخرين على اتخاذ قرار مناسب.">
+                Have you used one of our services? Share your genuine experience and help others make an informed decision.
+            </p>
 
-    <div class="stars">★★★★★</div>
+            <div class="reviewer">
+                <strong data-en="Real Feedback Only" data-ar="تقييمات حقيقية فقط">Real Feedback Only</strong>
+                <span data-en="CUSTOMER EXPERIENCE" data-ar="تجربة العميل">CUSTOMER EXPERIENCE</span>
+            </div>
+        </div>
 
-    <p data-en="Your real customer review will appear here. We only publish genuine feedback with the customer's permission."
-       data-ar="سيتم عرض تقييم العميل الحقيقي هنا. ننشر فقط التقييمات الحقيقية بموافقة العميل.">
-        Your real customer review will appear here. We only publish genuine feedback with the customer's permission.
-    </p>
+        <div class="review-card reveal">
+            <div class="stars">★★★★★</div>
 
-    <div class="reviewer">
-        <strong data-en="Customer Review" data-ar="تقييم عميل">Customer Review</strong>
-        <span>RAAZ REBOOT GROUP</span>
+            <p data-en="Your feedback matters to us. Tell us about your experience with RAAZ REBOOT GROUP."
+               data-ar="رأيك يهمنا. أخبرنا عن تجربتك مع RAAZ REBOOT GROUP.">
+                Your feedback matters to us. Tell us about your experience with RAAZ REBOOT GROUP.
+            </p>
+
+            <div class="reviewer">
+                <strong data-en="Your Experience Matters" data-ar="تجربتك تهمنا">Your Experience Matters</strong>
+                <span data-en="RAAZ REBOOT GROUP" data-ar="RAAZ REBOOT GROUP">RAAZ REBOOT GROUP</span>
+            </div>
+        </div>
+
     </div>
 
-</div>
+    <div class="review-cta reveal">
 
+        <div>
+            <h3 data-en="Had a great experience with us?"
+                data-ar="هل كانت تجربتك معنا رائعة؟">
+                Had a great experience with us?
+            </h3>
 
-<div class="review-card reveal">
+            <p class="section-text"
+               style="font-size:14px;margin-top:5px;"
+               data-en="We would love to hear your genuine feedback."
+               data-ar="يسعدنا معرفة رأيك وتجربتك الحقيقية.">
+                We would love to hear your genuine feedback.
+            </p>
+        </div>
 
-    <div class="stars">★★★★★</div>
+        <a href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20would%20like%20to%20leave%20a%20customer%20review."
+           target="_blank"
+           rel="noopener"
+           class="btn btn-primary"
+           data-en="LEAVE A REVIEW →"
+           data-ar="اترك تقييمًا ←">
+            LEAVE A REVIEW →
+        </a>
 
-    <p data-en="Have you used one of our services? Share your genuine experience with us and help future customers."
-       data-ar="هل استخدمت إحدى خدماتنا؟ شارك تجربتك الحقيقية معنا وساعد العملاء الآخرين.">
-        Have you used one of our services? Share your genuine experience with us and help future customers.
-    </p>
-
-    <div class="reviewer">
-        <strong data-en="Real Feedback Only" data-ar="تقييمات حقيقية فقط">Real Feedback Only</strong>
-        <span>RAAZ REBOOT GROUP</span>
     </div>
-
-</div>
-
-
-<div class="review-card reveal">
-
-    <div class="stars">★★★★★</div>
-
-    <p data-en="Your feedback matters to us. We are building our review section with real experiences from our customers."
-       data-ar="رأيك مهم بالنسبة لنا. نقوم ببناء قسم التقييمات من خلال تجارب عملائنا الحقيقية.">
-        Your feedback matters to us. We are building our review section with real experiences from our customers.
-    </p>
-
-    <div class="reviewer">
-        <strong data-en="Your Experience Matters" data-ar="تجربتك مهمة">Your Experience Matters</strong>
-        <span>RAAZ REBOOT GROUP</span>
-    </div>
-
-</div>
-
-</div>
-
-
-<div class="review-cta reveal">
-
-<div>
-    <h3 data-en="Had a great experience with us?"
-        data-ar="هل كانت تجربتك معنا رائعة؟">
-        Had a great experience with us?
-    </h3>
-
-    <p data-en="Send us your genuine feedback on WhatsApp."
-       data-ar="أرسل لنا تقييمك الحقيقي عبر واتساب.">
-        Send us your genuine feedback on WhatsApp.
-    </p>
-</div>
-
-<a class="btn"
-   style="background:#fff;color:#000"
-   href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20would%20like%20to%20leave%20a%20customer%20review."
-   target="_blank"
-   rel="noopener"
-   data-en="LEAVE A REVIEW →"
-   data-ar="اترك تقييماً ←">
-    LEAVE A REVIEW →
-</a>
-
-</div>
 
 </div>
 </section>
 
 
 <!-- PROCESS -->
-<section class="section process">
+<section>
 <div class="container">
 
-<div class="section-head reveal">
+    <div class="reveal">
+        <span class="section-label"
+              data-en="HOW IT WORKS"
+              data-ar="كيف نعمل">
+            HOW IT WORKS
+        </span>
 
-    <div class="section-label"
-         data-en="HOW IT WORKS"
-         data-ar="كيف نعمل">
-        HOW IT WORKS
+        <h2 class="section-title"
+            data-en="Simple. Clear. Professional."
+            data-ar="بسيط. واضح. احترافي.">
+            Simple. Clear. Professional.
+        </h2>
     </div>
 
-    <h2 data-en="Simple. Clear. Professional."
-        data-ar="بسيط. واضح. احترافي.">
-        Simple. Clear. Professional.
-    </h2>
+    <div class="process-grid">
 
-</div>
+        <div class="process-card reveal">
+            <div class="num">01</div>
+            <h3 data-en="Tell Us" data-ar="أخبرنا">Tell Us</h3>
+            <p data-en="Share your requirement with our team."
+               data-ar="شارك احتياجك مع فريقنا.">
+                Share your requirement with our team.
+            </p>
+        </div>
 
+        <div class="process-card reveal">
+            <div class="num">02</div>
+            <h3 data-en="Understand" data-ar="نفهم احتياجك">Understand</h3>
+            <p data-en="We understand your requirement and available options."
+               data-ar="نفهم احتياجك والخيارات المتاحة.">
+                We understand your requirement and available options.
+            </p>
+        </div>
 
-<div class="process-grid">
+        <div class="process-card reveal">
+            <div class="num">03</div>
+            <h3 data-en="Support" data-ar="الدعم">Support</h3>
+            <p data-en="Our team assists you through the relevant process."
+               data-ar="يساعدك فريقنا خلال الإجراءات ذات الصلة.">
+                Our team assists you through the relevant process.
+            </p>
+        </div>
 
-<div class="process-card reveal">
-    <div class="process-number">01</div>
-    <h3 data-en="Tell Us What You Need"
-        data-ar="أخبرنا بما تحتاج">
-        Tell Us What You Need
-    </h3>
-    <p data-en="Contact us through WhatsApp or the website."
-       data-ar="تواصل معنا عبر واتساب أو الموقع.">
-        Contact us through WhatsApp or the website.
-    </p>
-</div>
+        <div class="process-card reveal">
+            <div class="num">04</div>
+            <h3 data-en="Complete" data-ar="الإتمام">Complete</h3>
+            <p data-en="We help you move forward with clarity."
+               data-ar="نساعدك على المضي قدمًا بوضوح.">
+                We help you move forward with clarity.
+            </p>
+        </div>
 
-<div class="process-card reveal">
-    <div class="process-number">02</div>
-    <h3 data-en="Understand Your Requirement"
-        data-ar="نفهم متطلباتك">
-        Understand Your Requirement
-    </h3>
-    <p data-en="We review your request and explain the available options."
-       data-ar="نراجع طلبك ونوضح الخيارات المتاحة.">
-        We review your request and explain the available options.
-    </p>
-</div>
+    </div>
 
-<div class="process-card reveal">
-    <div class="process-number">03</div>
-    <h3 data-en="Prepare & Process"
-        data-ar="التجهيز والمعالجة">
-        Prepare & Process
-    </h3>
-    <p data-en="We guide you through the required documents and process."
-       data-ar="نرشدك خلال المستندات والإجراءات المطلوبة.">
-        We guide you through the required documents and process.
-    </p>
-</div>
-
-<div class="process-card reveal">
-    <div class="process-number">04</div>
-    <h3 data-en="Stay Updated"
-        data-ar="ابقَ على اطلاع">
-        Stay Updated
-    </h3>
-    <p data-en="We keep communication clear throughout the service."
-       data-ar="نحافظ على التواصل الواضح طوال الخدمة.">
-        We keep communication clear throughout the service.
-    </p>
-</div>
-
-</div>
 </div>
 </section>
 
 
 <!-- CONTACT -->
-<section class="section" id="contact">
+<section class="contact" id="contact">
 <div class="container contact-grid">
 
-<div class="contact-info reveal">
+    <div class="reveal">
 
-    <div class="section-label"
-         data-en="CONTACT US"
-         data-ar="تواصل معنا">
-        CONTACT US
-    </div>
+        <span class="section-label"
+              data-en="CONTACT US"
+              data-ar="تواصل معنا">
+            CONTACT US
+        </span>
 
-    <h2 data-en="Let's Talk About What You Need."
-        data-ar="لنتحدث عما تحتاجه.">
-        Let's Talk About What You Need.
-    </h2>
+        <h2 class="section-title"
+            data-en="Let's Talk About What You Need."
+            data-ar="لنتحدث عن احتياجك.">
+            Let's Talk About What You Need.
+        </h2>
 
-    <p data-en="Send us your requirement and our team will guide you to the appropriate service."
-       data-ar="أرسل متطلباتك وسنوجهك إلى الخدمة المناسبة.">
-        Send us your requirement and our team will guide you to the appropriate service.
-    </p>
+        <p class="section-text"
+           data-en="Contact RAAZ REBOOT GROUP and our team will guide you toward the appropriate service."
+           data-ar="تواصل مع RAAZ REBOOT GROUP وسيوجهك فريقنا نحو الخدمة المناسبة.">
+            Contact RAAZ REBOOT GROUP and our team will guide you toward the appropriate service.
+        </p>
 
+        <div class="contact-info">
 
-    <div class="contact-item">
-        <div class="contact-icon">WA</div>
-        <div>
-            <strong>WhatsApp</strong>
-            <span>+974 7187 6497</span>
+            <div class="contact-item">
+                <strong data-en="Location" data-ar="الموقع">Location</strong>
+                <span>Al Muntazah, Doha, Qatar</span>
+            </div>
+
+            <div class="contact-item">
+                <strong data-en="Phone" data-ar="الهاتف">Phone</strong>
+                <span>+974 5113 3654</span>
+            </div>
+
+            <div class="contact-item">
+                <strong data-en="WhatsApp" data-ar="واتساب">WhatsApp</strong>
+                <span>+974 7187 6497</span>
+            </div>
+
+            <div class="contact-item">
+                <strong data-en="Email" data-ar="البريد الإلكتروني">Email</strong>
+                <span>raazrebootgroup@gmail.com</span>
+            </div>
+
+            <div class="contact-item">
+                <strong data-en="Business Hours" data-ar="ساعات العمل">Business Hours</strong>
+                <span>4:00 PM – 12:00 AM</span>
+            </div>
+
         </div>
+
     </div>
 
 
-    <div class="contact-item">
-        <div class="contact-icon">@</div>
-        <div>
-            <strong>Email</strong>
-            <span>raazrebootgroup@gmail.com</span>
-        </div>
+    <div class="form-box reveal">
+
+        <form onsubmit="sendWhatsApp(event)">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                    <input id="name" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Phone" data-ar="رقم الهاتف">Phone</label>
+                    <input id="phone" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                    <input id="email" type="email">
+                </div>
+
+                <div class="form-group">
+                    <label data-en="Service" data-ar="الخدمة">Service</label>
+
+                    <select id="service" required>
+                        <option value="" data-en="Select a service" data-ar="اختر الخدمة">Select a service</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="Cleaning & Hospitality">Cleaning & Hospitality</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Business & Company Formation">Business & Company Formation</option>
+                        <option value="Online Services">Online Services</option>
+                        <option value="Government Services">Government Services</option>
+                        <option value="Travel & Tourist Visa Services">Travel & Tourist Visa Services</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group full">
+                    <label data-en="Message" data-ar="الرسالة">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+                <span data-en="SEND INQUIRY VIA WHATSAPP →"
+                      data-ar="إرسال الطلب عبر واتساب ←">
+                    SEND INQUIRY VIA WHATSAPP →
+                </span>
+            </button>
+
+        </form>
+
     </div>
-
-
-    <div class="contact-item">
-        <div class="contact-icon">QA</div>
-        <div>
-            <strong data-en="Location" data-ar="الموقع">Location</strong>
-            <span>Al Muntazah, Doha, Qatar</span>
-        </div>
-    </div>
-
-
-    <div class="contact-item">
-        <div class="contact-icon">4–12</div>
-        <div>
-            <strong data-en="Business Hours" data-ar="ساعات العمل">Business Hours</strong>
-            <span>4:00 PM – 12:00 AM</span>
-        </div>
-    </div>
-
-</div>
-
-
-<div class="contact-form reveal">
-
-<form onsubmit="sendWhatsApp(event)">
-
-<div class="form-grid">
-
-<div class="field">
-    <label for="name" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
-    <input id="name" type="text" required placeholder="Your name">
-</div>
-
-<div class="field">
-    <label for="phone" data-en="Phone" data-ar="رقم الهاتف">Phone</label>
-    <input id="phone" type="tel" required placeholder="+974">
-</div>
-
-<div class="field">
-    <label for="email" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
-    <input id="email" type="email" placeholder="your@email.com">
-</div>
-
-<div class="field">
-    <label for="service" data-en="Service" data-ar="الخدمة">Service</label>
-
-    <select id="service" required>
-
-        <option value=""
-                data-en="Select a service"
-                data-ar="اختر الخدمة">
-            Select a service
-        </option>
-
-        <option value="Real Estate"
-                data-en="Real Estate"
-                data-ar="العقارات">
-            Real Estate
-        </option>
-
-        <option value="Cleaning & Hospitality"
-                data-en="Cleaning & Hospitality"
-                data-ar="التنظيف والضيافة">
-            Cleaning & Hospitality
-        </option>
-
-        <option value="Technology"
-                data-en="Technology"
-                data-ar="التكنولوجيا">
-            Technology
-        </option>
-
-        <option value="Company Formation"
-                data-en="Business & Company Formation"
-                data-ar="الأعمال وتأسيس الشركات">
-            Business & Company Formation
-        </option>
-
-        <option value="Online Services"
-                data-en="Online Services"
-                data-ar="الخدمات الإلكترونية">
-            Online Services
-        </option>
-
-        <option value="Government Services"
-                data-en="Government Services"
-                data-ar="الخدمات الحكومية">
-            Government Services
-        </option>
-
-        <option value="Travel & Tourist Visa"
-                data-en="Travel & Tourist Visa"
-                data-ar="السفر والتأشيرات السياحية">
-            Travel & Tourist Visa
-        </option>
-
-        <option value="Other"
-                data-en="Other"
-                data-ar="أخرى">
-            Other
-        </option>
-
-    </select>
-
-</div>
-
-
-<div class="field full">
-
-    <label for="message"
-           data-en="Message"
-           data-ar="الرسالة">
-        Message
-    </label>
-
-    <textarea id="message"
-              required
-              placeholder="Tell us what you need..."></textarea>
-
-</div>
-
-</div>
-
-
-<button class="btn btn-primary"
-        type="submit"
-        style="margin-top:18px;width:100%"
-        data-en="SEND INQUIRY ON WHATSAPP →"
-        data-ar="إرسال الطلب عبر واتساب ←">
-    SEND INQUIRY ON WHATSAPP →
-</button>
-
-<p class="form-note"
-   data-en="Submitting this form will open WhatsApp with your inquiry."
-   data-ar="سيؤدي إرسال هذا النموذج إلى فتح واتساب مع طلبك.">
-    Submitting this form will open WhatsApp with your inquiry.
-</p>
-
-</form>
-
-</div>
 
 </div>
 </section>
@@ -2263,122 +1888,104 @@ body.rtl .contact-form{
 
 <!-- DISCLAIMER -->
 <section class="disclaimer">
-<div class="container disclaimer-box">
+<div class="container">
 
-<strong data-en="Important Service Disclaimer"
-        data-ar="إخلاء مسؤولية مهم">
-    Important Service Disclaimer
-</strong>
+    <div class="disclaimer-box">
 
-<p data-en="RAAZ REBOOT GROUP is an independent service provider. We assist customers with eligible government-related procedures and applications. Government approvals, decisions, fees and processing times are determined by the relevant authorities."
-   data-ar="RAAZ REBOOT GROUP هي جهة خدمات مستقلة. نساعد العملاء في الإجراءات والطلبات الحكومية المؤهلة. تخضع الموافقات والقرارات والرسوم وأوقات المعالجة للجهات الحكومية المختصة.">
-    RAAZ REBOOT GROUP is an independent service provider. We assist customers with eligible government-related procedures and applications. Government approvals, decisions, fees and processing times are determined by the relevant authorities.
-</p>
+        <strong data-en="Important Information"
+                data-ar="معلومات مهمة">
+            Important Information
+        </strong>
 
-<br>
+        <br><br>
 
-<p data-en="Visa applications are subject to embassy, immigration and government decisions. We provide application assistance and processing support and do not guarantee approval."
-   data-ar="تخضع طلبات التأشيرات لقرارات السفارات والهجرة والجهات الحكومية. نقدم المساعدة في الطلبات ودعم الإجراءات ولا نضمن الموافقة.">
-    Visa applications are subject to embassy, immigration and government decisions. We provide application assistance and processing support and do not guarantee approval.
-</p>
+        <span data-en="RAAZ REBOOT GROUP is an independent service provider. We assist customers with eligible government-related procedures and applications. Government approvals, decisions, official fees and processing times are determined solely by the relevant authorities."
+              data-ar="RAAZ REBOOT GROUP هي جهة خدمات مستقلة. نساعد العملاء في الإجراءات والطلبات المتعلقة بالجهات الحكومية المؤهلة. تخضع الموافقات والقرارات والرسوم الرسمية وأوقات المعالجة للجهات المختصة فقط.">
+            RAAZ REBOOT GROUP is an independent service provider. We assist customers with eligible government-related procedures and applications. Government approvals, decisions, official fees and processing times are determined solely by the relevant authorities.
+        </span>
+
+        <br><br>
+
+        <span data-en="Visa applications are subject to the decision of the relevant embassy, immigration authority or government department. RAAZ REBOOT GROUP provides application assistance and processing support and does not guarantee visa approval."
+              data-ar="تخضع طلبات التأشيرات لقرار السفارة أو جهة الهجرة أو الجهة الحكومية المختصة. تقدم RAAZ REBOOT GROUP المساعدة في الطلبات ودعم الإجراءات ولا تضمن الموافقة على التأشيرة.">
+            Visa applications are subject to the decision of the relevant embassy, immigration authority or government department. RAAZ REBOOT GROUP provides application assistance and processing support and does not guarantee visa approval.
+        </span>
+
+    </div>
 
 </div>
 </section>
-
-</main>
 
 
 <!-- FOOTER -->
 <footer>
 <div class="container">
 
-<div class="footer-grid">
+    <div class="footer-grid">
 
-<div class="footer-brand">
+        <div>
+            <div class="footer-logo">
+                <img src="raaz-reboot-group-logo-transparent.png" alt="RAAZ REBOOT GROUP">
+            </div>
 
-    <img src="raaz-reboot-group-logo-transparent.png"
-         alt="RAAZ REBOOT GROUP Logo">
-
-    <h3>RAAZ REBOOT GROUP</h3>
-
-    <p data-en="ONE TRUSTED GROUP. MULTIPLE SOLUTIONS."
-       data-ar="مجموعة موثوقة واحدة. حلول متعددة.">
-        ONE TRUSTED GROUP. MULTIPLE SOLUTIONS.
-    </p>
-
-</div>
+            <p data-en="ONE TRUSTED GROUP. MULTIPLE SOLUTIONS."
+               data-ar="مجموعة موثوقة واحدة. حلول متعددة.">
+                ONE TRUSTED GROUP. MULTIPLE SOLUTIONS.
+            </p>
+        </div>
 
 
-<div>
+        <div>
+            <h4 data-en="Services" data-ar="الخدمات">Services</h4>
 
-<h4 data-en="SERVICES" data-ar="الخدمات">SERVICES</h4>
-
-<div class="footer-links">
-
-<a href="#services">Real Estate</a>
-<a href="#services">Cleaning & Hospitality</a>
-<a href="#services">Technology</a>
-<a href="#services">Company Formation</a>
-<a href="#services">Online Services</a>
-
-</div>
-
-</div>
+            <ul>
+                <li><a href="#services">Real Estate</a></li>
+                <li><a href="#services">Cleaning & Hospitality</a></li>
+                <li><a href="#services">Technology</a></li>
+                <li><a href="#services">Company Formation</a></li>
+                <li><a href="#services">Online Services</a></li>
+            </ul>
+        </div>
 
 
-<div>
+        <div>
+            <h4 data-en="More Services" data-ar="خدمات أخرى">More Services</h4>
 
-<h4 data-en="MORE SERVICES" data-ar="المزيد من الخدمات">MORE SERVICES</h4>
-
-<div class="footer-links">
-
-<a href="#services">Government Services</a>
-<a href="#travel">Travel & Tourist Visa</a>
-<a href="#reviews">Customer Reviews</a>
-<a href="#why">Why Us</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-</div>
+            <ul>
+                <li><a href="#services">Government Services</a></li>
+                <li><a href="#services">Travel & Visa Services</a></li>
+                <li><a href="#reviews">Customer Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
 
 
-<div>
+        <div>
+            <h4 data-en="Contact" data-ar="التواصل">Contact</h4>
 
-<h4 data-en="CONTACT" data-ar="تواصل">CONTACT</h4>
+            <ul>
+                <li>Al Muntazah, Doha, Qatar</li>
+                <li>+974 7187 6497</li>
+                <li>raazrebootgroup@gmail.com</li>
+                <li>4:00 PM – 12:00 AM</li>
+            </ul>
+        </div>
 
-<div class="footer-links">
-
-<a href="https://wa.me/97471876497" target="_blank" rel="noopener">
-    +974 7187 6497
-</a>
-
-<a href="mailto:raazrebootgroup@gmail.com">
-    raazrebootgroup@gmail.com
-</a>
-
-<a href="#contact">
-    Al Muntazah, Doha, Qatar
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 
-<div class="footer-bottom">
+    <div class="footer-bottom">
 
-<span>
-© <span id="year"></span> RAAZ REBOOT GROUP. All Rights Reserved.
-</span>
+        <span>
+            © <span id="year"></span> RAAZ REBOOT GROUP. All Rights Reserved.
+        </span>
 
-<span>
-SANOAR HOSSEN — Founder & Managing Director
-</span>
+        <span data-en="Qatar Based Business Group"
+              data-ar="مجموعة أعمال مقرها دولة قطر">
+            Qatar Based Business Group
+        </span>
 
-</div>
+    </div>
 
 </div>
 </footer>
@@ -2393,80 +2000,62 @@ SANOAR HOSSEN — Founder & Managing Director
     WA
 </a>
 
-
-<!-- TOP BUTTON -->
-<button class="top-btn"
-        id="topBtn"
-        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     ↑
 </button>
 
 
 <script>
 
-let currentLanguage = localStorage.getItem("raazLanguage") || "en";
+function toggleMenu(){
+    const menu = document.getElementById("mobileNav");
+    const button = document.querySelector(".menu-toggle");
 
-function setLanguage(lang){
+    menu.classList.toggle("active");
 
-    currentLanguage = lang;
+    const isOpen = menu.classList.contains("active");
 
-    localStorage.setItem("raazLanguage",lang);
+    button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+}
 
-    document.documentElement.lang = lang;
+function closeMenu(){
+    const menu = document.getElementById("mobileNav");
+    const button = document.querySelector(".menu-toggle");
 
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    menu.classList.remove("active");
+    button.setAttribute("aria-expanded","false");
+}
 
-    document.body.classList.toggle("rtl",lang === "ar");
+
+function setLanguage(language){
+
+    document.documentElement.lang = language;
+
+    if(language === "ar"){
+        document.body.classList.add("rtl");
+        document.documentElement.dir = "rtl";
+
+        document.getElementById("arBtn").classList.add("active");
+        document.getElementById("enBtn").classList.remove("active");
+    }else{
+        document.body.classList.remove("rtl");
+        document.documentElement.dir = "ltr";
+
+        document.getElementById("enBtn").classList.add("active");
+        document.getElementById("arBtn").classList.remove("active");
+    }
 
     document.querySelectorAll("[data-en]").forEach(function(element){
 
-        const value = element.getAttribute("data-" + lang);
+        const value = element.getAttribute("data-" + language);
 
-        if(value !== null){
+        if(value){
             element.textContent = value;
         }
 
     });
 
-    document.querySelectorAll("option[data-en]").forEach(function(option){
-
-        const value = option.getAttribute("data-" + lang);
-
-        if(value !== null){
-            option.textContent = value;
-        }
-
-    });
-
-    document.getElementById("enBtn").classList.toggle("active",lang === "en");
-
-    document.getElementById("arBtn").classList.toggle("active",lang === "ar");
-}
-
-
-function toggleMenu(){
-
-    const menu = document.getElementById("mobileNav");
-
-    const button = document.querySelector(".menu-toggle");
-
-    menu.classList.toggle("active");
-
-    const open = menu.classList.contains("active");
-
-    button.setAttribute("aria-expanded",open ? "true" : "false");
-}
-
-
-function closeMenu(){
-
-    const menu = document.getElementById("mobileNav");
-
-    const button = document.querySelector(".menu-toggle");
-
-    menu.classList.remove("active");
-
-    button.setAttribute("aria-expanded","false");
+    localStorage.setItem("raazLanguage", language);
 }
 
 
@@ -2475,13 +2064,9 @@ function sendWhatsApp(event){
     event.preventDefault();
 
     const name = document.getElementById("name").value.trim();
-
     const phone = document.getElementById("phone").value.trim();
-
     const email = document.getElementById("email").value.trim();
-
     const service = document.getElementById("service").value;
-
     const message = document.getElementById("message").value.trim();
 
     const text =
@@ -2505,60 +2090,59 @@ function sendWhatsApp(event){
 }
 
 
-const observer = new IntersectionObserver(
+/* REVEAL ANIMATION */
 
+const revealObserver = new IntersectionObserver(
     function(entries){
 
         entries.forEach(function(entry){
 
             if(entry.isIntersecting){
-
-                entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
-
+                entry.target.classList.add("show");
+                revealObserver.unobserve(entry.target);
             }
 
         });
 
     },
-
     {
         threshold:.12
     }
-
 );
 
-
 document.querySelectorAll(".reveal").forEach(function(element){
-
-    observer.observe(element);
-
+    revealObserver.observe(element);
 });
 
 
+/* SCROLL TOP */
+
 window.addEventListener("scroll",function(){
 
-    const topButton = document.getElementById("topBtn");
+    const button = document.getElementById("scrollTop");
 
     if(window.scrollY > 500){
-
-        topButton.classList.add("show");
-
+        button.classList.add("show");
     }else{
-
-        topButton.classList.remove("show");
-
+        button.classList.remove("show");
     }
 
 });
 
 
+/* LANGUAGE */
+
+const savedLanguage = localStorage.getItem("raazLanguage");
+
+if(savedLanguage){
+    setLanguage(savedLanguage);
+}
+
+
+/* YEAR */
+
 document.getElementById("year").textContent =
     new Date().getFullYear();
-
-
-setLanguage(currentLanguage);
 
 </script>
 
