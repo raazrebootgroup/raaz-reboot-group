@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raazrebootgroup.github.io/raaz-reboot-group/sitemap.xml
