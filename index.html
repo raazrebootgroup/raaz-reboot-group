@@ -58,7 +58,8 @@
       "url": "https://raazreboot.com/",
       "inLanguage": [
         "en",
-        "ar"
+        "ar",
+        "bn"
       ]
     },
     {
@@ -103,7 +104,7 @@
         {
           "@type": "Question",
           "name": "What services does RAAZ REBOOT GROUP provide?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and selected tourist visa application support."}
+          "acceptedAnswer": {"@type": "Answer", "text": "Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and tourist visa application support for multiple destinations, subject to current eligibility and availability."}
         },
         {
           "@type": "Question",
@@ -120,7 +121,8 @@
       "areaServed": "QA",
       "availableLanguage": [
         "English",
-        "Arabic"
+        "Arabic",
+        "Bengali"
       ]
     }
   ]
@@ -1297,6 +1299,7 @@ body.rtl .faq-item summary:after{right:auto;left:0;}
         <div class="language-switch">
             <button id="enBtn" class="active" onclick="setLanguage('en')">EN</button>
             <button id="arBtn" onclick="setLanguage('ar')">العربية</button>
+            <button id="bnBtn" onclick="setLanguage('bn')">বাংলা</button>
         </div>
 
         <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
@@ -1677,6 +1680,7 @@ body.rtl .faq-item summary:after{right:auto;left:0;}
                data-ar="خدمات التنظيف والضيافة ودعم العقارات بشكل احترافي.">
                 Professional cleaning, hospitality and property support services.
             </p>
+            <a class="service-link" href="cleaning-hospitality.html" data-en="Explore cleaning & hospitality →" data-ar="استكشف خدمات التنظيف والضيافة ←">Explore cleaning &amp; hospitality →</a>
         </div>
 
         <div class="service-card reveal">
@@ -1729,9 +1733,9 @@ body.rtl .faq-item summary:after{right:auto;left:0;}
             <h3 data-en="TRAVEL & TOURIST VISA SERVICES" data-ar="السفر وخدمات التأشيرات السياحية">
                 TRAVEL & TOURIST VISA SERVICES
             </h3>
-            <p data-en="Travel planning and tourist visa application assistance for selected destinations."
-               data-ar="التخطيط للسفر والمساعدة في طلبات التأشيرات السياحية لوجهات مختارة.">
-                Travel planning and tourist visa application assistance for selected destinations.
+            <p data-en="Travel planning and tourist visa application assistance for multiple destinations, subject to current eligibility and availability."
+               data-ar="التخطيط للسفر والمساعدة في طلبات التأشيرات السياحية لوجهات متعددة حسب الأهلية والتوافر الحالي.">
+                Travel planning and tourist visa application assistance for multiple destinations, subject to current eligibility and availability.
             </p>
             <a class="service-link" href="tourist-visa-processing.html" data-en="Explore visa support →" data-ar="استكشف دعم التأشيرات ←">Explore visa support →</a>
         </div>
@@ -1983,7 +1987,7 @@ body.rtl .faq-item summary:after{right:auto;left:0;}
     <div class="faq-list">
         <details class="faq-item reveal">
             <summary data-en="What services does RAAZ REBOOT GROUP provide?" data-ar="ما الخدمات التي تقدمها RAAZ REBOOT GROUP؟">What services does RAAZ REBOOT GROUP provide?</summary>
-            <p data-en="Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and selected tourist visa application support." data-ar="تشمل أقسام خدماتنا العقارات والتنظيف والضيافة والتكنولوجيا وتأسيس الشركات ودعم الأعمال والخدمات الإلكترونية والمساعدة المؤهلة في الإجراءات الحكومية ودعم طلبات التأشيرات السياحية المختارة.">Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and selected tourist visa application support.</p>
+            <p data-en="Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and tourist visa application support for multiple destinations, subject to current eligibility and availability." data-ar="تشمل أقسام خدماتنا العقارات والتنظيف والضيافة والتكنولوجيا وتأسيس الشركات ودعم الأعمال والخدمات الإلكترونية والمساعدة المؤهلة في الإجراءات الحكومية ودعم طلبات التأشيرات السياحية المختارة.">Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and tourist visa application support for multiple destinations, subject to current eligibility and availability.</p>
         </details>
         <details class="faq-item reveal">
             <summary data-en="How can I ask about tourist visa assistance?" data-ar="كيف يمكنني الاستفسار عن المساعدة في التأشيرة السياحية؟">How can I ask about tourist visa assistance?</summary>
@@ -2267,35 +2271,156 @@ function closeMenu(){
 }
 
 
+const bnTranslations = {
+  "QATAR • BUSINESS • SERVICES": "কাতার • ব্যবসা • সেবা",
+  "Home": "হোম",
+  "About": "আমাদের সম্পর্কে",
+  "Services": "সেবাসমূহ",
+  "FAQ": "সাধারণ প্রশ্ন",
+  "Leadership": "পরিচালনা দল",
+  "Reviews": "গ্রাহকের মতামত",
+  "Why Us": "কেন আমরা",
+  "Contact": "যোগাযোগ",
+  "WhatsApp": "হোয়াটসঅ্যাপ",
+  "QATAR BASED BUSINESS GROUP": "কাতারভিত্তিক ব্যবসায়িক গ্রুপ",
+  "ONE TRUSTED GROUP.": "একটি বিশ্বস্ত গ্রুপ।",
+  "MULTIPLE SOLUTIONS.": "বিভিন্ন সমাধান।",
+  "Your Trusted Partner for Business, Property, Technology & Services in Qatar.": "কাতারে ব্যবসা, সম্পত্তি, প্রযুক্তি ও বিভিন্ন সেবায় আপনার বিশ্বস্ত সহযোগী।",
+  "EXPLORE SERVICES →": "সেবাসমূহ দেখুন →",
+  "CONTACT US": "যোগাযোগ করুন",
+  "One Group. Multiple Solutions.": "একটি গ্রুপ, নানা সমাধান।",
+  "Professional support across business, property, technology, hospitality, online services, government-related assistance and travel visa services.": "ব্যবসা, সম্পত্তি, প্রযুক্তি, হসপিটালিটি, অনলাইন সেবা, প্রযোজ্য সরকারি প্রক্রিয়া এবং ভিসা-সংক্রান্ত সহায়তা।",
+  "QATAR BASED": "কাতারভিত্তিক",
+  "Local business support": "স্থানীয় ব্যবসায়িক সহায়তা",
+  "MULTI-SERVICE GROUP": "বহুমুখী সেবার গ্রুপ",
+  "Multiple solutions under one group": "এক গ্রুপের অধীনে নানা সমাধান",
+  "PROFESSIONAL SUPPORT": "পেশাদার সহায়তা",
+  "Practical and responsive assistance": "বাস্তবসম্মত ও দ্রুত সহায়তা",
+  "ABOUT RAAZ REBOOT GROUP": "RAAZ REBOOT GROUP সম্পর্কে",
+  "Built to Make Life and Business Simpler.": "জীবন ও ব্যবসাকে সহজ করার লক্ষ্য।",
+  "RAAZ REBOOT GROUP is a Qatar-based business group bringing multiple professional services together under one trusted name.": "RAAZ REBOOT GROUP কাতারভিত্তিক একটি ব্যবসায়িক গ্রুপ, যা এক বিশ্বস্ত নামের অধীনে বিভিন্ন পেশাদার সেবা প্রদান করে।",
+  "Business-focused solutions for individuals, entrepreneurs and companies.": "ব্যক্তি, উদ্যোক্তা ও প্রতিষ্ঠানের জন্য ব্যবসাকেন্দ্রিক সমাধান।",
+  "Multiple service divisions designed to make everyday processes easier.": "দৈনন্দিন কাজ সহজ করার জন্য বিভিন্ন সেবা বিভাগ।",
+  "Professional support with clear communication and practical assistance.": "স্পষ্ট যোগাযোগ ও বাস্তবসম্মত সহায়তার মাধ্যমে পেশাদার সেবা।",
+  "The dream of building RAAZ REBOOT GROUP began in 2020, and the company has been operating in Qatar since January 2023.": "RAAZ REBOOT GROUP গড়ার স্বপ্ন শুরু হয় ২০২০ সালে এবং প্রতিষ্ঠানটি ২০২৩ সালের জানুয়ারি থেকে কাতারে কার্যক্রম পরিচালনা করছে।",
+  "OUR PEOPLE": "আমাদের টিম",
+  "Leadership & Qatar Partnership": "পরিচালনা দল ও কাতারি অংশীদারিত্ব",
+  "Meet the people behind RAAZ REBOOT GROUP and our Qatar-based business presence.": "RAAZ REBOOT GROUP-এর পেছনের মানুষ এবং কাতারে আমাদের ব্যবসায়িক উপস্থিতির সঙ্গে পরিচিত হোন।",
+  "Founder & Managing Director": "প্রতিষ্ঠাতা ও ব্যবস্থাপনা পরিচালক",
+  "Founder & Managing Director, leading the group's vision, service development and customer-focused operations across its business divisions in Qatar.": "প্রতিষ্ঠাতা ও ব্যবস্থাপনা পরিচালক; গ্রুপের লক্ষ্য, সেবা উন্নয়ন এবং কাতারে গ্রাহককেন্দ্রিক কার্যক্রম পরিচালনা করেন।",
+  "Qatari Sponsor": "কাতারি স্পনসর",
+  "Qatari Sponsor of RAAZ REBOOT GROUP, supporting our Qatar-based business presence.": "RAAZ REBOOT GROUP-এর কাতারি স্পনসর, কাতারে আমাদের ব্যবসায়িক উপস্থিতিকে সহায়তা করেন।",
+  "Manpower Supply & Hospitality Operations Manager": "ম্যানপাওয়ার ও হসপিটালিটি অপারেশনস ম্যানেজার",
+  "Director of Business Development & Hospitality": "ব্যবসা উন্নয়ন ও হসপিটালিটি পরিচালক",
+  "OUR DIVISIONS": "আমাদের সেবা বিভাগ",
+  "Multiple Services. One Trusted Group.": "বিভিন্ন সেবা, একটি বিশ্বস্ত গ্রুপ।",
+  "Explore our core service divisions.": "আমাদের প্রধান সেবা বিভাগগুলো দেখুন।",
+  "RAAZ REBOOT REAL ESTATE": "RAAZ REBOOT রিয়েল এস্টেট",
+  "Property-related services, rental support and real estate solutions in Qatar.": "কাতারে সম্পত্তি-সংক্রান্ত সেবা, ভাড়া সহায়তা ও রিয়েল এস্টেট সমাধান।",
+  "CLEANING & HOSPITALITY": "ক্লিনিং ও হসপিটালিটি",
+  "Professional cleaning, hospitality and property support services.": "পেশাদার পরিচ্ছন্নতা, হসপিটালিটি ও সম্পত্তি-সহায়তা সেবা।",
+  "TECHNOLOGY": "প্রযুক্তি",
+  "Technology solutions, digital support, websites and business technology services.": "প্রযুক্তি সমাধান, ডিজিটাল সহায়তা, ওয়েবসাইট এবং ব্যবসায়িক প্রযুক্তি সেবা।",
+  "BUSINESS & COMPANY FORMATION": "ব্যবসা ও কোম্পানি গঠন",
+  "Business setup and company formation support for entrepreneurs and businesses.": "উদ্যোক্তা ও ব্যবসার জন্য ব্যবসা শুরু এবং কোম্পানি গঠনে সহায়তা।",
+  "Explore company formation →": "কোম্পানি গঠনের বিস্তারিত →",
+  "Explore cleaning & hospitality →": "ক্লিনিং ও হসপিটালিটি বিস্তারিত →",
+  "ONLINE SERVICES": "অনলাইন সেবা",
+  "Online applications, digital tasks and various internet-related services.": "অনলাইন আবেদন, ডিজিটাল কাজ ও ইন্টারনেট-সম্পর্কিত বিভিন্ন সেবা।",
+  "GOVERNMENT SERVICES": "সরকারি প্রক্রিয়ায় সহায়তা",
+  "Assistance with eligible Qatar government-related procedures and applications.": "কাতারের প্রযোজ্য সরকারি প্রক্রিয়া ও আবেদনে সহায়তা।",
+  "TRAVEL & TOURIST VISA SERVICES": "ভ্রমণ ও ট্যুরিস্ট ভিসা সেবা",
+  "Travel planning and tourist visa application assistance for multiple destinations, subject to current eligibility and availability.": "বর্তমান যোগ্যতা ও প্রাপ্যতা সাপেক্ষে বিভিন্ন গন্তব্যের ভ্রমণ পরিকল্পনা ও ট্যুরিস্ট ভিসা আবেদনে সহায়তা।",
+  "Explore visa support →": "ভিসা সহায়তার বিস্তারিত →",
+  "MORE SOLUTIONS, ONE GROUP": "আরও সমাধান, একটি গ্রুপ",
+  "Tell us what you need and our team will guide you toward the appropriate solution.": "আপনার প্রয়োজন জানান, আমাদের টিম উপযুক্ত সমাধানের দিকনির্দেশনা দেবে।",
+  "TRAVEL & VISA SUPPORT": "ভ্রমণ ও ভিসা সহায়তা",
+  "YOUR JOURNEY STARTS HERE.": "আপনার ভ্রমণ শুরু হোক এখানে।",
+  "Planning your next journey? Our team can assist with selected tourist visa application processes and travel-related support.": "পরবর্তী ভ্রমণের পরিকল্পনা করছেন? আমাদের টিম বিভিন্ন গন্তব্যের ভিসা আবেদন ও ভ্রমণ-সংক্রান্ত সহায়তা নিয়ে আলোচনা করতে পারে।",
+  "VIEW VISA SUPPORT →": "ভিসা সহায়তা দেখুন →",
+  "START VISA PROCESS →": "ভিসা প্রক্রিয়া সম্পর্কে জানুন →",
+  "Professional Application Support": "আবেদনে পেশাদার সহায়তা",
+  "We help organize application information and guide customers through the process.": "আবেদনের তথ্য গুছিয়ে নিতে এবং প্রক্রিয়া বুঝতে আমরা সহায়তা করি।",
+  "Clear Communication": "স্পষ্ট যোগাযোগ",
+  "We keep customers informed about the information and documents required.": "প্রয়োজনীয় তথ্য ও নথি সম্পর্কে গ্রাহকদের জানিয়ে রাখি।",
+  "WHY RAAZ REBOOT GROUP": "কেন RAAZ REBOOT GROUP",
+  "One Trusted Group. Multiple Solutions.": "একটি বিশ্বস্ত গ্রুপ, নানা সমাধান।",
+  "We aim to make professional services easier to access through one trusted business group.": "একটি বিশ্বস্ত ব্যবসায়িক গ্রুপের মাধ্যমে পেশাদার সেবা সহজলভ্য করাই আমাদের লক্ষ্য।",
+  "Professional": "পেশাদার",
+  "We focus on clear communication and practical service.": "আমরা স্পষ্ট যোগাযোগ ও বাস্তবসম্মত সেবায় গুরুত্ব দিই।",
+  "Multi-Service": "বহুমুখী সেবা",
+  "Multiple business and personal service solutions under one group.": "একটি গ্রুপের অধীনে ব্যবসায়িক ও ব্যক্তিগত নানা সেবা।",
+  "Qatar Based": "কাতারভিত্তিক",
+  "Our operations and service focus are based in Qatar.": "আমাদের কার্যক্রম ও সেবার প্রধান ক্ষেত্র কাতার।",
+  "CUSTOMER FEEDBACK": "গ্রাহকের মতামত",
+  "Your Feedback Matters": "আপনার মতামত গুরুত্বপূর্ণ",
+  "We value every customer's experience. Contact our team on WhatsApp to share your feedback about our services.": "প্রতিটি গ্রাহকের অভিজ্ঞতাকে আমরা গুরুত্ব দিই। আমাদের সেবা সম্পর্কে মতামত জানাতে হোয়াটসঅ্যাপে যোগাযোগ করুন।",
+  "SHARE FEEDBACK →": "মতামত জানান →",
+  "HOW IT WORKS": "যেভাবে কাজ করি",
+  "Simple. Clear. Professional.": "সহজ। স্পষ্ট। পেশাদার।",
+  "Tell Us": "আমাদের জানান",
+  "Share your requirement with our team.": "আপনার প্রয়োজন আমাদের টিমকে জানান।",
+  "Understand": "বুঝে নেওয়া",
+  "We understand your requirement and available options.": "আপনার প্রয়োজন ও সম্ভাব্য বিকল্পগুলো বুঝে নিই।",
+  "Support": "সহায়তা",
+  "Our team assists you through the relevant process.": "সংশ্লিষ্ট প্রক্রিয়ায় আমাদের টিম সহায়তা করে।",
+  "Complete": "সম্পন্ন করা",
+  "We help you move forward with clarity.": "স্পষ্ট ধারণা নিয়ে পরবর্তী ধাপে এগোতে সহায়তা করি।",
+  "QUICK ANSWERS": "দ্রুত উত্তর",
+  "Frequently Asked Questions": "সাধারণ জিজ্ঞাসা",
+  "A few helpful answers before you contact our team. Requirements and availability can vary by service and case.": "যোগাযোগের আগে কিছু গুরুত্বপূর্ণ উত্তর। সেবা ও পরিস্থিতি অনুযায়ী শর্ত ও প্রাপ্যতা ভিন্ন হতে পারে।",
+  "What services does RAAZ REBOOT GROUP provide?": "RAAZ REBOOT GROUP কী কী সেবা দেয়?",
+  "Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and tourist visa application support for multiple destinations, subject to current eligibility and availability.": "আমাদের সেবার মধ্যে রয়েছে রিয়েল এস্টেট, ক্লিনিং ও হসপিটালিটি, প্রযুক্তি, কোম্পানি গঠন ও ব্যবসায়িক সহায়তা, অনলাইন সেবা, প্রযোজ্য সরকারি প্রক্রিয়ায় সহায়তা এবং ট্যুরিস্ট ভিসা আবেদন সহায়তা।",
+  "How can I ask about tourist visa assistance?": "ট্যুরিস্ট ভিসা সহায়তা সম্পর্কে কীভাবে জানতে পারি?",
+  "Contact us with your destination, nationality, current country of residence, and intended travel dates. We will explain the support available for your case. Visa approval is decided by the relevant authorities and cannot be guaranteed.": "আপনার গন্তব্য, জাতীয়তা, বর্তমান বসবাসের দেশ ও সম্ভাব্য ভ্রমণের তারিখ জানান। আপনার ক্ষেত্রে কী সহায়তা পাওয়া যেতে পারে তা জানাব। ভিসার সিদ্ধান্ত সংশ্লিষ্ট কর্তৃপক্ষ নেয়; অনুমোদনের নিশ্চয়তা দেওয়া যায় না।",
+  "What documents are needed for company formation?": "কোম্পানি গঠনে কী কী নথি লাগে?",
+  "Requirements depend on the business activity, legal structure, ownership and approvals required. Share your proposed activity and ownership details so our team can outline the likely next steps and documents to confirm with the relevant authorities.": "প্রয়োজনীয়তা ব্যবসার কার্যক্রম, আইনি কাঠামো, মালিকানা ও অনুমোদনের ওপর নির্ভর করে। সম্ভাব্য কার্যক্রম ও মালিকানার তথ্য দিলে পরবর্তী ধাপ এবং কর্তৃপক্ষের সঙ্গে যাচাইযোগ্য নথি সম্পর্কে ধারণা দিতে পারি।",
+  "How much do your services cost?": "আপনাদের সেবার খরচ কত?",
+  "Fees vary by service, scope, third-party charges and official fees where applicable. Contact us with your requirements for a case-specific quotation before proceeding.": "সেবা, কাজের পরিধি, তৃতীয় পক্ষের চার্জ এবং প্রযোজ্য সরকারি ফি অনুযায়ী খরচ ভিন্ন হয়। এগোনোর আগে আপনার পরিস্থিতি অনুযায়ী মূল্য জানতে যোগাযোগ করুন।",
+  "How do I contact the team?": "টিমের সঙ্গে কীভাবে যোগাযোগ করব?",
+  "Use the website contact form to prepare an enquiry for WhatsApp, or message our business WhatsApp directly at +974 7187 6497.": "ওয়েবসাইটের যোগাযোগ ফর্ম ব্যবহার করুন অথবা সরাসরি ব্যবসায়িক হোয়াটসঅ্যাপ +974 7187 6497 নম্বরে বার্তা পাঠান।",
+  "Do you guarantee government or visa approval?": "সরকারি বা ভিসার অনুমোদন কি নিশ্চিত করেন?",
+  "No. We can provide application guidance and administrative support where available, but decisions, processing times and official fees are controlled by the relevant authorities.": "না। প্রযোজ্য ক্ষেত্রে আমরা আবেদন-সংক্রান্ত দিকনির্দেশনা ও প্রশাসনিক সহায়তা দিতে পারি; তবে সিদ্ধান্ত, প্রক্রিয়াকরণের সময় ও সরকারি ফি সংশ্লিষ্ট কর্তৃপক্ষ নির্ধারণ করে।",
+  "Let's Talk About What You Need.": "আপনার প্রয়োজন নিয়ে কথা বলি।",
+  "Contact RAAZ REBOOT GROUP and our team will guide you toward the appropriate service.": "RAAZ REBOOT GROUP-এর সঙ্গে যোগাযোগ করুন; আমাদের টিম উপযুক্ত সেবার দিকনির্দেশনা দেবে।",
+  "Location": "ঠিকানা",
+  "Business Phone / WhatsApp": "ব্যবসায়িক ফোন / হোয়াটসঅ্যাপ",
+  "Email": "ইমেইল",
+  "Business Hours": "কার্যসময়",
+  "Full Name": "পূর্ণ নাম",
+  "Phone": "ফোন",
+  "Service": "সেবা",
+  "Select a service": "সেবা নির্বাচন করুন",
+  "Message": "বার্তা",
+  "SEND INQUIRY VIA WHATSAPP →": "হোয়াটসঅ্যাপে অনুসন্ধান পাঠান →",
+  "Important Information": "গুরুত্বপূর্ণ তথ্য",
+  "RAAZ REBOOT GROUP is an independent service provider. We assist customers with eligible government-related procedures and applications. Government approvals, decisions, official fees and processing times are determined solely by the relevant authorities.": "RAAZ REBOOT GROUP একটি স্বতন্ত্র সেবা প্রদানকারী প্রতিষ্ঠান। প্রযোজ্য সরকারি প্রক্রিয়া ও আবেদনে আমরা সহায়তা করি। সরকারি অনুমোদন, সিদ্ধান্ত, ফি ও প্রক্রিয়াকরণের সময় সংশ্লিষ্ট কর্তৃপক্ষ নির্ধারণ করে।",
+  "Visa applications are subject to the decision of the relevant embassy, immigration authority or government department. RAAZ REBOOT GROUP provides application assistance and processing support and does not guarantee visa approval.": "ভিসার আবেদন সংশ্লিষ্ট দূতাবাস, অভিবাসন কর্তৃপক্ষ বা সরকারি বিভাগের সিদ্ধান্তের ওপর নির্ভরশীল। RAAZ REBOOT GROUP আবেদন-সংক্রান্ত সহায়তা দেয়, তবে ভিসা অনুমোদনের নিশ্চয়তা দেয় না।",
+  "ONE TRUSTED GROUP. MULTIPLE SOLUTIONS.": "একটি বিশ্বস্ত গ্রুপ। বিভিন্ন সমাধান।",
+  "More Services": "আরও সেবা",
+  "Qatar Based Business Group": "কাতারভিত্তিক ব্যবসায়িক গ্রুপ"
+};
+
 function setLanguage(language){
 
+    if(!["en","ar","bn"].includes(language)) language = "en";
     document.documentElement.lang = language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    document.body.classList.toggle("rtl", language === "ar");
 
-    if(language === "ar"){
-        document.body.classList.add("rtl");
-        document.documentElement.dir = "rtl";
-
-        document.getElementById("arBtn").classList.add("active");
-        document.getElementById("enBtn").classList.remove("active");
-    }else{
-        document.body.classList.remove("rtl");
-        document.documentElement.dir = "ltr";
-
-        document.getElementById("enBtn").classList.add("active");
-        document.getElementById("arBtn").classList.remove("active");
-    }
+    document.getElementById("enBtn").classList.toggle("active", language === "en");
+    document.getElementById("arBtn").classList.toggle("active", language === "ar");
+    document.getElementById("bnBtn").classList.toggle("active", language === "bn");
 
     document.querySelectorAll("[data-en]").forEach(function(element){
-
-        const value = element.getAttribute("data-" + language);
-
-        if(value){
-            element.textContent = value;
-        }
-
+        const english = element.getAttribute("data-en") || "";
+        const value = language === "bn"
+            ? (bnTranslations[english] || english)
+            : (element.getAttribute("data-" + language) || english);
+        element.textContent = value;
     });
 
-    localStorage.setItem("raazLanguage", language);
+    try { localStorage.setItem("raazLanguage", language); } catch(e) {}
 }
 
 
