@@ -18,15 +18,15 @@
 
 <meta name="theme-color" content="#8A1538">
 
-<link rel="canonical" href="https://raazrebootgroup.github.io/raaz-reboot-group/">
+<link rel="canonical" href="https://raazreboot.com/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="RAAZ REBOOT GROUP | Qatar Based Business Group">
 <meta property="og:description" content="RAAZ REBOOT GROUP — Your Trusted Partner for Business, Property, Technology & Services in Qatar.">
-<meta property="og:url" content="https://raazrebootgroup.github.io/raaz-reboot-group/">
+<meta property="og:url" content="https://raazreboot.com/">
 <meta property="og:site_name" content="RAAZ REBOOT GROUP">
-<meta property="og:image" content="https://raazrebootgroup.github.io/raaz-reboot-group/raaz-reboot-group-logo-transparent.png">
+<meta property="og:image" content="https://raazreboot.com/raaz-reboot-group-logo-transparent.png">
 <meta property="og:image:alt" content="RAAZ REBOOT GROUP Logo">
 <meta property="og:locale" content="en_QA">
 <meta property="og:locale:alternate" content="ar_QA">
@@ -35,7 +35,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RAAZ REBOOT GROUP | Qatar Based Business Group">
 <meta name="twitter:description" content="Business, Real Estate, Cleaning & Hospitality, Technology, Company Formation, Online Services, Government-related Assistance and Tourist Visa Services in Qatar.">
-<meta name="twitter:image" content="https://raazrebootgroup.github.io/raaz-reboot-group/raaz-reboot-group-logo-transparent.png">
+<meta name="twitter:image" content="https://raazreboot.com/raaz-reboot-group-logo-transparent.png">
 
 <!-- Geographic / Business Information -->
 <meta name="geo.region" content="QA-DA">
@@ -48,14 +48,14 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://raazrebootgroup.github.io/raaz-reboot-group/#website",
+      "@id": "https://raazreboot.com/#website",
       "name": "RAAZ REBOOT GROUP",
       "alternateName": [
         "Raaz Reboot Group",
         "RAAZ REBOOT",
         "Raaz Reboot"
       ],
-      "url": "https://raazrebootgroup.github.io/raaz-reboot-group/",
+      "url": "https://raazreboot.com/",
       "inLanguage": [
         "en",
         "ar"
@@ -63,16 +63,16 @@
     },
     {
       "@type": "Organization",
-      "@id": "https://raazrebootgroup.github.io/raaz-reboot-group/#organization",
+      "@id": "https://raazreboot.com/#organization",
       "name": "RAAZ REBOOT GROUP",
       "alternateName": "Raaz Reboot Group",
-      "url": "https://raazrebootgroup.github.io/raaz-reboot-group/",
+      "url": "https://raazreboot.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://raazrebootgroup.github.io/raaz-reboot-group/raaz-reboot-group-logo-transparent.png",
-        "contentUrl": "https://raazrebootgroup.github.io/raaz-reboot-group/raaz-reboot-group-logo-transparent.png"
+        "url": "https://raazreboot.com/raaz-reboot-group-logo-transparent.png",
+        "contentUrl": "https://raazreboot.com/raaz-reboot-group-logo-transparent.png"
       },
-      "image": "https://raazrebootgroup.github.io/raaz-reboot-group/raaz-reboot-group-logo-transparent.png",
+      "image": "https://raazreboot.com/raaz-reboot-group-logo-transparent.png",
       "description": "RAAZ REBOOT GROUP is a Qatar-based business group providing professional services across real estate, cleaning and hospitality, technology, business and company formation, online services, government-related assistance, manpower supply and travel and tourist visa services.",
       "telephone": "+97471876497",
       "email": "raazrebootgroup@gmail.com",
@@ -97,8 +97,24 @@
       ]
     },
     {
+      "@type": "FAQPage",
+      "@id": "https://raazreboot.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does RAAZ REBOOT GROUP provide?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and selected tourist visa application support."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you guarantee government or visa approval?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. RAAZ REBOOT GROUP can provide application guidance and administrative support where available, but decisions, processing times and official fees are controlled by the relevant authorities."}
+        }
+      ]
+    },
+    {
       "@type": "ContactPoint",
-      "@id": "https://raazrebootgroup.github.io/raaz-reboot-group/#contact",
+      "@id": "https://raazreboot.com/#contact",
       "telephone": "+97471876497",
       "contactType": "customer service",
       "areaServed": "QA",
@@ -1218,6 +1234,37 @@ body.rtl .logo-text{
         bottom:80px;
     }
 }
+
+/* SERVICE DETAIL LINKS */
+.service-link{
+    display:inline-flex;
+    margin-top:18px;
+    color:var(--maroon);
+    font-size:13px;
+    font-weight:900;
+    text-decoration:underline;
+    text-underline-offset:4px;
+}
+.service-link:focus-visible,
+.faq-item summary:focus-visible{
+    outline:3px solid var(--maroon);
+    outline-offset:4px;
+}
+
+/* FAQ */
+.faq-section{background:var(--white);}
+.faq-list{max-width:900px;margin:38px auto 0;display:grid;gap:12px;}
+.faq-item{background:var(--light);border:1px solid var(--border);border-radius:12px;padding:0 22px;}
+.faq-item summary{cursor:pointer;list-style:none;font-weight:800;padding:20px 32px 20px 0;position:relative;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary:after{content:"+";position:absolute;right:0;top:16px;color:var(--maroon);font-size:24px;font-weight:700;}
+.faq-item[open] summary:after{content:"−";}
+.faq-item p{padding:0 0 20px;color:var(--gray);font-size:15px;max-width:800px;}
+body.rtl .faq-item summary{padding:20px 0 20px 32px;}
+body.rtl .faq-item summary:after{right:auto;left:0;}
+.service-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;}
+@media(max-width:650px){.service-cta-row .btn{width:100%;}.faq-item{padding:0 16px;}}
+
 </style>
 </head>
 
@@ -1238,6 +1285,7 @@ body.rtl .logo-text{
         <a href="#home" onclick="closeMenu()" data-en="Home" data-ar="الرئيسية">Home</a>
         <a href="#about" onclick="closeMenu()" data-en="About" data-ar="من نحن">About</a>
         <a href="#services" onclick="closeMenu()" data-en="Services" data-ar="الخدمات">Services</a>
+        <a href="#faq" onclick="closeMenu()" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a>
         <a href="#people" onclick="closeMenu()" data-en="Leadership" data-ar="الإدارة">Leadership</a>
         <a href="#reviews" onclick="closeMenu()" data-en="Reviews" data-ar="آراء العملاء">Reviews</a>
         <a href="#why" onclick="closeMenu()" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
@@ -1441,9 +1489,9 @@ body.rtl .logo-text{
 
                 <h3>SANOAR HOSSEN</h3>
 
-                <p data-en="Founder & Managing Director of RAAZ REBOOT GROUP, focused on building professional business and service solutions in Qatar."
-                   data-ar="مؤسس وعضو منتدب في RAAZ REBOOT GROUP، يركز على تطوير حلول الأعمال والخدمات المهنية في دولة قطر.">
-                    Founder & Managing Director of RAAZ REBOOT GROUP, focused on building professional business and service solutions in Qatar.
+                <p data-en="Founder & Managing Director, leading the group's vision, service development and customer-focused operations across its business divisions in Qatar."
+                   data-ar="المؤسس والعضو المنتدب، يقود رؤية المجموعة وتطوير الخدمات والعمليات التي تركز على العملاء عبر أقسام الأعمال في قطر.">
+                    Founder & Managing Director, leading the group's vision, service development and customer-focused operations across its business divisions in Qatar.
                 </p>
 
                 <p style="margin-top:10px;">
@@ -1651,6 +1699,7 @@ body.rtl .logo-text{
                data-ar="دعم تأسيس الأعمال والشركات لرواد الأعمال والشركات.">
                 Business setup and company formation support for entrepreneurs and businesses.
             </p>
+            <a class="service-link" href="company-formation.html" data-en="Explore company formation →" data-ar="استكشف تأسيس الشركات ←">Explore company formation →</a>
         </div>
 
         <div class="service-card reveal">
@@ -1684,6 +1733,7 @@ body.rtl .logo-text{
                data-ar="التخطيط للسفر والمساعدة في طلبات التأشيرات السياحية لوجهات مختارة.">
                 Travel planning and tourist visa application assistance for selected destinations.
             </p>
+            <a class="service-link" href="tourist-visa-processing.html" data-en="Explore visa support →" data-ar="استكشف دعم التأشيرات ←">Explore visa support →</a>
         </div>
 
         <div class="service-card reveal">
@@ -1727,6 +1777,7 @@ body.rtl .logo-text{
 
         <br>
 
+        <a href="tourist-visa-processing.html" class="btn btn-outline" data-en="VIEW VISA SUPPORT →" data-ar="عرض دعم التأشيرات ←">VIEW VISA SUPPORT →</a>
         <a href="https://wa.me/97471876497?text=Hello%20RAAZ%20REBOOT%20GROUP%2C%20I%20want%20to%20start%20a%20tourist%20visa%20process."
            target="_blank"
            rel="noopener"
@@ -1920,6 +1971,45 @@ body.rtl .logo-text{
 </section>
 
 
+
+<!-- FREQUENTLY ASKED QUESTIONS -->
+<section class="faq-section" id="faq">
+<div class="container">
+    <div class="reveal">
+        <span class="section-label" data-en="QUICK ANSWERS" data-ar="إجابات سريعة">QUICK ANSWERS</span>
+        <h2 class="section-title" data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</h2>
+        <p class="section-text" data-en="A few helpful answers before you contact our team. Requirements and availability can vary by service and case." data-ar="إجابات مفيدة قبل التواصل مع فريقنا. قد تختلف المتطلبات والتوافر حسب الخدمة والحالة.">A few helpful answers before you contact our team. Requirements and availability can vary by service and case.</p>
+    </div>
+    <div class="faq-list">
+        <details class="faq-item reveal">
+            <summary data-en="What services does RAAZ REBOOT GROUP provide?" data-ar="ما الخدمات التي تقدمها RAAZ REBOOT GROUP؟">What services does RAAZ REBOOT GROUP provide?</summary>
+            <p data-en="Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and selected tourist visa application support." data-ar="تشمل أقسام خدماتنا العقارات والتنظيف والضيافة والتكنولوجيا وتأسيس الشركات ودعم الأعمال والخدمات الإلكترونية والمساعدة المؤهلة في الإجراءات الحكومية ودعم طلبات التأشيرات السياحية المختارة.">Our service divisions include real estate, cleaning and hospitality, technology, company formation and business support, online services, eligible government-related assistance, and selected tourist visa application support.</p>
+        </details>
+        <details class="faq-item reveal">
+            <summary data-en="How can I ask about tourist visa assistance?" data-ar="كيف يمكنني الاستفسار عن المساعدة في التأشيرة السياحية؟">How can I ask about tourist visa assistance?</summary>
+            <p data-en="Contact us with your destination, nationality, current country of residence, and intended travel dates. We will explain the support available for your case. Visa approval is decided by the relevant authorities and cannot be guaranteed." data-ar="تواصل معنا مع تحديد الوجهة والجنسية وبلد الإقامة الحالي وتواريخ السفر المقترحة. سنوضح الدعم المتاح لحالتك. تقرر الجهات المختصة الموافقة على التأشيرة ولا يمكن ضمانها.">Contact us with your destination, nationality, current country of residence, and intended travel dates. We will explain the support available for your case. Visa approval is decided by the relevant authorities and cannot be guaranteed.</p>
+        </details>
+        <details class="faq-item reveal">
+            <summary data-en="What documents are needed for company formation?" data-ar="ما المستندات المطلوبة لتأسيس شركة؟">What documents are needed for company formation?</summary>
+            <p data-en="Requirements depend on the business activity, legal structure, ownership and approvals required. Share your proposed activity and ownership details so our team can outline the likely next steps and documents to confirm with the relevant authorities." data-ar="تعتمد المتطلبات على النشاط التجاري والهيكل القانوني والملكية والموافقات اللازمة. شارك النشاط المقترح وتفاصيل الملكية حتى يوضح فريقنا الخطوات والمستندات التي يجب تأكيدها لدى الجهات المختصة.">Requirements depend on the business activity, legal structure, ownership and approvals required. Share your proposed activity and ownership details so our team can outline the likely next steps and documents to confirm with the relevant authorities.</p>
+        </details>
+        <details class="faq-item reveal">
+            <summary data-en="How much do your services cost?" data-ar="كم تبلغ تكلفة خدماتكم؟">How much do your services cost?</summary>
+            <p data-en="Fees vary by service, scope, third-party charges and official fees where applicable. Contact us with your requirements for a case-specific quotation before proceeding." data-ar="تختلف الرسوم حسب الخدمة ونطاق العمل وتكاليف الجهات الأخرى والرسوم الرسمية عند انطباقها. تواصل معنا بمتطلباتك للحصول على عرض سعر مناسب لحالتك قبل البدء.">Fees vary by service, scope, third-party charges and official fees where applicable. Contact us with your requirements for a case-specific quotation before proceeding.</p>
+        </details>
+        <details class="faq-item reveal">
+            <summary data-en="How do I contact the team?" data-ar="كيف يمكنني التواصل مع الفريق؟">How do I contact the team?</summary>
+            <p data-en="Use the website contact form to prepare an enquiry for WhatsApp, or message our business WhatsApp directly at +974 7187 6497." data-ar="استخدم نموذج التواصل في الموقع لإعداد استفسار عبر واتساب، أو راسل رقم واتساب الأعمال مباشرة على +974 7187 6497.">Use the website contact form to prepare an enquiry for WhatsApp, or message our business WhatsApp directly at +974 7187 6497.</p>
+        </details>
+        <details class="faq-item reveal">
+            <summary data-en="Do you guarantee government or visa approval?" data-ar="هل تضمنون الموافقات الحكومية أو التأشيرات؟">Do you guarantee government or visa approval?</summary>
+            <p data-en="No. We can provide application guidance and administrative support where available, but decisions, processing times and official fees are controlled by the relevant authorities." data-ar="لا. يمكننا تقديم الإرشاد ودعم الإجراءات الإدارية عند توفرها، لكن القرارات وأوقات المعالجة والرسوم الرسمية تحددها الجهات المختصة.">No. We can provide application guidance and administrative support where available, but decisions, processing times and official fees are controlled by the relevant authorities.</p>
+        </details>
+    </div>
+</div>
+</section>
+
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
 <div class="container contact-grid">
@@ -1952,8 +2042,8 @@ body.rtl .logo-text{
             </div>
 
             <div class="contact-item">
-                <strong data-en="Phone" data-ar="الهاتف">Phone</strong>
-                <span>+974 5113 3654</span>
+                <strong data-en="Business Phone / WhatsApp" data-ar="هاتف الأعمال / واتساب">Business Phone / WhatsApp</strong>
+                <span>+974 7187 6497</span>
             </div>
 
             <div class="contact-item">
@@ -2091,7 +2181,7 @@ body.rtl .logo-text{
                 <li><a href="#services">Real Estate</a></li>
                 <li><a href="#services">Cleaning & Hospitality</a></li>
                 <li><a href="#services">Technology</a></li>
-                <li><a href="#services">Company Formation</a></li>
+                <li><a href="company-formation.html">Company Formation</a></li>
                 <li><a href="#services">Online Services</a></li>
             </ul>
         </div>
@@ -2102,8 +2192,9 @@ body.rtl .logo-text{
 
             <ul>
                 <li><a href="#services">Government Services</a></li>
-                <li><a href="#services">Travel & Visa Services</a></li>
+                <li><a href="tourist-visa-processing.html">Tourist Visa Processing</a></li>
                 <li><a href="#reviews">Customer Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </div>
